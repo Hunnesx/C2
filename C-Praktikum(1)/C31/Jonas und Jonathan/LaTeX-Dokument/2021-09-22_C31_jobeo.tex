@@ -1,0 +1,230 @@
+
+%Diese LaTeX-Vorlage für Praktikumsprotokolle in Form einer Veröffentlichung für das 
+%F-Praktikum wurde erstellt von Andreas Nuber EP II, Uni Würzburg.
+%Es wurde das Koma-Skript verwendet und sollte somit installiert sein
+%desweiteren sollten alle packages installiert sein, die mit \usepackage{} 
+%eingebunden werden.
+%Zum Testen dieser Vorlage wurde MikTex verwendet sowie TeXnicCenter als Editor
+%beim Compilieren waren 0 Fehler, 1 Warnung und 3 zu volle/leere Boxen. Das ist ok :)
+
+%Für das Erstellen einfach den sinnfreien Text, der zum ausfüllen genommen wurde 
+%ersetzen. Was sonst noch verändert werden sollte steht in den Kommentaren!
+
+
+\documentclass[a4paper,10pt,twocolumn]{scrartcl} %Koma-Skript-Äquivalent zu "article"
+
+\usepackage{german}            %macht deutsche überschriften
+\usepackage[latin1]{inputenc}  %man kann Sonderzeiche wie ü,ö usw direkt eingeben
+\usepackage{amsmath}           %macht
+\usepackage{amsfonts}          %Mathe
+\usepackage{amssymb}           %mächtiger
+\usepackage{graphicx}          %erlaubt Graphiken einzubinden (.eps für dvi und ps sowie .jpg für pdf)
+\usepackage[T1]{fontenc}       %Zeichenbelegung der verwendeten Schrift
+\usepackage{ae}                %macht schöneres ß
+\usepackage{typearea}	       %ermöglicht änderung des Seitenspiegels
+\usepackage{scrlayer-scrpage}  %ermöglicht änderung der Kopf-/Fußzeile
+\usepackage{lastpage}          %lässt auf die Seienanzahl zugreifen
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{placeins}
+
+\renewcommand{\figurename}{Abb.}
+
+\pagestyle{scrheadings}        %sagt Koma-Skript, dass selbstdefiniers Kopfzeilen verwendet werden
+\typearea{16}                  %stellt Seitenspiegel ein
+\columnsep25pt				   %definiert Breite zwischen den zwei Spalten von \twocolumns
+
+\renewcommand{\pnumfont}{%     %ändert die Schriftart der Seitennummerierung
+\normalfont\rmfamily\slshape}  %ändert die Schriftart der Seitennummerierung 
+
+
+
+\begin{document}
+\cfoot{\thepage /\pageref{LastPage}}     %macht die Seitennumerierung der Fom 2/5 (ausser auf der Titelseite)
+
+\twocolumn[{\csname @twocolumnfalse\endcsname                %erlaubt "Abstrakt" über beide Spalten
+\titlehead{                                                  %Kopfzeile
+	\begin{tabular*}{\textwidth}[]{@{\extracolsep{\fill}}lr}   %Kopfzeile
+	Betreuer: Benedikt Schurr & \today\\                          %Kopfzeile      hier den Betreuer eintragen!!!
+	\end{tabular*}                                             %Kopfzeile
+	}
+\title{Phasenübergang und kritischer Punkt von SF$_\text{6}$}	    %Titel der Versuchs
+\author{Jonas Beck und Jonathan Bodky		}                   %Namen der Studenten
+\date{}                                                         %benötigt um automatisches Datum auszuschalten
+\maketitle                                                      %erzeugt Titelseite
+\vspace{-8ex}                                                   %verringert Abstand zur Überschrift
+\begin{abstract}                                                %Beginn des Abstracts
+Für Schwefelhexafluorid (SF$_\text{6}$) wurden Isothermen im Bereich des Phasenübergangs von gasförmig zu flüssig gemessen und daraus der kritische Punkt bei $V_\text{k}=(69,4 \pm 0,5)\,\si{\cm^3}$, $p_\text{k}=(37 \pm 1)\,\si{\bar}$ und $T_\text{k}=(46,78 \pm 0,91)\,\si{\celsius}$ ermittelt. Die Van-der-Waals-Gleichung wurde mit den Parametern für Kohäsionsdruck $a= (0,815 \pm 0,023)\,\frac{\si{\Pa}\,\si{\m^6}}{\si{\mol^2}}$ und Kovolumen $b= (9,07 \pm 0,25)\cdot 10^{-5}\,\frac{\si{\m^3}}{\si{\mol}}$ an das Gas angepasst. Weiterhin wurde die Ausbildung von Maxwellgeraden im Koexistenzbereich der beiden Phasen untersucht und die Aussagekraft von idealer Gasgleichung und Van-der-Waals-Gleichung bewertet. Aus den konstanten, an den Maxwellgeraden im Koexistenzbereich angenommenen Drücken wurde die Dampfdruckkurve ermittelt, deren exponentieller Verlauf bestätigt werden konnte.
+\\ \\ 
+\\ 
+Versuchsdurchführung: 17. September 2021\\       %Datum ändern!
+Protokollabgabe: 24. September 2021\\                 %Datum ändern!
+Erstkorrektur: 11. Oktober 2021
+\\ 
+\\ 
+\end{abstract}
+}]
+
+\section{Einleitung}
+Schwefelhexafluorid (SF$_\text{6}$) besteht aus sechs oktaedisch um ein Schwefelatom angeordneten Fluoratomen. Diese Konfiguration macht das Molekül chemisch quasi inert, weshalb SF$_\text{6}$ unter Normalbedingungen als geruchloses, äußerst reaktionsarmes Gas vorliegt \cite{inert}. Neben Anwendungen in der Elektroindustrie als Isolier- und Löschgas für Mittel- und Hochspannungsschaltanlagen \cite{dilo} eignet es sich daher auch, um an seinem Beispiel in einer relativ sicheren Umgebung den in einem leicht erreichbaren Temperatur- und Druckbereich liegenden Phasenübergang von gasförmig zu flüssig zu untersuchen, sofern das sehr starke Treibhausgas \cite{treibhaus} nicht aus der Appparatur austreten kann.\\
+Hierzu wurden die Zustandsparameter Druck, Volumen und Temperatur im Verdampfungsbereich als Isothermen gemessen, wodurch sich der kritische Punkt des Gases bestimmen lässt.\\
+Die einfachste Theorie zu diesem Experiment ist die Näherung des idealen Gases, die auf einem mikroskopischen Wechselwirkungsmodell der Moleküle basiert, in dem diese ausschließlich durch Stöße interagieren. Aber auch komplexere Theorien mit mehr Parametern werden auf Näherungen aufgebaut, weshalb für technische Anwendungen genaue empirische Daten höchst relevant sind. Im Folgenden wird auch die Van-der-Waals-Theorie, welche das ideale Gas um zwei weitere Parameter ergänzt, untersucht und mit der idealen Gastheorie verglichen.
+
+
+
+\section{Theorie: Ideales Gas und Van-der-Waals-Gleichung}
+
+Modelliert man ein Gas unter der Annahme, dass es aus unendlich kleinen Molekülen bestehe, die nur durch Stöße miteinander interagieren, so erhält man für boltzmannverteilte Geschwindigkeiten die ideale Gasgleichung
+\begin{align} \label{eq:ideal}
+pV=\nu RT
+\end{align}
+\cite{gerth} mit dem Druck $p$, Volumen $V$, Stoffmenge $\nu$, Temperatur $T$ und universeller Gaskonstante $R$.
+Alternativ kann diese auch aus den empirischen Gesetzen von Gay-Lussac und Marriot-Boyle abgeleitet werden.\\\\
+Van-der-Waals fügt dieser Gleichung zwei Modifikationen hinzu: Die Moleküle haben nun ein endliches Volumen, beschrieben durch das Kovolumen $\nu b$, sowie eine gegenseitige Anziehungswechselwirkung, die sich in einer Modifikation des Drucks, beschrieben durch den Kohäsionsdruckparameter $a$, äussert:
+\begin{align} \label{eq:vdw}
+(p+\frac{\nu^2 a}{V^2})(V-\nu b)=\nu R T
+\end{align}
+\cite{gerth}. Die Van-der-Waals-Gleichung liefert zwar ein deutlich realistischeres Gasmodell als das ideale Gas, versagt aber dennoch im Bereich des Phasenübergangs zwischen gasförmiger und flüssiger Phase. Hier weisen reale Gase einen Bereich konstanten Drucks auf (Maxwellgerade, vgl. Anhang \ref{anh:vdw}). In diesem Bereich koexistieren die beiden Phasen, da die boltzmannverteilten Teilchen aus der flüssigen Phase sich statistisch wieder in die Gasphase ablösen können und umgekehrt. Der sich dadurch einstellende Druck wird Dampfdruck genannt. Verkleinert man in diesem Bereich das Volumen, geht ein Teil des Gases in die flüssige Phase über. Bei steigender Temperatur wird der Koexistenzbereich immer schmaler, bis er ab dem kritischen Punkt, ab welchem die flüssige und gasförmige Phase ununterscheidbar sind, schließlich verschwindet.
+
+\section{Messung der Isothermen und Bestimmung des kritischen Punktes} \label{sec:exp}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/Versuchsaufbau.png}
+\end{center}
+\caption[]{Aufbau der Versuchsanordnung aus \cite{instr}. Mittels Druckregler, Manometer, Quecksilbersäule als Volumenanzeige und Thermostat  können gezielt Isothermen von SF$_\text{6}$ vermessen werden.}
+\label{abb:aufbau}
+\end{figure}
+Insgesamt wurden neun Isothermen von SF$_6$ aufgenommen, von denen bei sechs ein Koexistenzbereich von flüssiger und gasförmiger Phase auftritt. Hierfür wurde im in Abb.~\ref{abb:aufbau} dargestellten Versuchsaufbau zunächst die Druckkammer mit einem Thermostat auf die gewünschte Temperatur reguliert, dann mithilfe der Quecksilbersäule ein Volumen eingestellt und der zugehörige Druck am Barometer abgelesen. Für kleine Volumina, bei denen der Druck sehr stark ansteigt, wurde umgekehrt bei exakt eingestelltem Druck das Volumen gemessen. Nach jeder Veränderung des Volumens wurde gewartet, bis sich das System wieder im thermodynamischen Gleichgewicht befand, bevor gemessen wurde.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/p-V-Diagramm.png}
+\end{center}
+\caption[]{p-V Diagramm der gemessenen Isothermen. Die Maxwellgeraden im Koexistenzbereich wurden eingezeichnet und die abgrenzende Binodale mit dem kritischen Punkt am Maximum interpoliert. Der Koexistenzbereich im vermessenen Temperaturintervall wurde rot gekennzeichnet.}
+\label{abb:pV}
+\end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/KPkt.png}
+\end{center}
+\caption[]{Vergrößerte Darstellung des Bereichs um den kritischen Punkt im p-V Diagramm der gemessenen Isothermen, vgl. Abb.~\ref{abb:pV}.}
+\label{abb:KPkt}
+\end{figure}
+\\Die gemessenen Daten sind in Abb.~\ref{abb:pV}~und~\ref{abb:KPkt} dargestellt. In der Abbildung wurden die Bereiche, in denen die Isothermen horizontal als Maxwellgeraden verlaufen, gekennzeichnet und die Randpunkte zur Abgrenzung des Koexistenzbereichs zu einer Binodalen interpoliert sowie der Koexistenzbereich rötlich markiert. Das Vorgehen ist in Kap.~\ref{datenverwertung} näher beschrieben. Am Druckmaximum der Binodalen liegt der kritische Punkt des Gases bei einer geschätzten Temperatur von $T_\text{k,1}=( 46,6 \pm 0,5 )\,\si{\celsius}$. Bestwert und Fehler ergeben sich aus der Abschätzung des kritischen Punktes in der Mitte der $46,1\,\si{\celsius}$- und der $47,1\,\si{\celsius}$-Isothermen. Ab diesem Punkt ist für höhere Temperaturen kein Phasenübergang mehr möglich, da die flüssige und gasförmige Phase hier ununterscheidbar werden. Am kritischen Punkt können das kritische Volumen $V_\text{k}=(69,4 \pm 0,5)\,\si{\cm^3}$ und der kritische Druck $p_\text{k}=(37 \pm 1)\,\si{\bar}$ abgelesen werden. Beide Fehler sind Schätzfehler. Der Volumenfehler orientiert sich an der Form der Binodalen und der Länge der Maxwellgeraden, der Druckfehler basiert auf dem Abstand der Isothermen zueinander sowie dem Skalenfehler des Barometers. Der ermittelte Wert für den kritischen Druck stimmt im Rahmen seines Fehlers mit dem Literaturwert von $p_\text{k,Lit}=37,7\,\si{\bar}$~\cite{crc} überein.
+\\\\Für kleinere Volumina kommt es nach Verlassen des Koexistenzbereichs zu einem starken Druckanstieg, da das SF$_\text{6}$ nun vollständig als Flüssigkeit vorliegt und als solche inkompressibel ist. Bei den Maxwellgeraden fällt auf, dass diese entgegen der theoretischen Erwartung nicht exakt horizontal verlaufen, sondern zu kleineren Volumina leicht ansteigen.\\
+Ein möglicher systematischer Fehler der dies erklärt ist, dass sich während der Messung nicht instantan ein Temperaturgleichgewicht einstellt, zwischen Messungen aber nur endlich lange gewartet werden konnte. Dadurch ist, obwohl die Temperatur des Wasserbades bei allen Messungen stabil war, nicht absolut sichergestellt, dass sich das SF$_\text{6}$ im thermischen Gleichgewicht befand. Im Experiment wurde das Gasvolumen sukzessive verringert. Da dies nicht unendlich langsam geschehen kann ist ein kurzzeitiges Abweichen von der Isothermen zu höheren Temperaturen wahrscheinlich, woraufhin sich etwas mehr SF$_\text{6}$ in der Gasphase befinden würde als bei niedrigerer Temperatur. Dieses würde aufgrund der langsamen Abkühlung zurück zur Ausgangstemperatur nicht ausfallen, sondern zu übersättigtem Dampf bei höherem Druck führen. Wenn sich ein solcher Effekt immer weiter aufbaut, resultiert dies in der beobachteten Steigung der Maxwellgeraden. Ob dies jedoch signifikant genug ist, um die Geradensteigung tatsächlich zu erklären, kann an dieser Stelle nicht weiter überprüft werden. Der Anstieg der Maxwellgeraden stellt ein Problem für die Auswertung dar, da die Bestimmung des kritischen Punktes, ab dem eigentlich erst eine durchgehende Steigung der Kurve zu beobachten sein sollte, so erschwert wird.
+
+\subsection{Dampfdruckkurve}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/Dampfdruckkurve.png}
+\end{center}
+\caption[]{Dampfdruckkurve von SF$_\text{6}$ in invers-logarithmischer Auftragung und exponentielle Ausgleichsfunktion zur Extrapolation des kritischen Punktes auf Höhe des Dampfdrucks. Im Inset sind dieselben Daten linear aufgetragen, der kritische Punkt ist jeweils markiert. Oberhalb von diesem sind flüssige und gasförmige Phase nicht mehr unterscheidbar, es existiert also kein Dampfdruck mehr.}
+\label{abb:stpr}
+\end{figure}
+An den interpolierten Maxwellgeraden in Abb.~\ref{abb:pV} kann für den Koexistenzbereich der Druck in Abhängigkeit der Temperatur abgelesen werden, welcher den Dampfdruck darstellt. Diese Daten werden im Inset in Abb.~\ref{abb:stpr} abgebildet. Der Hauptplot von Abb.~\ref{abb:stpr} zeigt dieselben Daten in der linearisierenden Auftragung $ln(p)\big(\frac{1}{T}\big)$ mit einer exponentiellen Ausgleichsfunktion. Die theoretische Form der Dampfdruckkurve
+\begin{align}
+p=b(T)e^{-\frac{E_\text{Dampf}}{k_\text{B}T}}
+\end{align}
+\cite{gerth} mit einem näherungsweise konstanten Vorfaktor $b(T)=b$ lässt sich mit der Boltzmannverteilung der Teilchenenergien erklären, da nur Teilchen, die die Austrittsarbeit $E_\text{Dampf}$ aus der flüssigen in die Gasphase überwinden können, verdampfen. Da die Daten in der gewählten Darstellung im Rahmen ihrer Fehler auf einer Geraden liegen, kann die angenommene Exponentialfunktion als Verlauf der Dampfdruckkurve bestätigt werden. Daher kann die Verdampfungsenergie aus dem Exponenten der Ausgleichsfunktion unter Verwendung von $k_\text{B}=1,380649\cdot10^{-23}\,\frac{\si{\J}}{\si{\K}}$~\cite{codata} zu $E_\text{Dampf}=(19,39 \pm 0,12)\,\frac{\si{\kJ}}{\si{\mol}}$ berechnet werden. Am Schnittpunkt der Ausgleichsfunktion mit dem kritischen Druck kann die kritische Temperatur $T_\text{k,2}=(46,78 \pm 0,91)\,\si{\celsius}$ mit Größtfehlerabschätzung aus Min-Max-Geraden abgelesen werden. Der erhaltene Wert stimmt im Rahmen seines Fehlers nicht mit dem Literaturwert von $T_\text{k,Lit}=45,54\,\si{\celsius}$~\cite{crc} überein. Dies kann an möglichen Verunreinigungen des untersuchten Gases, beispielsweise Lufteintritt durch undichte Stellen, sowie den bereits diskutierten systematischen Abweichungen wie Messungen außerhalb des thermodynamischen Gleichgewichts liegen. Der Wert stimmt mit der aus dem p-V-Diagramm abgeschätzten Temperatur $T_\text{k,1}$ im Rahmen der Fehler überein und wird dieser für weitere Auswertungen vorgezogen, da der Bestwert bei letzterer nur geschätzt wurde.
+
+\subsection{Modellparameter von SF$_\text{6}$}
+Die VdW-Konstanten $a$ und $b$ lassen sich mit der universellen Gaskonstante $R=8.31446261815324\,{\displaystyle \textstyle {\frac {\mathrm {kg\,m^{2}} }{\mathrm {s^{2}\,mol\,K} }}}$ \cite{codata} aus den zuvor abgelesenen kritischen Daten berechnen (siehe hierzu Anhang~\ref{sec:ab}). Sie betragen $a= (0,815 \pm 0,023)\,\frac{\si{\Pa}~\si{\m^6}}{\si{\mol^2}}$ und $b= (9,07 \pm 0,25)\,\cdot 10^{-5}\frac{\si{\m^3}}{\si{\mol}}$ und stimmen nicht im Rahmen der Fehler mit den Literaturwerten $a_\text{Lit}= 0,786\,\frac{\si{\Pa}~\si{\m^6}}{\si{\mol^2}}$ und $b_\text{Lit}= 8,79\cdot 10^{-5}\,\frac{\si{\m^3}}{\si{\mol}}$ \cite{crc} überein. Grund ist die Berechnung aus den bereits von der Literatur abweichenden kritischen Parametern. Aus diesen kann die Stoffmenge unter Annahme der Gültigkeit der VdW-Gleichung (Gl.~\ref{eq:vdw}) zu $\nu=(2,55 \pm 0,20)~\cdot~10^{-3}\,\si{\mol}$ berechnet werden. Schließlich kann noch die Definition des kritischen Koeffizienten
+\begin{align}
+K_\text{k}=\frac{\nu RT}{pV},
+\end{align}
+der die Abweichung eines Gases zum VdW-Gas mit $K_\text{k}=\frac{8}{3}$ beschreibt, verwendet werden. Da jedoch bereits bei der Bestimmung der Stoffmenge von der Gültigkeit der VdW-Gleichung ausgegangen wird, liefert die Berechnung des kritischen Koeffizienten nur diesen Ansatz zurück, also exakt den Exponenten des VdW-Gases. Alle in diesem Abschnitt angegebenen Fehler wurden mit gaußscher Fehlerfortpflanzung berechnet.
+
+\subsection{Vergleich mit der Theorie}
+
+In Abb.~\ref{abb:vgl} wurden die gemessene $30,3\si{\celsius}$ Isotherme sowie die aus den zuvor berechneten Parametern entstehende Van-der-Waals-Kurve und die Isotherme eines idealen Gases zum Vergleich dargestellt. Offensichtlich werden die Messdaten durch die VdW-Kurve besser approximiert, wobei die Beschreibung im Koexistenzbereich der Maxwellgeraden am schlechtesten ist, da der Kondensations- bzw. Verdampfungsprozess durch die VdW-Gleichung nicht dargestellt wird. Die VdW-Gleichung nimmt überall zu hohe Drücke an, was darauf schließen lässt, dass die Kohäsionsdruckkorrektur nicht ausreicht, um die tatsächliche Wechselwirkung der Moleküle zu beschreiben. Die Isotherme der idealen Gasgleichung liegt noch deutlich über den anderen beiden, da hier von gar keiner druckmindernden Anziehungswechselwirkung der Teilchen ausgegangen wird. Für hohe Volumina nähern sich die Verläufe der VdW-Gleichung und der idealen Gasgleichung einander an. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/Theorievergleich.png}
+\end{center}
+\caption[]{Vergleich der Experimentellen Daten aus der $30,3\,\si{\celsius}$-Isotherme mit der zugehörigen Van-der-Waals-Kurve sowie der idealen Gasgleichung.}
+\label{abb:vgl}
+\end{figure}
+
+\section{Zusammenfassung}
+Druck, Temperatur und Volumen von Schwefelhexafluorid (SF$_\text{6}$) wurden in Form von Isothermen beim Übergang aus der gasförmigen in die flüssige Phase gemessen. In die Isothermen aus diesen Daten wurden Maxwellgeraden sowie der Koexistenzbereich der Phasen und der kritische Punkt bei $V_\text{k}=(69,4 \pm 0,5)\,\si{\cm^3}$ und $p_\text{k}=(37 \pm 1)\,\si{\bar}$ interpoliert. Aus den Drücken der Maxwellgeraden wurde eine Dampfdruckkurve erhalten, welche den theoretischen exponentiellen Verlauf bestätigt und deren Extrapolation auf den kritischen Druck die kritische Temperatur $T_\text{k}=(46,78 \pm 0,91)\,\si{\celsius}$ liefert. Aus diesen Werten konnten unter Annahme der Van-der-Waals-Gleichung deren Parameter $a= (0,815 \pm 0,023)\,\frac{\si{\Pa}\,\si{\m^6}}{\si{\mol^2}}$ und $b= (9,07 \pm 0,25)\cdot 10^{-5}\,\frac{\si{\m^3}}{\si{\mol}}$ sowie die Stoffmenge $\nu=(2,55 \pm 0,20)~\cdot~10^{-3}\,\si{\mol}$ berechnet werden. Der graphische Vergleich der experimentellen Daten mit den Theorien der idealen Gasgleichung und von Van-der-Waal zeigt, dass die VdW-Gleichung das vorliegende Gas zwar besser als die ideale Gasgleichung, aber vor allem im Phasenübergangsbereich nicht gut beschreiben kann.
+
+
+
+\FloatBarrier
+%FF: Angabe der verwendeten Literatur mit Quellennachweis.
+\begin{thebibliography}{}    %so wird das Literaturverzeichnis erstellt
+\bibitem{instr} Physikalisches Grundpraktikum, Universität Würzburg, Modul C1, Versuch 31, Zustandsgrößen realer Gase, 2021 
+\bibitem{gerth} Meschede, Dieter, Gerthsen Physik, 25. Auflage, Springer-Verlag, Berlin, 2015 
+\bibitem{codata} E. Tiesinga \textit{et al.}, \grqq CODATA
+recommended values of the fundamental physical constants: 2018\grqq, Rev. Mod. Phys.
+93, 025010 (2021)
+\bibitem{crc} D. R. Lide: \grqq CRC Handbook of Chemistry
+and Physics\grqq , CRC Press, Boca Raton, 84th
+edition, 2004
+\bibitem{dilo} \url{https://dilo.eu/sf6-gas}, zuletzt aufgerufen am 08.10.2021
+\bibitem{treibhaus} \url{https://www.umweltbundesamt.de/themen/klima-energie/fluorierte-treibhausgase-fckw/anwendungsbereiche-emissionsminderung/schaltanlagen}, zuletzt aufgerufen am 09.10.2021
+\bibitem{inert} \url{https://gestis.dguv.de/data?name=005220}, zuletzt aufgerufen am 09.10.2021
+\end{thebibliography}
+
+\newpage~\newpage
+\section{Anhang}
+\subsection{Zusammenhang der VdW-Konstanten mit den kritischen Parametern}\label{sec:ab}
+Die Van-der-Waals Parameter a und b in Gl.~\ref{eq:vdw} hängen direkt mit den kritischen Daten $p_\text{k}$, $V_\text{k}$ und $T_\text{k}$ zusammen. Der kritische Punkt ist derjenige, ab dem die Phasen flüssig und gasförmig nicht mehr unterscheidbar sind. Das heißt, dass die Van-der-Waals Isotherme hier einen Sattelpunkt hat. Mathematisch äußert sich das durch die Bedingungen:
+\begin{equation}\label{eq:anh1}
+\begin{split}
+0 & \overset{!}{=}\frac{dp}{dV}\\
+ & =-\frac{\nu R T}{(V-\nu b)^2}+\frac{2 \nu^2 a}{V^3}
+\end{split}
+\end{equation}
+\begin{equation}\label{eq:anh2}
+\begin{split}
+0 & \overset{!}{=}\frac{d^2p}{dV^2}\\
+ & =\frac{2 \nu R T}{(V-\nu b)^3}-\frac{b \nu^2 a}{V^4}
+\end{split}
+\end{equation}
+Gl.~\ref{eq:anh1},~\ref{eq:anh2} können nach $\nu R T$ aufgelöst und gleichgesetzt werden, was das kritische Volumen
+\begin{align}
+V_\text{k} = 3\nu b
+\end{align}
+liefert. Eingesetzt in Gl.~\ref{eq:anh1} bekommt man damit die kritische Temperatur
+\begin{align}
+T_\text{k}=\frac{8a}{27bR}
+\end{align}
+und wenn man diese beiden Größen wieder in Gl.~\ref{eq:vdw} einsetzt, so erhält man auch den kritischen Druck:
+\begin{align}
+p_\text{k}=\frac{a}{27b^2}
+\end{align}
+Durch Umkehren dieser Gleichungen können $a$ und $b$ aus den kritischen Daten bestimmt werden.
+
+\subsection{Maxwell-Gerade}
+\subsubsection{Aus der VdW-Kurve} \label{anh:vdw}
+Die Maxwellgerade beschreibt den konstanten Druckverlauf bei sich änderndem Volumen im hochstabilen Koexistenzbereich der flüssigen und gasförmigen Phase. Die einfache VdW-Gleichung kann dieses Verhalten nicht widerspiegeln. Sie macht dennoch eine theoretische Approximation der Maxwellgerade möglich, indem auf Grundlage der Energieerhaltung gleiche Flächen im pV-Diagramm zwischen Maxwellgerade und VdW-Kurve angenommen werden. Durch Integration mit freien Grenzen kann daraus eine Voraussetzung für den Druck $p_1$ der zwischen den Volumina $V_1$ und $V_2$ verlaufenden, horizontalen Maxwellgeraden gewonnen werden:
+\begin{align}
+p_1 = \frac{\nu RT}{V_2-V_1}~ln \bigg | \frac{V_2-\nu b}{V_1-\nu b} \bigg | - \frac{\nu^2 a}{V_1 V_2}
+\end{align}
+\\Diese liefert wiederum mit der VdW-Gleichung (Gl.~\ref{eq:vdw}) ein Gleichungssystem, welches numerisch gelöst werden kann. Eine beispielhafte VdW-Kurve mit Maxwellgerade ist in Abb.~\ref{abb:anh} gezeigt. Zum Vergleich wurde auch die zugehörige Kurve aus der idealen Gasgleichung abgebildet.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/C31-Hausaufgabe.png}
+\end{center}
+\caption[]{Theoretische Isothermen für CO$_2$ bei folgenden Parametern:\\
+$T=288,7\,\si{\K}$, $\nu = 1\,\si{\mol}$\\
+$a=3,658\cdot10^6\,\frac{\si{\bar}~\si{\cm^6}}{\si{\mol^2}}$, $b=42,75\,\frac{\si{\cm^3}}{\si{\mol}}$\\
+$p_{Maxwell} = 59,3629\,\si{\bar}$}
+\label{abb:anh}
+\end{figure}
+
+\subsubsection{Aus den Messdaten} \label{datenverwertung}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.97 \columnwidth]{img/p-V-Diagramm_Auswertung.png}
+\end{center}
+\caption[]{Bestimmung der Maxwellgeraden im p-V-Diagramm: Zunächst werden die Druckwerte der Punkte des Koexistenzbereichs gemittelt und die entsprechende Horizontale eingezeichnet. Dann werden deren Endpunkte als Schnittpunkte mit Anpassungsgeraden an den Flanken des Phasenübergangs festgelegt. Auf diesen Endpunkten basiert die Binodale in Abb.~\ref{abb:pV}.}
+\label{abb:maxw}
+\end{figure}
+Auch die Messdaten weisen aufgrund systematischer Fehler (vgl.~Abschnitt~\ref{sec:exp}) nicht den zu erwartenden, waagrechten Verlauf der Isothermen im Koexistenzbereich auf, weshalb die Maxwellgeraden interpoliert werden mussten. Hierfür wurden zunächst für jede Isotherme die zum Koexistenzbereich gehörenden Datenpunkte, die voneinander in Druckrichtung nur um den Ablesefehler abweichen, ausgewählt und deren Druckmittelwert berechnet, der die Höhe der Maxwellkurve vorgibt. Die Enden wurden durch Schnittpunkte mit Anpassungsgeraden an den Flanken des Koexistenzbereichs begrenzt. Dieses Vorgehen ist in Abb.~\ref{abb:maxw} skizziert. Aus den Endpunkten der Maxwellgeraden konnte dann schließlich die in Abb.~\ref{abb:pV} zu sehende Binodale interpoliert werden.
+\newpage~
+
+
+\end{document}

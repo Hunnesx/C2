@@ -1,0 +1,375 @@
+
+%Diese LaTeX-Vorlage für Praktikumsprotokolle in Form einer Veröffentlichung für das 
+%F-Praktikum wurde erstellt von Andreas Nuber EP II, Uni Würzburg.
+%Es wurde das Koma-Skript verwendet und sollte somit installiert sein
+%desweiteren sollten alle packages installiert sein, die mit \usepackage{} 
+%eingebunden werden.
+%Zum Testen dieser Vorlage wurde MikTex verwendet sowie TeXnicCenter als Editor
+%beim Compilieren waren 0 Fehler, 1 Warnung und 3 zu volle/leere Boxen. Das ist ok :)
+
+%Für das Erstellen einfach den sinnfreien Text, der zum ausfüllen genommen wurde 
+%ersetzen. Was sonst noch verändert werden sollte steht in den Kommentaren!
+
+
+\documentclass[a4paper,10pt,twocolumn]{scrartcl} %Koma-Skript-Äquivalent zu "article"
+
+\usepackage{german}            %macht deutsche überschriften
+\usepackage[latin1]{inputenc}  %man kann Sonderzeiche wie ü,ö usw direkt eingeben
+\usepackage{amsmath}           %macht
+\usepackage{amsfonts}          %Mathe
+\usepackage{amssymb}           %mächtiger
+\usepackage{graphicx}          %erlaubt Graphiken einzubinden (.eps für dvi und ps sowie .jpg für pdf)
+\usepackage[T1]{fontenc}       %Zeichenbelegung der verwendeten Schrift
+\usepackage{ae}                %macht schöneres ß
+\usepackage{typearea}	       %ermöglicht änderung des Seitenspiegels
+\usepackage{scrlayer-scrpage}  %ermöglicht änderung der Kopf-/Fußzeile
+\usepackage{lastpage}          %lässt auf die Seienanzahl zugreifen
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{placeins}
+
+\renewcommand{\figurename}{Abb.}
+
+\pagestyle{scrheadings}        %sagt Koma-Skript, dass selbstdefiniers Kopfzeilen verwendet werden
+\typearea{16}                  %stellt Seitenspiegel ein
+\columnsep25pt				   %definiert Breite zwischen den zwei Spalten von \twocolumns
+
+\renewcommand{\pnumfont}{%     %ändert die Schriftart der Seitennummerierung
+\normalfont\rmfamily\slshape}  %ändert die Schriftart der Seitennummerierung 
+
+
+
+\begin{document}
+\cfoot{\thepage /\pageref{LastPage}}     %macht die Seitennumerierung der Fom 2/5 (ausser auf der Titelseite)
+
+\twocolumn[{\csname @twocolumnfalse\endcsname                %erlaubt "Abstrakt" über beide Spalten
+\titlehead{                                                  %Kopfzeile
+	\begin{tabular*}{\textwidth}[]{@{\extracolsep{\fill}}lr}   %Kopfzeile
+	Betreuer: Martin Stehno & \today\\                          %Kopfzeile      hier den Betreuer eintragen!!!
+	\end{tabular*}                                             %Kopfzeile
+	}
+\title{Kennlinien von Vakuumdioden und Franck-Hertz-Versuch}	    %Titel der Versuchs
+\author{Jonas Beck und Jonathan Bodky		}                   %Namen der Studenten
+\date{}                                                         %benötigt um automatisches Datum auszuschalten
+\maketitle                                                      %erzeugt Titelseite
+\vspace{-8ex}                                                   %verringert Abstand zur Überschrift
+\begin{abstract}                                                %Beginn des Abstracts
+Wir haben die Kennlinie einer Vakuumdiode sowie deren Sättigungsströme gemessen und die Gültigkeit des Schottky-Langmuir Raumladungsgesetzes sowie der Richardsongleichung für Glühemission untersucht. Aus den Sättigunsströmen konnte die Austrittsarbeit $W_A~=~(6,591~\pm~0,062)\si{\eV}$ von Wolfram abgeschätzt werden. Zudem wurde das Franck-Hertz-Experiment mit den Füllgasen Neon und Quecksilberdampf durchgeführt, wobei die Anregungsenergien dieser Gase gemessen wurden. Für den Neon 2p$\to$3p Übergang erhalten wir $E_\text{1, exp}=(19,13\pm0,50)\si{\eV}$, für den Neon 3s$\to$3p Übergang $E_{2, exp}=(2,22\pm0,71)\si{\eV}$ und für den Quecksilber $6^1S_0$ - $6^3P_1$ Übergang $E_{exp}=(4,78\pm0,21)\si{\eV}$.
+\\ \\ 
+\\ 
+Versuchsdurchführung: 15. September 2021\\       %Datum ändern!
+Protokollabgabe: 22. September 2021\\ %Datum ändern!
+1. Korrektur: 5. Oktober 2021
+\\ 
+\\ 
+\end{abstract}
+}]
+
+\section{Einleitung}
+Dioden sind elektrische Schaltelemente mit zwei Anschlussklemmen, die mittlerweile meist als Halbleiter ausgeführt werden und eine gleichrichtende Wirkung auf den Strom haben. Doch auch heute noch besitzen alte Vakuumdioden das bei weitem sauberste Schaltverhalten, da bei diesen keine Kriechströme fließen. Eine solche Diode wurde in unserem Experiment untersucht. Durch Messung ihrer Kennlinie konnten nicht nur ihr Schaltverhalten als elektrisches Bauteil charakterisiert, sondern auch für ihre Funktion verantwortliche physikalische Effekte wie die Glühemission von Elektronen und das Abschirmen elektrischer Felder durch Raumladungen betrachtet werden.\\
+Aber auch Abwandlungen von Dioden mit komplexeren Kennlinien sind möglich. Auf einer solchen basiert der Franck-Hertz-Versuch, erstmals beschrieben 1914 \cite{fh}, bei dem Röhrendioden mit einem bestimmten Füllgas unter Niederdruck untersucht werden. Um die zusätzlich durch Interaktion der Elektronen mit dem Gas entstehenden Effekte identifizieren und verstehen zu können, sind die Ergebnisse der Vakuumdiode notwendig. So kann durch den Franck-Hertz-Versuch auf die diskreten Energieniveaus des Gases sowie Stoßwechselwirkung zwischen Atomen und Elektronen rückgeschlossen werden. Wir wollen uns hier in erster Linie einen Einblick verschaffen und verwenden daher bereits in der theoretischen Beschreibung unserer Daten einige Näherungen.
+
+
+
+\section{Untersuchung von Vakuumdioden}
+
+\subsection{Aufbau und theoretische Beschreibung}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/Vakuumdiode.png}
+\end{center}
+\caption[]{Aufbau einer Vakuumdiode. Bei Erhöhung der Anodenspannung $U_A$ wird ein größerer Anteil der aus der geheizten Kathode ausgetretenen Elektronen von der Anode angezogen, folglich steigt $I_A$. Bei umgekehrter Polung von $U_A$ fließt kein Strom, da die negativen Ladungsträger nur an der Kathode zur Verfügung stehen.~\cite{vakuum} }
+\label{fig:Vakuumdiode}
+\end{figure}
+Eine Vakuumdiode besteht typischerweise aus einer evakuierten Glasröhre mit zwei elektrischen Kontakten (negative Kathode und positive Anode, Abb.~\ref{fig:Vakuumdiode}). Die Kathode wird durch Anlegen einer  Heizspannung $U_H$ erwärmt, wodurch aufgrund des glühelektrischen Effekts Elektronen aus ihrer Oberfläche austreten \cite{gerth}. Wird nun eine positive Anodenspannung $U_A$ angelegt, so wird ein Teil der Elektronen zur Anode hin beschleunigt und es fließt ein messbarer Anodenstrom $I_A$. Bei umgekehrt gepolter Spannung kann kein Strom fließen, da die negativen Ladungsträger ausschließlich an der Kathode zur Verfügung stehen. Das Bauteil wirkt also gleichrichtend.\\
+
+Im Fall großer Anodenspannungen wird der Anodenstrom durch die Anzahl der an der Kathode bereitgestellter Elektronen beschränkt. Die Stromdichte dieser durch die Kathodenoberfläche wird durch die Richardson-Gleichung
+\begin{align}\label{Richardson}
+j=CT^2e^{-\frac{W_A}{k_B T}}
+\end{align}
+\cite{gerth} mit einer Materialkonstanten $C$ und der Boltzmannkonstante $k_B$ beschrieben. Sie lässt sich mit der Fermi-Dirac-Verteilung der Elektronenenergie innerhalb der Kathode motivieren, die im Limes niedriger Temperaturen bzw. hoher Austrittsarbeiten $W_A$ in die Boltzmannverteilung übergeht \cite{gerth}. Betrachtet man auf deren Basis die Anzahl der Elektronen, die pro Zeit auf die Außenfläche der Kathode treffen und über ausreichend Energie verfügen, um die zum Verlassen des Materials notwendige Austrittsarbeit $W_A$ aufzubringen, so erhält man daraus die Richardson-Gleichung.\\
+
+Im Fall niedriger Anodenspannungen können dagegen nicht alle emittierten Elektronen zum Stromfluss beitragen, da das elektrische Feld von der um die Glühkathode herum entstehenden Raumladung abgeschirmt wird. Im Extremfall kann das Feld an der Kathode sogar vollständig verschwinden. In dieser Näherung lässt sich die Stromdichte in der Vakuumdiode durch das Schottky-Langmuir-Raumladungsgesetz~\cite{gerth}
+
+\begin{align}\label{Schottky}
+j= \frac{4}{9}\epsilon_0\sqrt{\frac{2e}{m_e}}\frac{(U_A-U_K)^\frac{3}{2}}{d^2}
+\end{align}
+mit der elektrischen Feldkonstante $\epsilon_0$, der Elementarladung $e$, der Elektronenmasse $m_e$, dem Abstand $d$ zwischen Anode und Kathode sowie der Kontaktspannung $U_K$ beschreiben.\\
+Die Kontaktspannung bezeichnet im Allgemeinen diejenige Spannung, die sich aufgrund verschiedener Austrittsarbeiten zwischen den Oberflächen zweier verschiedener Metalle aufbaut, wenn diese miteinander in Kontakt gebracht werden. Im Fall der Vakuumdiode ist sie genau die Spannung, die angelegt werden muss, sodass kein Strom mehr fließt. 
+
+
+\subsection{Kennlinie einer Vakuumdiode}
+
+Die Diodenkennlinie beschreibt den durch das Bauteil fließenden Strom $I_A$ in Abhängigkeit der angelegten Spannung $U_A$ und charakterisiert das Schaltverhalten der Diode.\\
+
+Zur Beschreibung der vorliegenden Röhrendiode wurden für die Parametereinstellungen $U_H=6,5\si{\V}$ sowie $U_H=7,5\si{\V}$ Anodenstrom und Anodenspannung gemessen und die Kennlinien in Abb.~\ref{fig:Kennlinie} dargestellt.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-1.png}
+\end{center}
+\caption[]{Gemessene Kennlinien einer Vakuumdiode bei verschiedenen Heizspannungen $U_H$. Für negative Anodenspannungen sperrt die Diode den Stromfluss. Bei positiven Spannungen kommt es zu einem Anstieg des Stromes, der ab einem gewissen Punkt in den Sättigungsbereich übergeht, hier zu sehen für die $U_H=6,5\si{\V}$-Kennlinie. Der Gültigkeitsbereich des Schottky-Langmuir-Gesetzes(\ref{Schottky}) wurde durch eine vertikale Gerade gekennzeichnet.}
+\label{fig:Kennlinie}
+\end{figure}
+Man erkennt, dass für große negative Spannungen kein Strom fließt, da die aus der Kathode austretenden Elektronen nicht genügend thermische Energie haben, um das Gegenfeld zwischen den Kontakten zu durchlaufen.
+Für positive Anodenspannungen steigt der Strom zunächst gemäß dem Schottky-Langmuir-Gesetz (Gl.~\ref{Schottky}) an, da mit erhöhter Anodenspannung mehr Elektronen zur Anode hin beschleunigt werden können. Sobald die Raumladung um die Anode vollständig abgesaugt wurde, flacht der Stromverlauf ab, wie in der Kennlinie für $U_H= 6,5 \si{\V}$ ab $U_A~\approx 100 \si{\V}$ erkennbar ist. In diesem Bereich ist die Anodenspannung groß genug, um fast alle ausgetretenen Elektronen zur Anode zu beschleunigen, die Kennlinie nähert sich also dem Sättigungsstrom an und wird nun durch die Richardson-Gleichung (Gl.~\ref{Richardson}) beschrieben. \\
+Für die $U_H=7,5\si{\V}$-Kennlinie ist ein solches Abflachen nicht zu erkennen, die Anodenpannung ist also in dem dargestellten Bereich noch nicht groß genug, um alle Elektronen abzusaugen und es stellt sich keine Sättigung ein.
+
+\subsubsection{Raumladungsbereich und Kontaktspannung (Schottky-Langmuir)}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-2_unbereinigt.png}
+\end{center}
+\caption[]{Schottky-Langmuir Raumladungsbereich der $U_H=6,5\si{\V}$ Kennlinie in doppellogarithmischer Auftragung. Zur Ermittlung des Schottky-Langmuir Exponenten wird eine Potenzfunktion der Form $I_A=a{U_A}^b$ an die Daten gefittet.}
+\label{fig:exp6,5}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-3_unbereinigt.png}
+\end{center}
+\caption[]{Schottky-Langmuir Raumladungsbereich der $U_H=7,5\si{\V}$ Kennlinie in doppellogarithmischer Auftragung. Zur Ermittlung des Schottky-Langmuir Exponenten wird eine Potenzfunktion der Form $I_A=a{U_A}^b$ an die Daten gefittet.}
+\label{fig:exp7,5}
+\end{figure}
+Um die Gültigkeit des Schottky-Langmuir-Raumladungsgesetzes~(Gl.~\ref{Schottky}) quantitativ zu überprüfen, wird der für die gemessenen Daten beste Exponent für den Zusammenhang zwischen $j$ und $(U_A-U_K)$ bestimmt. Hierzu werden die Daten aus dem gekennzeichneten Bereich in Abb.~\ref{fig:Kennlinie} doppellogarithmisch in Abb.~\ref{fig:exp6,5} und Abb.~\ref{fig:exp7,5} aufgetragen. Der Bereich wurde so gewählt, dass die Kennlinien hier übereinstimmen, da nur in diesem Bereich eine Gültigkeit des erwarteten Zusammenhangs (Gl.~\ref{Schottky}) möglich ist.\\
+
+Zur Ermittlung des (unbereinigten) Exponenten $b$ des Raumladungsgesetzes wird eine Potenzfunktion der Form $I_A=a{U_A}^b$, die in der gewählten Auftragung als Gerade erscheint, an die Daten gefittet. Die für die beiden Kennlinien ermittelten Exponenten $b$ sind in Tabelle \ref{tab:exp} angegeben, ihre Fehler ergeben sich mithilfe von Min-Max-Geraden.  Die Exponenten sind im Rahmen ihres Fehlers miteinander, die $7,5\si{\V}$-Kennlinie sogar mit dem theoretisch erwarteten Exponenten von $\frac{3}{2}$ (Gl.~\ref{Schottky}) vereinbar und beide Exponenten liegen unter diesem Wert. Bei der Ermittlung des Exponenten auf diese Weise vernachlässigt man jedoch die von $0$ verschiedene Kontaktspannung, was zu einem systematischen Auswertefehler führt. Da der Logarithmus für große Argumente nur wenig steigt, verursacht diese Vernachlässigung vor allem für kleine Spannungen eine starke Abweichung. Somit zeigen die ermittelten Exponenten zwar, dass der tatsächliche Exponent in der Größenordnung von $\frac{3}{2}$ liegt, eine genaue Aussage ist jedoch nicht möglich.
+
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}c|ccc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt}  Heizspannung [V]  &  $6,5$  	&  $7,5$ \\
+\hline
+\rule[-5pt]{0pt}{23pt}  \small $U_K$ [V]  &  \small $-4,0\pm2,6$  	&  \small$-2,6\pm1,0$ \\
+\rule[-5pt]{0pt}{23pt}  \small$b$ unbereinigt   & \small$1,35\pm0,13$  	&  \small$1,40\pm0,20$ \\
+\rule[-5pt]{0pt}{23pt}  \small$b$ bereinigt  &  \small$1,44\pm0,47$  	&  \small$1,51\pm0,36$ \\
+\hline
+\hline
+\end{tabular*}  
+\normalsize
+\caption[]{Extrapolierte Kontaktspannungen $U_K$ für beide Kennlinien, damit bereinigte sowie unbereinigte Exponenten des Raumladungsgesetzes}  %siehe Graphik: Beschriftung
+\label{tab:exp}                             %siehe Graphik: zum Zitieren
+\end{table}
+ 
+Zur Ermittlung der Kontaktspannung wird der erwartete theoretische Zusammenhang (Gl.~\ref{Schottky}) als gültig angenommen. Für den markierten Raumladungsbereich der Kennlinien wird in Abb.~\ref{fig:Kontakt6,5} und Abb.~\ref{fig:Kontakt7,5} jeweils ${I_A}^{\frac{2}{3}}(U_A)$ dargestellt.
+An die Datenpunkte wird eine Gerade angepasst, deren Schnittpunkt mit der Spannungsachse gerade die Kontaktspannung ergibt. Die Kontaktspannungen sind in Tabelle \ref{tab:exp} angegeben und stimmen im Rahmen ihrer Fehler, welche mithilfe von Min-Max-Geraden bestimmt wurden, überein. Als bester Schätzer der Kontaktspannung wird ein gewichteter Mittelwert aus den Ergebnissen der beiden Kennlinien gebildet und mit $U_k=( -2,82\pm 0,97)~\si{\V}$ angegeben. Der zugehörige Fehler ist aufgrund der eingehenden systematischen Fehler sehr groß. Sicher lässt sich also vor allem aussagen, dass die Kontaktspannung im negativ einstelligen Voltbereich liegt.\\\\
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-4.png}
+\end{center}
+\caption[]{${I_A}^\frac{2}{3}$-Auftragung des Raumladungsbereichs der $U_H=6,5\si{\V}$ Kennlinie. In dieser kann die Kontaktspannung der Diode durch Extrapolation der Ausgleichsgerade auf die Abszisse bestimmt werden. Die Fehler sind in Symbolgröße und werden unterdrückt.}
+\label{fig:Kontakt6,5}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-5.png}
+\end{center}
+\caption[]{${I_A}^\frac{2}{3}$-Auftragung des Raumladungsbereichs der $U_H=7,5\si{\V}$ Kennlinie. In dieser kann die Kontaktspannung der Diode durch Extrapolation der Ausgleichsgerade auf die Abszisse bestimmt werden. Die Fehler sind in Symbolgröße und werden unterdrückt.}
+\label{fig:Kontakt7,5}
+\end{figure}
+
+Zur weiteren Überprüfung der Plausibilität des theoretischen Exponenten im Raumladungsgesetz können die gemessenen Daten nun um die ermittelte Kontaktspannung bereinigt werden. Es wird also $U_A-U_K$ gebildet. Mit den bereinigten Daten wird genauso wie in Abb.~ \ref{fig:exp6,5} und \ref{fig:exp7,5} verfahren, das Ergebnis ist in Abb.~\ref{fig:exp_ber_6,5} bzw. \ref{fig:exp_ber_7,5} dargestellt. Die erhaltenen Exponenten sind in Tabelle~\ref{tab:exp} angegeben und liegen deutlich näher am erwarteten Wert von $\frac{3}{2}$. Für beide Kennlinien ist der erhaltene Wert mit dem erwarteten im Rahmen der Fehler vereinbar. Diese besser mit der Theorie übereinstimmenden Werte sind aber auch damit zu begründen, dass der theoretische Exponent bereits bei der Ermittlung der Kontaktspannung vorausgesetzt wird, was sich nun durch die Bereinigung der Anodenspannungen auch auf die Exponentenbestimmung auswirkt.
+
+\subsubsection{Sättigungsbereich der Kennlinie (Richardson)}
+
+Für hohe Anodenspannungen wird der Anodenstrom nicht beliebig groß, da die Kathode nur eine begrenzte Anzahl an Elektronen in Form der Raumladung bereitstellt. Dies ist gut an der $6,5\si{\V}$-Kennlinie in Abb.~\ref{fig:Kennlinie} zu erkennen, bei der die Raumladung ab etwa $U_A=100\si{\V}$ das E-Feld nicht mehr vollständig von der Kathode abschirmt. Um diesen Sättigungsstrom mit dem erwarteten Verlauf nach Gl.~\ref{Richardson} vergleichen zu können, wurde der Stromfluss für Heizspannungen zwischen $U_H=5,0\si{\V}$ und $U_H=7,0\si{\V}$ bei einer Anodenspannung von $500\si{\V}$ gemessen.\\
+Aus der Heizspannung kann nach \cite{instr} die Temperatur des Wolfram-Glühdrahtes näherungsweise bestimmt werden:
+\begin{align} \label{temp}
+T(U_H)=1616K+97\frac{\si{\K}}{\si{\V}}\cdot~U_H
+\end{align}
+Somit kann der Sättigungsstrom in Abhängigkeit der Temperatur berechnet werden. Zur Überprüfung der Richardson-Gleichung sowie der Ermittlung der Austrittsarbeit der Heizkathode wird $\frac{I_A}{T^2}$ logarithmisch gegen das Inverse der Temperatur aufgetragen und in Abb.~\ref{fig:Sättigung} dargestellt.\\
+Man erkennt, dass die Messpunkte für niedrige Temperaturen wie erwartet gut auf einer Geraden liegen, für höhere Temperaturen dagegen abweichen. Dies führen wir darauf zurück, dass bei höheren Heizspannungen und somit hohen Temperaturen die angelegte Anodenspannung von $500\si{\V}$ nicht ausreichend groß war, um die Abschirmung der Kathode durch die Raumladung aufzuheben. Die gemessenen Ströme sind daher geringer als der eigentliche Sättigungsstrom. Dies erklärt die systematische Abweichung der Messpunkte nach unten. Für Heizspannungen bis $6,5\si{\V}$ kann auf Basis von Abb.~\ref{fig:Kennlinie} davon ausgegangen werden, dass tatsächlich der Sättigungsstrom gemessen wurde.\\
+Zur Bestimmung der Austrittsarbeit des Kathodenmaterials wird eine Gerade an die linearisierten Daten angepasst. Aufgrund des bereits genannten systematischen Fehlers für Heizspannungen größer als $6,5\si{\V}$ werden hierfür nur die Datenpunkte mit geringeren Heizspannungen berücksichtigt, bei denen tatsächlich der Sättigungsstrom gemessen wurde.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-7.png}
+\end{center}
+\caption[]{Überprüfung der Richardson-Gleichung durch Auftragung von $\frac{I}{T^2}\big(\frac{1}{T}\big)$ und exponentielle Anpassung. Die Temperatur wurde aus der Heizspannung berechnet, die Originaldaten sind im Inlet gezeigt. Für hohe Temperaturen ist eine systematische Abweichung vom Idealverlauf erkennbar.}
+\label{fig:Sättigung}
+\end{figure}
+\\Die Steigung der Geraden ist nach Gl.~\ref{Richardson} $-\frac{W_A}{k_B}$, folglich kann mit dieser die Austrittsarbeit $W_A$ berechnet werden. Mit $k_B=1,380649\cdot10^{-23}\frac{\si{\J}}{\si{\K}}$ sowie $e=1,602176634\cdot10^{-19}\si{\coulomb}$~\cite{codata}
+ergibt sich $W_A~=~(6,591~\pm~0,062)\si{\eV}$. Sie stimmt im Rahmen ihres Fehlers nicht mit dem Literaturwert von $W_A=4,55\si{\eV}$~\cite{wolfram} für polykristallines Wolfram überein. Dies ist primär darauf zurückzuführen, dass die verwendete Formel zur Berechnung der Kathodentemperatur lediglich eine Näherung ist, die zudem Veränderungen der bereits recht alten Diode über die Zeit nicht berücksichtigt. Das führt in der gewählten Auftragung in beiden Achsen zu weiteren systematischen Abweichungen, die bei der Ermittlung der Austrittsarbeit nicht beachtet wurden.
+
+
+\section{Franck-Hertz-Versuch}
+
+\subsection{Aufbau des Versuchs}
+
+Der Aufbau des Franck-Hertz-Versuchs besteht aus einer gasgefüllten Röhre, in der zusätzlich zu den aus der Vakuumdiode bekannten Kontakten, Glühkathode und Anode, noch zwei Gitter verbaut sind, wie in Abb. \ref{fig:Franck-Hertz} dargestellt.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/Franck-Hertz.jpg}
+\end{center}
+\caption[]{Schematischer Aufbau der verwendeten Franck-Hertz Röhre}
+\label{fig:Franck-Hertz}
+\end{figure}
+
+Zwischen dem ersten Gitter und der Glühkathode wird eine steuerbare Saugspannung $U_S$ angelegt, die dafür sorgt, dass die Abschirmungseffekte der Raumladung an der Kathode für das eigentliche Experiment, das zwischen den Gittern stattfindet, unterdrückt werden. Somit wird ein Teil der Kathodenelektronen abgesaugt und befindet sich nun zwischen den Gittern, wo die Elektronen durch die Beschleunigungsspannung $U_B$ zum zweiten Gitter beschleunigt werden. Zum Anodenstrom $I_A$ tragen jedoch nur die Elektronen bei, die am zweiten Gitter genügend kinetische Energie haben, um die einstellbare Gegenspannung $U_G$ zu überwinden.\\
+Franck-Hertz-Röhren können mit einer Vielzahl an Füllgasen betrieben werden, in unserem Experiment wurden Neon und Quecksilberdampf untersucht und die Messkurven in Abb.~\ref{fig:Neon},~\ref{fig:Quecksilber} dargestellt. Für diese wurden Gegen- und Saugspannung fest eingestellt und über den Spannungsabfall an einem Shunt der Anodenstrom in Abhängigkeit der Beschleunigungsspannung gemessen. Die Spannungsmessungen erfolgten mithilfe eines PASCO Universal Interface 550 Analog-Digital-Wandlers bei einer Abtastfrequenz von $50\si{\Hz}$.
+
+\subsection{Theoretische Beschreibung des Franck-Hertz-Versuchs}\label{sec:fht}
+
+Die Quantenphysik besagt, dass Atome nur in diskrete Energieniveaus angeregt werden können. Tatsächlich kann der Franck-Hertz-Versuch als Bestätigung dieser herangezogen werden, da sich nur so der charakteristische Stromverlauf erklären lässt.\\
+Elektronen mit zu wenig Energie zur Anregung des Gases wechselwirken also nur elastisch mit den Atomen. Im Stromverlauf ist daher mit zunehmender Beschleunigungsspannung zunächst ein Anstieg des Stroms zu erwarten, da mit steigendem $U_B$ ein größerer Teil der Elektronen über die zum Durchlaufen der Gegenspannung notwendige Energie verfügt. Aufgrund ihrer deutlich geringeren Masse verglichen mit den Atomen verlieren die Elektronen bei den elastischen Stößen näherungsweise keine Energie.\\
+Ab einer ausreichend großen Beschleunigungsspannung bricht der Strom ein und ein lokales Maximum entsteht. Hier verfügen die schnellsten Elektronen gerade über ausreichend Energie, um inelastisch mit den Gasatomen zu stoßen und diese anzuregen. Dabei verlieren sie die zur Anregung nötige Energie und können das Gegenfeld nicht mehr überwinden. Erhöht man die Beschleunigungsspannung nun weiter, stoßen auch langsamere Elektronen und die Kennlinie bekommt eine abfallende Flanke. Bei noch höheren Spannungen werden die Elektronen nach dem Stoß erneut beschleunigt und können wieder zum Anodenstrom beitragen, bis sie bereits vor dem zweiten Gitter wieder genügend Energie haben, um ein zweites Mal inelastisch zu stoßen. Bei dieser Beschleunigungsspannung befindet sich das zweite Hauptmaximum. Das dritte Maximum entsteht analog, wenn die Elektronen genügend Energie für einen dritten Stoß haben, und so weiter.\\
+Analog der Vakuumdiode im Schottky-Langmuir Bereich nimmt der Anodenstrom in den Maxima mit steigender Beschleunigungsspannung zu. In den Minima fällt er nicht auf Null zurück und steigt ebenfalls, da bei einer höheren Beschleunigungsspannung die Wahrscheinlichkeit zunimmt, nach dem letzten Stoß auf ausreichend Energie zum Überwinden des Gegenfeldes beschleunigt zu werden.
+
+\subsection{Franck-Hertz Versuch mit Neon}
+
+Bei Verwendung des Füllgases Neon wurde die Beschleunigungsspannung an der Franck-Hertz Röhre von $0\si{\V}$ bis ca. $70\si{\V}$ variiert. Es wurden mehrere Messreihen mit verschiedenen Kombinationen von $U_S$ und $U_G$ aufgenommen, um eine möglichst scharfe, den verfügbaren Messbereich ausnutzende Franck-Hertz Kurve zu erhalten. Die Kurve, die dies am besten erfüllt, ist in Abb.~\ref{fig:Neon} dargestellt. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-9.png}
+\end{center}
+\caption[]{Aufgenommene Franck-Hertz Kurve für Neon. Auffällig sind die Nebenmaxima. Die Maxima wurden zur quantitativen Auswertung markiert.}
+\label{fig:Neon}
+\end{figure}
+\\\\Sie folgt der in Abschnitt~\ref{sec:fht} erläuterten Theorie sehr gut, weist aber zusätzlich zu den oben beschriebenen Haupt- auch Nebenmaxima auf. Diese können dadurch erklärt werden, dass es nicht nur ein Energieniveau gibt, auf das die Neonatome angeregt werden können, sondern mehrere, zwischen denen selbst wieder Übergänge möglich sind.
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt}  Maxima & Energiedifferenz [\si{\eV}] \\
+\hline
+\rule[-5pt]{0pt}{23pt}  $1\to2$ & $17,78\pm0,71$ \\
+\rule[-5pt]{0pt}{23pt}  $2\to3$ & $7,94\pm0,71$ \\
+\rule[-5pt]{0pt}{23pt}  $2\to4$ & $20,48\pm0,71$ \\
+\rule[-5pt]{0pt}{23pt}  $4\to5$ & $3,85\pm0,71$ \\
+\rule[-5pt]{0pt}{23pt}  $4\to6$ & $6,07\pm0,71$ \\
+\rule[-5pt]{0pt}{23pt}  $5\to6$ & $2,22\pm0,71$ \\
+\hline
+\hline
+\end{tabular*}  
+\normalsize
+\caption[]{Energieabstände der Haupt- und Nebenmaxima in der Neon-Franck-Hertz-Röhre. Die Fehler ergeben sich durch Gauß'sche Fortpflanzung aus dem geschätzten Ablesefehler von $\sigma_\text{U}=0,5\si{\V}$.}  %siehe Graphik: Beschriftung
+\label{tab:neon}                             %siehe Graphik: zum Zitieren
+\end{table}
+\\\\Um diese Beobachtungen zu quantifizieren, werden aus der aufgenommenen Kurve die Abstände zwischen den Maxima bestimmt und durch Multiplikation mit der Elementarladung $e$ in korrespondierende Energien umgerechnet. Die Energiedifferenzen sind in Tabelle~\ref{tab:neon} angegeben. In den Energieabständen lassen sich zwischen den Hauptmaxima der Abstand $E_\text{1, exp}=( 19,13\pm 0,50)\si{\eV}$ und zwischen den Nebenmaxima $5\to6$ der Abstand $E_\text{2, exp}=( 2,22\pm 0,71)\si{\eV}$ finden, während die anderen Abstände der Nebenmaxima durch Vielfache von $E_2$ erklärt werden können. Diesen können bei Vergleich mit dem Energieniveauschema von Neon in Abb.~\ref{fig:ENeon} Anregungen eines Neonelektrons vom Grundzustand im 2p- in das 3p-Orbital mit einer Energie von $E_\text{1, lit} \in [18,3\si{\eV}; 18,9\si{\eV}] $ bzw. vom angeregten Zwischenorbital 3s in das 3p-Orbital mit Energien im Bereich $E_\text{2, lit} \in [1,51\si{\eV}; 2,33\si{\eV}] $ zugeordnet werden.\\
+Daraus folgern wir, dass die Stoßanregung mit $E_1$ vom 2p- in das 3p-Niveau für die Hauptmaxima verantwortlich ist. Aus dem angeregten 3p-Zustand fällt das angeregte Neonelektron unter Emission von gelbem Licht erst auf das 3s-Niveau zurück, von wo aus es entweder in den Grundzustand zurückkehrt oder nochmals durch einen Stoß mit der Energie $E_2$ in das 3p-Niveau angeregt wird. Durch letztere Anregung entstehen die Nebenmaxima. Diese ist mehrmals direkt nacheinander möglich, weshalb mehrere Nebenmaxima nach einem Hauptmaximum im Abstand von Vielfachen von $E_2$ entstehen. Da die Kennlinie nicht ideal scharf ist, sind nicht alle Nebenmaxima erkennbar.
+\\\\Stellt man einen ausreichend großen Elektronenstrom ein, so lässt sich die bei Abregung des Neon aus dem 3p in das 3s Niveau enstehende sichtbare elektromagnetische Strahlung in Form gelb-oranger Leuchtzonen in der Neonröhre auch mit dem Auge erkennen. Diese Zonen wandern bei steigender Beschleunigungsspannung vom zweiten Gitter aus in Richtung des ersten, da es nun früher zur ersten Stoßanregung kommt, und werden dabei zunehmend dünner. Die Beschleunigungsspannungen, ab denen gerade eine neue Leuchtzone erschienen ist, sind in Tabelle~\ref{tab:shine} angegeben.
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt}  Anzahl Linien  &  Beschleunigungsspannung $U_B [\si{\V}]$\\
+\hline
+\rule[-5pt]{0pt}{23pt}   1  &   $22 \pm 1$  	\\
+\rule[-5pt]{0pt}{23pt}   2  &   $43 \pm 1$  	\\
+\rule[-5pt]{0pt}{23pt}   3  &   $62 \pm 1$  	\\
+\hline
+\hline
+\end{tabular*}  
+\normalsize
+\caption[]{Beschleunigungsspannungen, ab denen bei Neon sichtbare Stoßzonen zu erkennen waren.}  %siehe Graphik: Beschriftung
+\label{tab:shine}                             %siehe Graphik: zum Zitieren
+\end{table}
+\\Die Spannungen sind nur grobe Richtwerte, da die Zonen in der Röhre nur schwer genau abgrenzbar waren. Im Rahmen ihrer Genauigkeit sind ihre Abstände aber wie zu erwarten ungefähr so groß wie die der Hauptmaxima in der Kennlinie. Das bestätigt die These, dass nach dem für die Hauptmaxima verantwortlichen 2p$\to$3p-Übergang ein das gelbe Licht emittierender 3p$\to$3s-Übergang stattfindet.
+
+
+\subsection{Franck-Hertz Versuch mit Quecksilber}
+
+Ein analoges Experiment wurde für Quecksilberdampf bei $T=171\si{\celsius}$ als Füllgas durchgeführt. Hier wurde die Beschleunigungsspannung von $0\si{\V}$ bis ca. $30\si{\V}$ variiert. Die beste aufgenommene Kennlinie ist in Abb.~\ref{fig:Quecksilber} dargestellt. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-8.png}
+\end{center}
+\caption[]{Aufgenommene Franck-Hertz Kurve für Quecksilber. Auffällig ist der zunehmende Abstand der Maxima. Diese wurden zur quantitativen Auswertung markiert.}
+\label{fig:Quecksilber}
+\end{figure}
+\\\\Diese Kurve erfüllt das Ziel einer möglichst scharfen Kennlinie mit vielen Maxima sogar noch besser als die für Neon, was eine etwas genauere quantitative Betrachtung der Abstände der Maxima zulässt. Hierbei fällt auf, dass der Abstand benachbarter Maxima mit zunehmender Beschleunigungsspannung zunimmt. Das kann darauf zurückgeführt werden, dass ein Elektron nicht sofort bei Erreichen der Anregungsenergie des Gases auf ein Atom stößt, sondern zuvor die (hier konstante) mittlere freie Weglänge des Gases durchläuft. Die hierbei aufgenommene Energie ist proportional zur Beschleunigungsspannung und geht beim nächsten Stoß verloren. Dies verursacht ein Aufspreizen der Anregungszonen und dadurch auch der Kennlinie \cite{rapior}.
+Aufgrund dieses Effekts ist zu erwarten, dass die aus dem Mittelwert der in Tabelle~\ref{tab:hg} angegebenen Abstände der Maxima bestimmte Anregungsenergie von $E_{exp}=(4,78 \pm 0,21)\si{\eV}$ etwas größer als die tatsächliche Energie des Quecksilberübergangs ist. Aufgrund des großen Fehlerintervalls ist dies mit unserem Ergebnis aber nicht quantitativ belegbar. Als Übergang kann aus dem Energieniveauschema von Quecksilber in Abb.~\ref{fig:EQuecksilber} der Übergang vom $6^1S_0$- in das $6^3P_1$-Orbital mit einer Energie von $E_{lit}=4,89\si{\eV}$ identifiziert werden \cite{instr, mercurytable}. Unser experimentell ermittelter Wert ist mit diesem im Rahmen seines Fehlers vereinbar.
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt}  Maxima & Energiedifferenz [\si{\eV}] \\
+\hline
+\rule[-5pt]{0pt}{23pt}  $1\to2$ & $4,54\pm0,42$ \\
+\rule[-5pt]{0pt}{23pt}  $2\to3$ & $4,73\pm0,42$ \\
+\rule[-5pt]{0pt}{23pt}  $3\to4$ & $4,88\pm0,42$ \\
+\rule[-5pt]{0pt}{23pt}  $4\to5$ & $4,98\pm0,42$ \\
+\hline
+\hline
+\end{tabular*}  
+\normalsize
+\caption[]{Energieabstände der Maxima in der Quecksilber-Franck-Hertz-Röhre. Die Fehler ergeben sich durch Gauß'sche Fortpflanzung aus dem geschätzten Ablesefehler von $\sigma_\text{U}=0,3\si{\V}$}  %siehe Graphik: Beschriftung
+\label{tab:hg}                             %siehe Graphik: zum Zitieren
+\end{table}
+\\\\Für die Quecksilberröhre kann wie zuvor bei der Diode die Kontaktspannung $U_\text{K}$ abgeschätzt werden. Diese ist definiert als die angelegte Spannung, bei der gerade kein Anodenstrom fließen kann, da die unterschiedlichen Austrittsarbeiten von Anode und Kathode durch das elektrische Feld kompensiert werden. Dieses Feld wird bei unserer Franck-Hertz-Röhre durch die Summe aus Saug- und Beschleunigungsspannung erzeugt, womit die auf ein Elektron übertragene Energie mit der Elementarladung $e$ durch
+\begin{align}\label{eq:uk1}
+E_\text{ges}=e(U_S+U_B-U_K)
+\end{align}
+gegeben ist. Gleichzeitig hat das Elektron nach der $n$-ten Stoßzone genau $n$ mal die Anregungsenergie $\Delta E$ des Quecksilbers verloren und noch keine weitere Energie aus dem Feld erhalten, weshalb die insgesamt übertragene Energie am $n$-ten Maximum der Franck-Hertz-Kurve auch durch
+\begin{align}\label{eq:uk2}
+E_\text{ges}=n~\Delta E
+\end{align}
+ausgedrückt werden kann. Dabei ist zu beachten, dass das erste markierte Maximum in der Kennlinie (Abb. \ref{fig:Quecksilber}) eigentlich das dritte Hauptmaximum ist, das zweite Hauptmaximum ist zu klein um einen klaren Peak abzulesen und das erste liegt aufgrund der relativ hohen Saugspannung außerhalb des Messbereichs. Durch Gleichsetzen von Gl.~\ref{eq:uk1} und Gl.~\ref{eq:uk2} finden wir schließlich die Kontaktspannung
+\begin{align}
+U_K=U_S+U_B-\frac{n}{e} \Delta E
+\end{align}
+und erhalten durch fehlergewichtete Mittelung der aus den verschiedenen Maxima bestimmten Werte $U_K=(-2,53 \pm 0,44 )\si{\V}$. Die elementaren Fehler der Beschleunigungsspannung wurden aus der Breite der Maxima auf $\sigma_\text{U}= 0,3\si{V}$ geschätzt.
+
+\section{Zusammenfassung}
+In unserem Experiment wurden die Kennlinien einer Vakuumdiode für Anodenspannungen zwischen $\pm 500\si{\V}$ bei Heizspannungen von $6,5\si{\V}$ und $7,5\si{\V}$ gemessen. In der Kennlinie wurde der dem Schottky-Langmuir Gesetz genügende Teil der Messwerte durch doppellogarithmische Linearisierung identifiziert und durch Anpassung eines Potenzgesetzes die Schottky-Langmuir Exponenten $b_{6,5\si{\V}} = 1,35\pm 0,13$ und $b_{7,5\si{\V}} = 1,40\pm 0,20$ berechnet. Durch Extrapolation der Kennlinie im selben Bereich auf $I_A=0$ konnte zudem die Kontaktspannung der glühenden Kathode $U_k= -2,82 \pm 0,97 \si{\V}$ abgeschätzt werden. Des Weiteren haben wir die Sättigungsströme bei einer Anodenspannung von $U_A=500\si{\V}$ für Heizspannungen von $U_H=5,0\si{\V}$ bis $U_H=7,0\si{\V}$ gemessen und durch Berechnung der Temperatur aus der Heizspannung die Gültigkeit der Richardsongleichung im Sättigungsbereich überprüft. Aus den Daten konnte auch die Austrittsarbeit der Wolframkathode zu $W_A~=~(6,591~\pm~0,062)\si{\eV}$ berechnet werden.\\
+Abschließend wurde der Franck-Hertz Versuch an Neon und Quecksilberdampf durchgeführt und die Anregungsenergien dieser Gase gemessen. Für den Neon 2p$\to$3p Übergang erhalten wir $E_\text{1, exp}=(19,13\pm 0,50)\si{\eV}$, für den Neon 3s$\to$3p Übergang $E_\text{2, exp}=(2,22\pm 0,71)\si{\eV}$ und für den Quecksilber $6^1S_0$ - $6^3P_1$ Übergang $E_{exp}=(4,78\pm 0,21)\si{\eV}$. Außerdem wurde für die Quecksilberröhre als Ganzes wie bei der Diode die Kontaktspannung zu $U_K=(-2,53 \pm 0,44)\si{\V}$ bestimmt. Bei Neon konnte zudem in den Stoßzonen eine sichtbares Licht emittierende Atomabregung beobachtet werden.
+
+\FloatBarrier
+
+%FF: Angabe der verwendeten Literatur mit Quellennachweis.
+\begin{thebibliography}{}    %so wird das Literaturverzeichnis erstellt
+\bibitem{instr} Physikalisches Grundpraktikum, Universität Würzburg, Modul C1, Versuch 49, Kennlinien von Vakuumdioden und Franck-Hertz-Versuch, 2021 
+\bibitem{gerth} Meschede, Dieter, Gerthsen Physik, 25. Auflage, Springer-Verlag, Berlin, 2015 
+\bibitem{codata} E. Tiesinga \textit{et al.}, \grqq CODATA
+recommended values of the fundamental physical constants: 2018\grqq, Rev. Mod. Phys.
+93, 025010 (2021)
+\bibitem{vakuum} \url{https://lp.uni-goettingen.de/get/bigimage/5849}, zuletzt aufgerufen am 16.09.2021
+\bibitem{wolfram} H. B. Michaelson, \grqq The work function of the elements and its periodicity\grqq, Journal of Applied Physics 48, 4729-4733 (1977)
+\bibitem{rapior} G. Rapior \textit{et al.}, \grqq New features of the Franck-Hertz experiment\grqq, American Journal of Physics 74, 423 (2006)
+\bibitem{mercurytable} \url{https://physics.nist.gov/PhysRefData/Handbook/Tables/mercurytable5.htm}, zuletzt abgerufen am 20.09.2021
+\bibitem{fh} J. Franck, G. Hertz, \grqq Über Zusammenstöße zwischen Elektronen und Molekülen des Quecksilberdampfes und die Ionisierungsspannung desselben\grqq , Verh. Dtsch. Phys. Ges., 16 457-467 (1914)
+\end{thebibliography}
+
+
+\newpage
+\section{Anhang}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-2.png}
+\end{center}
+\caption[]{Schottky-Langmuir Raumladungsbereich der $U_H=6,5\si{\V}$ Kennlinie in doppellogarithmischer Auftragung mit um die Kontaktspannung bereinigter Anodenspannung. Zur Ermittlung des Schottky-Langmuir Exponenten wird eine Potenzfunktion der Form $I_A=a{U_A}^b$ an die Daten gefittet. Bei der Bereinigung wurde bereits die Theorie vorausgesetzt, weshalb oben der unbereinigte Exponent angegeben wird.}
+\label{fig:exp_ber_6,5}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C49-3.png}
+\end{center}
+\caption[]{Schottky-Langmuir Raumladungsbereich der $U_H=7,5\si{\V}$ Kennlinie in doppellogarithmischer Auftragung mit um die Kontaktspannung bereinigter Anodenspannung. Zur Ermittlung des Schottky-Langmuir Exponenten wird eine Potenzfunktion der Form $I_A=a{U_A}^b$ an die Daten gefittet. Bei der Bereinigung wurde bereits die Theorie vorausgesetzt, weshalb oben der unbereinigte Exponent angegeben wird.}
+\label{fig:exp_ber_7,5}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/Neon_Energie.png}
+\end{center}
+\caption[]{Energieniveauschema von Neon, aus \cite{instr}.}
+\label{fig:ENeon}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/Hg_Energie.png}
+\end{center}
+\caption[]{Energieniveauschema von Quecksilber, aus \cite{instr}.}
+\label{fig:EQuecksilber}
+\end{figure}
+
+\end{document}

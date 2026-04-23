@@ -1,0 +1,296 @@
+
+%Diese LaTeX-Vorlage für Praktikumsprotokolle in Form einer Veröffentlichung für das 
+%F-Praktikum wurde erstellt von Andreas Nuber EP II, Uni Würzburg.
+%Es wurde das Koma-Skript verwendet und sollte somit installiert sein
+%desweiteren sollten alle packages installiert sein, die mit \usepackage{} 
+%eingebunden werden.
+%Zum Testen dieser Vorlage wurde MikTex verwendet sowie TeXnicCenter als Editor
+%beim Compilieren waren 0 Fehler, 1 Warnung und 3 zu volle/leere Boxen. Das ist ok :)
+
+%Für das Erstellen einfach den sinnfreien Text, der zum ausfüllen genommen wurde 
+%ersetzen. Was sonst noch verändert werden sollte steht in den Kommentaren!
+
+
+\documentclass[a4paper,10pt,twocolumn]{scrartcl} %Koma-Skript-Äquivalent zu "article"
+
+\usepackage{german}            %macht deutsche überschriften
+\usepackage[latin1]{inputenc}  %man kann Sonderzeiche wie ü,ö usw direkt eingeben
+\usepackage{amsmath}           %macht
+\usepackage{amsfonts}          %Mathe
+\usepackage{amssymb}           %mächtiger
+\usepackage{graphicx}          %erlaubt Graphiken einzubinden (.eps für dvi und ps sowie .jpg für pdf)
+\usepackage[T1]{fontenc}       %Zeichenbelegung der verwendeten Schrift
+\usepackage{ae}                %macht schöneres ß
+\usepackage{typearea}	       %ermöglicht änderung des Seitenspiegels
+\usepackage{scrlayer-scrpage}  %ermöglicht änderung der Kopf-/Fußzeile
+\usepackage{lastpage}          %lässt auf die Seienanzahl zugreifen
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{placeins}
+
+\renewcommand{\figurename}{Abb.}
+
+\pagestyle{scrheadings}        %sagt Koma-Skript, dass selbstdefiniers Kopfzeilen verwendet werden
+\typearea{16}                  %stellt Seitenspiegel ein
+\columnsep25pt				   %definiert Breite zwischen den zwei Spalten von \twocolumns
+
+\renewcommand{\pnumfont}{%     %ändert die Schriftart der Seitennummerierung
+\normalfont\rmfamily\slshape}  %ändert die Schriftart der Seitennummerierung 
+
+
+
+\begin{document}
+\cfoot{\thepage /\pageref{LastPage}}     %macht die Seitennumerierung der Fom 2/5 (ausser auf der Titelseite)
+
+\twocolumn[{\csname @twocolumnfalse\endcsname                %erlaubt "Abstrakt" über beide Spalten
+\titlehead{                                                  %Kopfzeile
+	\begin{tabular*}{\textwidth}[]{@{\extracolsep{\fill}}lr}   %Kopfzeile
+	Betreuer: Martin Stehno & \today\\                          %Kopfzeile      hier den Betreuer eintragen!!!
+	\end{tabular*}                                             %Kopfzeile
+	}
+\title{Verhalten von Ferromagnetika: Hysterese, Remanenz und Koerzitivfeldstärke}	    %Titel der Versuchs
+\author{Jonas Beck und Jonathan Bodky		}                   %Namen der Studenten
+\date{}                                                         %benötigt um automatisches Datum auszuschalten
+\maketitle                                                      %erzeugt Titelseite
+\vspace{-8ex}                                                   %verringert Abstand zur Überschrift
+\begin{abstract}                                                %Beginn des Abstracts
+In unserem Experiment wurden für die Ferromagnetika ST37K (Stahl), PERMENORM\textsuperscript{\textregistered} 5000 H2 und PERMENORM\textsuperscript{\textregistered} 5000 Z (beide Eisen-Nickel-Legierungen) Hysteresekurven aufgenommen und aus diesen sofern möglich die charakteristischen Größen Remanenz, Koerzitivfeldstärke, Sättigungsinduktion und der Energieverlust pro Masse bei Ummagnetisierung bestimmt. Zudem wurde der B(H)-Zusammenhang von Holz als nicht ferromagnetisches Material aufgezeichnet und die relative Permeabilität berechnet. Am Stahl wurde exemplarisch der Effekt einer Richtungsumkehr innerhalb einer Hystereseschleife gezeigt und dessen Anwendung zur Entmagnetisierung eines Ferromagneten untersucht.
+\\ \\ 
+\\ 
+Versuchsdurchführung: 21. September 2021\\       %Datum ändern!
+Protokollabgabe: 28. September 2021                 %Datum ändern!
+\\ 
+\\ 
+\end{abstract}
+}]
+
+\section{Einleitung}
+Ferromagnetika finden bei nahezu jeder technischen Anwendung von Magnetismus Verwendung, um beispielsweise Magnetfelder zu verstärken, zu richten oder abzuschirmen. Dabei ist das Verhalten ferromagnetischer Stoffe im Vergleich zu den anderen Kategorien, Dia- und Paramagnetika, in Magnetfeldern recht kompliziert: Die Magnetisierung und damit der magnetische Fluss $B$ ist nicht durch eine Funktion $B(H)$ in Abhängigkeit des äußeren Magnetfeldes $H$ beschreibbar, da der Zustand eines Ferromagneten von der Vorgeschichte des Materials abhängt. Dieses allgemein als Hysterese bekannte Phänomen, bei dem das Konzept von Ursache und direkter Wirkung durch einen Vergangenheitseinfluss aufgeweicht wird, verursacht die für ferromagnetische Materialien charakteristischen Effekte wie Remanenz, auf der Dauermagnete basieren, und die u.a. für Transformatorkerne wichtige Größe der Koerzitivfeldstärke.
+Wir haben in unserem Experiment all diese Größen für verschiedene Materialien bestimmt und die Hysteresekurven gezeichnet.
+
+\section{Theorie}\label{sec:theo}
+Um die Ergebnisse unserer Messungen zu verstehen, muss der nichtlineare Zusammenhang von magnetischem Feld $H$ und magnetischer Flussdichte $B$ auf atomarer Ebene betrachtet werden. Hier arbeiten zwei Effekte gegeneinander: die statistisch-thermische Unordnung und die auf Kopplungen basierende Ordnung der auf den quantenmechanischen Spin zurückgehenden Dipolmomente in den Atomen. Diese sind in Ferromagneten auf eine Weise gekoppelt, dass sie sich bevorzugt parallel zueinander ausrichten. So entstehen sogenannte Weiss-Bereiche, innnerhalb derer alle atomaren Spins in dieselbe Richtung zeigen.\\\\
+Im unmagnetisierten Zustand ist die Vorzugsrichtung der Weiss-Bereiche zufällig verteilt, wodurch sich ihre magnetische Wirkung zu $0$ mittelt. Wird nun ein äußeres Magnetfeld $H$ angelegt, so verschieben sich die als Bloch-Wände bezeichneten Grenzen der Weiss-Bezirke und diese richten sich parallel zum angelegten Feld aus. Diese Ausrichtung wird mit der Magnetisierung $M$ als magnetisches Moment pro Volumen quantifiziert und geht in die magnetische Flussdichte $B=\mu_0(M+H)$ ein, welche zunächst stark zunimmt. Sind irgendwann alle Spins des Ferromagneten in Parallelstellung, so erreicht die Magnetisierung bei weiterer Verstärkung des Magnetfeldes ein Sättigungsniveau und die Flussdichte nimmt nur noch mit der Vakuumpermeabilität $\mu_0$ als Steigung zu.\\\\
+Wird nun das angelegte Magnetfeld wieder reduziert, so bewegt sich die Dipolrichtung einiger Weiss-Bezirke aufgrund thermischer Fluktuationen aus der des Magnetfeldes heraus und die Flussdichte $B$ nimmt wieder ab. Da die Spin-Spin-Wechselwirkung in Ferromagnetika bei Raumtemperatur jedoch stärker als die thermische Unordnung ist, geschieht dies auf einer anderen Trajektorie im $B$-$H$-Raum mit höherer Flussdichte und bei Entfernen des äußeren Feldes bleibt eine als Remanenz bezeichnete Restflussdichte $B_{rem}=B(H=0)$ bestehen.\\\\
+Erst wenn an dieser Stelle die Richtung des Magnetfeldes umgekehrt und der Betrag wieder erhöht wird, fällt die Flussdichte bis auf $0$. Hierfür ist also ein gegenpoliges Koerzitivfeld $H_\text{koerz}$ notwendig. Wird das Magnetfeld noch weiter verstärkt, so läuft die Magnetisierung analog zur gegenpoligen Ausrichtung wieder in eine Sättigung und eine halbe Hysteresekurve ist durchlaufen. Nach einem weiteren halben Umlauf wie dem ersten schließt sich die Hysteresekurve punktsymmetrisch zum Ursprung, verhält sich also für beide Vorzeichen des Magnetfeldes identisch.\\\\
+Da die Flussdichte bei Reduktion des Magnetfelds immer höher ist als wenn dieses aufgebaut wird, werden Hystereseschleifen immer entgegen dem Uhrzeigersinn durchlaufen.\\\\
+Beim Umklappen der Weißschen Bezirke geht Energie in Form von Wärme aus dem System verloren. Mit der Massendichte $\rho$ des Spulenkerns kann diese Verlustenergie pro Masse $m$ bei einem Durchlauf der Hystereseschleife zu
+\begin{align}\label{eq:xi}
+\xi_\text{um}=\frac{E}{m}=\frac{1}{\rho}\oint B dH
+\end{align}
+\cite{eichler} berechnet werden, was der Fläche innerhalb der Hysteresekurve entspricht.
+
+\section{Experiment}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/Versuchsaufbau.png}
+\end{center}
+\caption[]{Versuchsaufbau zur Aufnahme von Hysteresekurven aus \cite{instr}. Durch Variation des Stroms durch die felderzeugende Spule wird ein einstellbares Magnetfeld im Spulenkern erzeugt. Dieser koppelt die Induktionsspule an erstere, wodurch mittels Integration der Induktionsspannung die magnetische Flussdichte gemessen werden kann.}
+\label{abb:aufb}
+\end{figure}
+
+In unserem Experiment wurden mithilfe des Aufbaus in Abb.~\ref{abb:aufb} Hysteresekurven verschiedener Materialien gemessen und einige wichtige Kenngrößen aus diesen gewonnen. Hierfür werden zwei mit einem Ringkern aus dem untersuchten Material gekoppelte Ringspulen verwendet. An der felderzeugenden Spule wird ein durch Messung des Spannungsabfalls $U_R$ an einem Widerstand $R$ bekanntes Magnetfeld
+\begin{align}\label{eq:H}
+H=\frac{N_1}{\pi\frac{1}{2}(d_i+d_a)R}U_R
+\end{align}
+erzeugt, wobei $N_1$ die Windungszahl, $d_i$ und $d_a$ Außen- und Innendurchmesser der felderzeugenden Spule sind. Als Widerstand wird zur Messung mit kleinen Strömen ein $R=(66,7 \pm 1,4)~\si{\Omega}$-Vorwiderstand (Messung mit Voltcraft VC-170), für große Ströme nur der $R=0,20~\si{\Omega}$-Meßwiderstand der Apperatur verwendet. Dieses Magnetfeld trägt zu der für uns interessanten magnetischen Flussdichte durch den Kern bei, deren Änderung wiederum einen Spannungsstoß in der Induktionsspule induziert. Dieser wird mithilfe des Fluxmeters gegen die Zeit zu einer dem $B$-Feld proportionalen Spannung aufintegriert. Damit ist die Flussdichte als
+\begin{align}\label{eq:B}
+B=\frac{\gamma_f}{N_2\cdot A_\text{eff}}U_F
+\end{align}
+gegeben. Dabei ist $\gamma_f$ der einstellbare Proportionalitätsfaktor der Fluxmeterspannung $U_F$ zum aufintegrierten Spannungsstoß, $N_2$ die Windungszahl der Induktionsspule und 
+\begin{align}
+A_\text{eff}=\frac{1}{2}(d_a-d_i)\cdot h \cdot f
+\end{align}
+die aus den Durchmessern, der Höhe $h$ und dem Füllfaktor $f$ des Kerns berechnete effektiv vom Magnetfeld durchsetzte Probenfläche.
+Somit können durch Steuerung des Eingangsstroms und Umpolung mittels Kommutierungsschalter die Hysteresekurven vollständig mit einem Interface (PASCO Universal Interface 550 Analog-Digital-Wandler) aufgezeichnet werden.\\\\
+Da das Fluxmeter aufgrund seiner Bauweise Spannungsstöße mithilfe von Operationsverstärkern analog integriert, sind die aufgenommenen Daten um eine freie Konstante in $B$-Richtung verschoben. Um die korrekten Hysteresekurven aus den Daten zu gewinnen, müssen diese also zunächst zentriert werden, was durch Verschieben des Mittelpunktes von Maximal- und Minimalausschlag von $B$ in den Ursprung des Koordinatensystems erzielt wird.\\
+Da die im Fluxmeter verwendeten Operationsverstärker keinen unendlich großen Eingangswiderstand besitzen, kommt zudem eine zeitlich linear steigende Verschiebung der Daten in positiver $B$-Richtung als Störfaktor hinzu, der noch vor der Zentrierung bereinigt werden muss \cite{walcher}. Dieser Drift-Effekt und wie er bereinigt wird werden im Anhang in Sektion~\ref{sec:drift} anhand des nicht ferromagnetischen Holzkerns verdeutlicht, da der Drift hier aufgrund der kleinen $B$-Felder besonders dominant ist. Die in der Auswertung dargestellten Abbildungen sind sowohl um den Fluxmeterdrift als auch die Integrationskonstante bereinigt.
+
+\FloatBarrier
+\subsection{Flachstahl (ST37K)}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-7.png}
+\end{center}
+\caption[]{Hystereseschleife eines Stahlkerns vom Typ ST37K. Die Achsenschnittpunkte wurden interpoliert und aus deren jeweiliger Mittelung Remanenz und Koerzitivfeldstärke bestimmt.}
+\label{abb:hyku7}
+\end{figure}
+
+In Abb.~\ref{abb:hyku7} ist die Hysteresekurve eines aus Flachstahl, genauer ST37K, bestehenden Spulenkerns zu sehen. Aus deren Achsenschnittpunkten können die Remanenz $B_\text{Rem}$ sowie die Koerzitivfeldstärke $H_\text{Koerz}$ abgelesen werden. Da die Magnetisierungssättigung bei keiner Messung mit dem Stahlkern  erreicht wurde, kann diese auch nicht bestimmt werden. Der Ummagnetisierungsverlust $\xi_\text{um}$ wurde durch numerische Integration der Fläche innerhalb der Hysteresekurve nach Gl.~\ref{eq:xi} berechnet. Die Daten sind in Tabelle~\ref{tab:k3} angegeben.
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt} \small $B_\text{Rem} [\si{T}]$  & \small $H_\text{Koerz} [\frac{\si{\A}}{\si{\m}}]$ 		&\small     $B_\text{sat} [\si{T}]$ &\small $\xi_\text{um} [\frac{\si{\J}}{\si{\kg}}]$\\
+\hline
+\rule[-6pt]{0pt}{21pt}  \tiny $0,541 \pm 0,026$ 			&    \tiny $343\pm16$ 	&\tiny       $-$  &\tiny $0,258 \pm 0,024$\\
+\hline
+\hline
+\end{tabular*}  
+\caption[]{Magnetische Kenngrößen für ST37K}  %siehe Graphik: Beschriftung
+\label{tab:k3}                             %siehe Graphik: zum Zitieren
+\end{table}
+\\\\Ihre Fehler wurden als Größtfehler aus den Eingangsgrößen abgeschätzt, indem Abszissen- und Ordinatenfehler in der Hysteresekurve durch deren Steigung kombiniert wurden. Dies wird im Anhang in den Sektionen~\ref{sec:err1}~und~\ref{sec:err2} näher erläutert.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-8.png}
+\end{center}
+\caption[]{Innere Hystereseschleifen beim Eisenkern durch kurzzeitige Richtungsänderung der Hystereseschleife an zwei Stellen. Die obere Innenschleife ist im Inlet vergrößert dargestellt, die Durchlaufrichtung mit Pfeilen markiert.}
+\label{abb:hyku8}
+\end{figure}
+
+Weiterhin wurde am Eisenkern der Effekt der Richtungsänderung in der Hysteresekurve untersucht. Hierfür wurde in Abb.~\ref{abb:hyku8} zunächst eine normale Hysteresekurve vollständig durchlaufen und anschließend während eines zweiten Umlaufs an zwei verschiedenen Stellen kurzzeitig die Richtung umgekehrt, indem das $H$-Feld im abnehmenden Zweig etwas erhöht wurde. Dadurch entstehen kleine Hystereseschleifen innerhalb der großen, die ebenfalls gegen den Uhrzeigersinn durchlaufen werden. Die scheinbare Punktsymmetrie dieser beiden Schleifen zueinander ist nicht exakt und der etwa symmetrischen Wahl der Umkehrpunkte auf der Schleife geschuldet.\\\\
+Dieser Effekt der inneren Hystereseschleife kann auch zur Entmagnetisierung verwendet werden: Dafür wird, wie in Abb.~\ref{abb:hyku10} gezeigt, das maximal eingestellte äußere Magnetfeld nach jeder Umpolung verringert, wodurch sich die Hystereseschleife spiralförmig dem Nullpunkt annähert. Durch maximale Erhöhung aus dem Nullpunkt heraus wurde am Ende wieder der Ausgangspunkt erreicht.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-10 (handzentriert).png}
+\end{center}
+\caption[]{Entmagnetisierung des Eisenkerns aus der Sättigung heraus durch wiederholtes Umpolen des Magnetfeldes bei abnehmendem Betrag. Anschließend wieder Anstieg zur Sättigungsmagnetisierung. Im Inlet ist der Ursprungsbereich vergrößert dargestellt. Es ist erkennbar, dass der Ferromagnet nicht vollständig entmagnetisiert wurde, da die Kurve um einen etwas zum Ursprung verschobenen Punkt schließt.}
+\label{abb:hyku10}
+\end{figure}
+\\\\Im Inlet in Abb.~\ref{abb:hyku10} ist erkennbar, dass die gewünschte Entmagnetisierung nicht vollständig erreicht wurde. Für diese wäre es notwendig gewesen, die Umkehrpunkte der Hysteresekurve erst nach Erreichen der Koerzitivfeldstärke zu setzen, sodass sich die Hysteresespirale um den Ursprung schließt. Da dies händisch nicht perfekt erzielt wurde, bleibt am Ende der Entmagnetisierung immernoch eine kleine Restremanenz. Diese ist jedoch deutlich kleiner als die Remanenz aus der Magnetisierungssättigung.
+\FloatBarrier
+\subsection{PERMENORM\textsuperscript{\textregistered} 5000 H2 Ni-Fe-Legierung}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-1.png}
+\end{center}
+\caption[]{Hysteresekurve von PERMENORM\textsuperscript{\textregistered} 5000 H2. Aus dieser können Remanenz und Koerzitivfeldstärke bestimmt werden, es wurde jedoch keine Magnetisierungssättigung erreicht.}
+\label{abb:hyku1}
+\end{figure}
+
+PERMENORM\textsuperscript{\textregistered} 5000 H2 ist eine industriell genutzte Eisen-Nickel-Legierung. Die Hysteresekurve dazu ist in Abb.~\ref{abb:hyku1} dargestellt und analog zum Eisenkern wurden die charakteristischen Größen bestimmt und in Tabelle~\ref{tab:k1} angegeben. Zudem wurde die Sättigungsinduktion aus Abb.~\ref{abb:hyku3} bei vergrößertem Messbereich abgeschätzt. Hierfür wird unter der Annahme, dass sich das Kernmaterial ab $|H|=1500~\frac{\si{\A}}{\si{\m}}$ in Magnetisierungssättigung befindet, eine Anpassungsgerade durch die linear steigenden Datenpunkte gelegt und auf $H=0$ extrapoliert. Durch die Extrapolation wird der Anteil des $H$-Feldes an der Flussdichte eliminiert und bis auf einen Faktor $\mu_0$ die maximal erreichte Magnetisierung als Sättigungsinduktion $B_\text{sat}$ angegeben. Die zugehörige Fehlerabschätzung wird im Anhang in Abschnitt~\ref{sec:err-sat} näher erläutert. Wie gut die Sättigungsmagnetisierung in diesem Bereich tatsächlich erreicht wurde, kann anhand der Steigung der Regressionsgeraden in Abb.~\ref{abb:hyku3} festgestellt werden, die im Sättigungsbereich $\mu_0=1,25663706212(19)\cdot 10^{-6}~\frac{\si{\N}}{\si{\A^2}}$ \cite{codata} betragen sollte. Der mit den Regressionsfehlern gewichtete Mittelwert beider Steigungen beträgt $\mu_\text{sat}=( 9,00 \pm 0,15)\cdot 10^{-6}~\frac{\si{\N}}{\si{\A^2}}$ und weicht im Rahmen des Fehlers nach oben von $\mu_0$ ab, liegt aber bereits in der richtigen Größenordnung. Folglich war der Sättigungsbereich noch nicht vollständig erreicht und sowohl Sättigungsinduktion als auch Koerzitivfeldstärke sind etwas zu klein abgeschätzt. Regressionsfehler sind bei der Steigung gerechtfertigt, da für diese nur der Streufehler des Interface, insbesondere keine systematischen Fehler relevant sind.\\\\
+Die Literaturwerte für Sättigungsinduktion und Koerzitivfeldstärke sind nach \cite{vac} als $B_\text{sat, Lit}= 1,55~\si{T}$ und $H_\text{Koerz, Lit}= 5~\frac{\si{A}}{\si{\m}}$ gegeben. Unsere ermittelten Werte stimmen mit diesen im Rahmen der Fehler nicht überein. Dies könnte neben der oben beschriebenen Abweichung durch Nichterreichen der Magnetisierungssättigung auch daran liegen, dass magnetische Eigenschaften nicht allein von der Legierung, sondern auch dem genauen Herstellungsprozess des Materials abhängig sind. Außerdem konnte aufgrund des geschlossenen Aufbaus die Güte der Spulen und die tatsächliche Form des Kerns nicht verifiziert werden, was beides zu systematischen Fehlern führen könnte.\\\\
+Das Material zählt wegen seiner relativ geringen Koerzitivfeldstärke zu den weichen Ferromagnetika und eignet sich daher eher schlecht als Dauermagnet (deren Koerzitivfeldstärke liegt typischerweise in der Größenordnung $1~\frac{\si{\kA}}{\si{\m}}$). Es ist jedoch mit geringerem Energieaufwand umpolbar und findet daher beispielsweise in Transformatorkernen Verwendung.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-3.png}
+\end{center}
+\caption[]{Hysteresekurve von PERMENORM\textsuperscript{\textregistered} 5000 H2 bei erweitertem Messbereich. Dadurch kann die Sättigungsinduktion durch Extrapolation der linearen Flanken bestimmt werden.}
+\label{abb:hyku3}
+\end{figure}
+
+
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt} \small $B_\text{Rem} [\si{T}]$  & \small $H_\text{Koerz} [\frac{\si{\A}}{\si{\m}}]$   &  \small $B_\text{sat} [\si{T}]$ & \small $\xi_\text{um} [\frac{\si{\mJ}}{\si{\kg}}]$\\
+\hline
+\rule[-6pt]{0pt}{21pt}  \tiny $0,648 \pm 0,017$ 		&  \tiny   $3,182 \pm 0,082$ 	&\tiny $1,430 \pm 0,023$  &\tiny $2,59 \pm 0,20$\\
+\hline
+\hline
+\end{tabular*}  
+\caption[]{Magnetische Kenngrößen für die PERMENORM\textsuperscript{\textregistered} 5000 H2 Ni-Fe-Legierung}  %siehe Graphik: Beschriftung
+\label{tab:k1}                             %siehe Graphik: zum Zitieren
+\end{table}
+\normalsize
+
+\FloatBarrier
+\subsection{PERMENORM\textsuperscript{\textregistered} 5000 Z Ni-Fe-Legierung}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-16.png}
+\end{center}
+\caption[]{Hysteresekurve von PERMENORM\textsuperscript{\textregistered} 5000 Z. Aus dieser sind alle Resultate bestimmbar, da annähernd die gesamte Sättigungsmagnetisierung als Remanenz zurückbleibt.}
+\label{abb:hyku16}
+\end{figure}
+
+PERMENORM\textsuperscript{\textregistered} 5000 Z ist eine weitere Eisen-Nickel-Legierung. Auch für diese ist die Hysteresekurve in Abb.~\ref{abb:hyku16} abgebildet und die in Tabelle~\ref{tab:k2} angegebenen Größen wurden analog zu 5000 H2 aus dieser bestimmt. Für die Sättigungsinduktion wurde der lineare Bereich ab $|H|= 60~\frac{\si{\A}}{\si{\m}}$ extrapoliert. Da für diesen Kern keine Dichte gegeben ist, kann die Ummagnetisierungsenergie pro Masse auch nicht bestimmt werden.\\
+Anhand der kleinen Koerzitivfeldstärke wird auch PERMENORM\textsuperscript{\textregistered} 5000 Z als magnetisch weiches Material eingeordnet. Auch dieses kann aufgrund der geringen Ummagnetisierungsverluste für Anwendungen, in denen häufige Ummagnetisierung nötig sind, wie beispielsweise Transformatorkerne, verwendet werden.
+
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt} \small $B_\text{Rem} [\si{T}]$  & \small $H_\text{Koerz} [\frac{\si{\A}}{\si{\m}}]$ 		&\small     $B_\text{sat} [\si{T}]$ &\small $\xi_\text{um} [\frac{\si{\J}}{\si{\kg}}]$\\
+\hline
+\rule[-6pt]{0pt}{21pt}  \tiny $1,426 \pm 0,023$ 			&    \tiny $13,54 \pm 0,21$ 	&\tiny       $1,430 \pm 0,023$  &\tiny $-$\\
+\hline
+\hline
+\end{tabular*}  
+\caption[]{Magnetische Kenngrößen für die PERMENORM\textsuperscript{\textregistered} 5000 Z Ni-Fe-Legierung}  %siehe Graphik: Beschriftung
+\label{tab:k2}                             %siehe Graphik: zum Zitieren
+\end{table}
+
+
+\FloatBarrier
+\subsection{Holzkern}\label{sec:hk}
+Um einen Vergleich der ferromagnetischen Hysteresekurven mit einem nicht ferromagnetischen Material zu schaffen, wurde unser Experiment auch mit einem Holzkern durchgeführt. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-6.png}
+\end{center}
+\caption[]{Magnetische Kennlinie des Holzkerns. Dieser weisst ein lineares Verhalten ohne Hysterese auf.}
+\label{abb:hyku6}
+\end{figure}
+\\In Abb.~\ref{abb:hyku6} fallen im Vergleich zu den Hysteresekurven der Ferromagnetika der lineare Zusammenhang von $H$ und $B$ sowie die sehr kleinen $B$-Felder auf. Diese sind damit zu erklären, dass die in Abschnitt~\ref{sec:theo} beschriebenen Effekte von Ferromagneten hier nicht eintreten. Die Spins der Atome koppeln nicht stark genug um Weiss-Bezirke auszubilden, die die Flussdichte um ein vielfaches verstärken. Auch werden die Atome bei Abnahme des Magnetfelds durch thermische Schwankungen statistisch unabhängig aus der Magnetfeldrichtung wegorientiert, weshalb sich keine Hystereseäste und keine Remanenz ausbilden.
+\\\\Die Steigung, welche genau der Permeabilität $\mu=\mu_0 \mu_r$ entspricht, wurde durch eine fehlergewichtete lineare Regression bestimmt, die auch den Steigungsfehler liefert. Für die relative Permeabilität erhalten wir mit $\mu_0=1,25663706212(19)\cdot 10^{-6}~\frac{\si{\N}}{\si{\A^2}}$ \cite{codata} $\mu_r= 1,835 \pm 0,027$, was unseren Holzkern als Paramagneten einstuft. Dies widerspricht \cite{holz}, wo Holz als Diamagnet mit einer Permeabilität von $\mu_r=0,99999942$ relativ zum Vakuum eingestuft wird. Ob diese Differenz auf verschiedene Holzsorten oder unbeachtete Einflüsse in unserer Versuchsanordnung zurückzuführen ist, kann an dieser Stelle nicht erschlossen werden. Klar ist aber, dass die Permeabilität des Holzes um ein Vielfaches kleiner ist als die der untersuchten Ferromagnetika.
+
+\FloatBarrier
+\section{Zusammenfassung}
+Wir haben für drei ferromagnetische Materialien, Stahl und zwei Eisen-Nickel-Legierungen, Hysteresekurven und für nicht ferromagnetisches Holz als Vergleich B(H) aufgezeichnet. Aus diesen wurden folgende wichtige Kenngrößen der Materialien abgeleitet: Für den Stahl vom Typ ST37K erhalten wir eine Remanenz von $B_\text{Rem}=(0,541 \pm 0,026)~\si{T} $, eine Koerzitivfeldstärke von $H_\text{Koerz}=(343 \pm 16)~\frac{\si{\A}}{\si{\m}} $ sowie bei der Ummagnetisierung einen Energieverlust pro Masse von $\xi_\text{um}=(0,258 \pm 0,024)~\frac{\si{J}}{\si{\kg}} $. Für die Ni-Fe-Legierung PERMENORM\textsuperscript{\textregistered} 5000 H2 wurde eine Remanenz von $B_\text{Rem}=(0,648 \pm 0,017)~\si{T} $, eine Koerzitivfeldstärke von $H_\text{Koerz}=(3,182 \pm 0,082)~\frac{\si{\A}}{\si{\m}} $, eine Sättigungsinduktion von $B_\text{sat}=(1,430 \pm 0,023)~\si{T} $ und ein spezifischer Ummagnetisierungsverlust von $\xi_\text{um}=(2,59 \pm 0,20)~\frac{\si{\mJ}}{\si{\kg}} $ bestimmt. Für die andere verfügbare Ni-Fe-Legierung PERMENORM\textsuperscript{\textregistered} 5000 Z beträgt die Remanenz $B_\text{Rem}=(1,426 \pm 0,023)~\si{T} $, die Koerzitivfeldstärke $H_\text{Koerz}=(13,54 \pm 0,21)~\frac{\si{\A}}{\si{\m}} $ und die Sättigungsinduktion $B_\text{sat}=(1,430 \pm 0,023)~\si{T} $. Für das Holz wurde eine relative Permeabilität von $\mu_r= 1,835 \pm 0,027$ gemessen.
+\\Alle aufgenommenen Hysteresekurven und auch der B(H)-Verlauf des Holzes folgen qualitativ der theoretischen Erwartung. Zudem wurde am Stahl (ST37K) exemplarisch der Effekt der Richtungsänderun innerhalb der Hystereseschleife untersucht, wodurch deren Irreversibilität gezeigt wurde, und beobachtet, wie dieser zur Entmagnetisierung eines Ferromagneten genutzt werden kann.
+
+\FloatBarrier
+%FF: Angabe der verwendeten Literatur mit Quellennachweis.
+\begin{thebibliography}{}    %so wird das Literaturverzeichnis erstellt
+\bibitem{instr} Physikalisches Grundpraktikum, Universität Würzburg, Modul C1, Versuch 39, Ferromagnetismus; Messung von Hysteresekurven, 2021 
+\bibitem{gerth} Meschede, Dieter, Gerthsen Physik, 25. Auflage, Springer-Verlag, Berlin, 2015 
+\bibitem{codata} P. J. Mohr, D. B. Newell, and B. N. Taylor: \grqq CODATA recommended values of the fundamental physical constants: 2014\grqq , Rev. Mod. Phys. 88, 035009 (2016)
+\bibitem{eichler} H. J. Eichler et al., Das neue Physikalische Grundpraktikum, 3. Auflage, Springer-Verlag, Berlin, 2016
+\bibitem{walcher} W. Walcher, Praktikum der Physik, 7. Auflage, B.G.Teubner-Verlag, Stuttgart, 1994
+\bibitem{vac} \url{https://vacuumschmelze.com/products/soft-magnetic-materials-and-stamped-parts/40-to-50-Nickel-Iron}, zuletzt aufgerufen am 28.09.2021
+\bibitem{holz} T. C. Edwards et al., Foundations for Microstrip Circuit Design, John Wiley \& Sons Incorporated, 2016.
+
+\end{thebibliography}
+
+\newpage
+\section{Anhang}
+
+\subsection{Fluxmeterdrift}\label{sec:drift}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=0.9 \linewidth]{img/C39_Hysteresekurve-6-offen.png}
+\end{center}
+\caption[]{Magnetische Kennlinie des Holzkerns mit bereinigtem Ordinatenoffset ohne Bereinigung des Fluxmeterdrifts.}
+\label{abb:hyku6o}
+
+\end{figure}
+Der Effekt des Fluxmeterdrifts wird in Abb.~\ref{abb:hyku6o} veranschaulicht, indem die in Abb.~\ref{abb:hyku6} dargestellte Hysteresekurve für Holz ohne Bereinigung des Drifts bei bereinigtem $B$-Offset gezeigt wird. Zu erkennen ist, dass die Flussdichte mit einer scheinbar konstanten Geschwindigkeit zu größeren Werten driftet, weshalb die Kurve nicht wie erwartet den Ursprung schneidet und am Ende auch nicht geschlossen ist. Aus der Dauer der Messreihe $t_\text{ges}$, der ersten gemessenen Flussdichte $B_1$ und der letzten $B_{n}$ können diese Geschwindigkeit zu
+\begin{align}
+\dot{B}_\text{Drift}=\bigg{(} \frac{\partial B}{\partial t}\bigg{)}_\text{Drift}\approx\frac{B_\text{n}-B_\text{1}}{t_\text{ges}}
+\end{align}
+abgeschätzt und alle Flussdichtedaten um einen mit dieser Geschwindigkeit zeitlich zunehmenden Summanden bereinigt werden.
+
+\subsection{Erweiterte Fehlerdiskussion}
+\subsubsection{Elementarfehler}
+Für die Berechnung von $\sigma_\text{H}$ und $\sigma_\text{B}$ gemäß gaußscher Fehlerfortpflanzung aus den Messgrößen und Gl.~\ref{eq:H},~\ref{eq:B} werden die am Versuchsplatz angegebenen Spulendaten als fehlerfrei angenommen, da deren Fehler aufgrund der gegebenen Stellenzahl deutlich kleiner als die des gemessenen Vorwiderstandes, der Spannungsmessung im Interface sowie der Ausgabe des Fluxmeters angenommen werden. Der Fehler des Vorwiderstandes ergibt sich aus der Geräteanleitung des Messgeräts (Voltcraft VC 170), der für das Interface ist ebenfalls vom Hersteller als $\sigma_U=1,22~\si{\mV}$ gegeben und für das Fluxmeter wurde mangels verfügbarer Herstellerangaben ein Fehler von $0,5~\%$ rng geschätzt, da das Fluxmeter vermutlich genauer als die mit Güteklasse 2,5 beschriftete Anzeige ist.\\\\
+Durch die freie Integrationskonstante im Fluxmeter entsteht kein zusätzlicher Fehler, da für Remanenz und Koerzitivfeldstärke jeweils zwei Punkte mit entgegengesetztem Vorzeichen abgelesen und deren halber Abstand als Resultat angegeben wird. Ein durch den Fluxmeterdrift verursachter Fehler wird vernachlässigt, da dieser, bei Annahme des Drifts als in sehr guter Näherung linear, nur in der Größenordnung der sehr kleinen Streubreite der Kurve ist.
+
+\subsubsection{Fehler von B$_\text{Rem}$ und H$_\text{Koerz}$}\label{sec:err1}
+Unsere Fehler für das Magnetfeld $\sigma_\text{H}$ und die Flussdichte $\sigma_\text{B}$ sind etwa von der gleichen Größenordnung, weshalb keiner von ihnen gegenüber dem anderen vernachlässigt werden kann.\\\\
+Für den Remanenzfehler wird daher $\sigma_\text{H}$ durch Multiplikation mit der Tangentensteigung $m_\text{Rem}$ der Hysteresekurve am $B$-Achsenschnittpunkt in eine Flussdichte umgerechnet und wir erhalten
+\begin{align}
+\sigma_{B_\text{Rem}}=\sigma_B + m_\text{Rem}\sigma_\text{H}
+\end{align}
+als Größtfehler. Analog erhalten wir
+\begin{align}
+\sigma_{H_\text{Koerz}}=\frac{1}{m_\text{Koerz}}\sigma_\text{B} + \sigma_\text{H}
+\end{align}
+als Koerzitivfeldstärkefehler durch Umrechnung von $\sigma_\text{B}$ in eine Feldstärke mithilfe der Steigung $m_\text{Koerz}$ am Ablesepunkt der Feldeldstärke.
+\subsubsection{Fehler der Sättigungsinduktion}\label{sec:err-sat}
+Für die Sättigungsinduktion wurde der linear steigende Sättigungsbereich der Hysteresekurve durch eine lineare Regression auf $H=0$ extrapoliert. Als Fehler wurde der mittlere Fehler der Datenpunkte, die dieser Regression zugrundeliegen, gewählt. Eine mögliche Alternative zur Größtfehlerabschätzung wären Min-Max-Geraden gewesen. Diese liefern aber eine deutlich zu grobe Abschätzung, da sie der Streuung unserer Messpunkte nicht gerecht werden, weil in die Elementarfehler $\sigma_\text{H}$ und $\sigma_\text{B}$ bereits systematische Anteile einfließen.
+\subsubsection{Fehler der Ummagnetisierungsverluste}\label{sec:err2}
+Der Ummagnetisierungsverlust berechnet sich nach Gl.~\ref{eq:xi} als Fläche aus $H$ und $B$. Die Dichte wird wieder als fehlerfrei angenommen, da sie deutlich genauer als unsere Messdaten angegeben ist. Für den relativen Energiefehler wurden mittlere Relativfehler $<\frac{\sigma_\text{H}}{H}>$ und $<\frac{\sigma_\text{B}}{B}>$ berechnet und gemäß gaußscher Fehlerrechnung quadratisch addiert.
+
+\end{document}
