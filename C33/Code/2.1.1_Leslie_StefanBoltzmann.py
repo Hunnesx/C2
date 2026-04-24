@@ -1,7 +1,9 @@
+from matplotlib import ticker
 import numpy as np
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import AutoMinorLocator
 
  ##import data from path
 base_path = Path.cwd()
@@ -46,8 +48,13 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     plt.title(f"{name} - U(T⁴)")
     plt.legend()
     plt.grid(False)
+    plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
+    plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
+    plt.tick_params(axis='both', which='minor', direction='in', right=True, top=True)
+    plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
+    plt.tight_layout()
     plt.savefig(img_path / f"{name}_U_T4.png")
-    #plt.show()
+ #   plt.show()
 
     # --- plot U(T)
     coeffs2 = np.polyfit(T_K, U, 1)
@@ -63,11 +70,17 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     plt.title(f"{name} - U(T)")
     plt.legend()
     plt.grid(False)
+    plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
+    plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
+    plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
+    plt.tick_params(axis='both', which='minor', direction='in', right=True, top=True)
+    plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
+    plt.tight_layout()
     plt.savefig(img_path / f"{name}_U_T.png")
-    #plt.show()
+   # plt.show()
 
     ##calling every data set
-plot_and_fit(SeiteSchwarz, "Schwarz")
-plot_and_fit(SeiteWeiss, "Weiß")
-plot_and_fit(SeiteNickelPoliert, "Vernickelt (poliert)")
-plot_and_fit(SeiteNickelMatt, "Vernickelt (matt)")
+plot_and_fit(SeiteSchwarz, "Measurement of the Leslie Cube with a black surface")
+plot_and_fit(SeiteWeiss, "Measurement of the Leslie Cube with a white surface")
+plot_and_fit(SeiteNickelPoliert, "Measurement of the Leslie Cube with a polished nickel surface")
+plot_and_fit(SeiteNickelMatt, "Measurement of the Leslie Cube with a matt nickel surface")
