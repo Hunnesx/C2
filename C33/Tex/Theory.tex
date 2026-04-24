@@ -1,0 +1,36 @@
+\section{Theory}
+
+In the following sections we will examine the emission of different surfaces and of a cavity radiator.
+A reasonable theoretical starting point is the black body radiator. Its spectral density of electromagnetic radiation is given by Planck's law:
+\begin{equation}
+    I(\nu, T) = \frac{2h\nu^3}{c^2} \cdot \frac{1}{e^{\frac{h\nu}{k T}} - 1}
+\end{equation}
+Here the T is the temerature of the black body, $\nu$ is the frequency of the emitted radiation, $h$ is Planck's constant, $c$ is the speed of light and $k$ is Boltzmann's constant. 
+The total power emitted by a black body per unit area can be calculated by integrating over all frequencies and the solid angle:
+\begin{equation}
+    \frac{P}{A} = \int_0^\infty I(\nu, T) d\nu \int cos(\theta) d\Omega 
+\end{equation}
+The cosine is there because the black body is also a Lambertian emitter, meaning that the intensity of the emitted radiation is proportional to the cosine of the angle between the normal of the surface and the direction of emission.
+Computing the integral yields the Stefan-Boltzmann law:
+\begin{equation}
+    P = \sigma A T^4
+    \label{eq:SBG}
+\end{equation}
+Where $\sigma$ is the Stefan-Boltzmann constant:
+\begin{equation}
+    \sigma = \frac{2\pi^5 k^4}{15 h^3 c^2} \approx 5.67 \cdot 10^{-8} \frac{W}{m^2 K^4}
+\end{equation}
+Since the black body is an idealized object, Eq. \ref{eq:SBG} is not valid for real objects. Instead, we have to introduce the specific emissivity $\epsilon$ of the object, which is smaller than 1 for real objects and equals 1 for a perfect black body.
+The modified Stefan-Boltzmann law for real objects is then:
+\begin{equation}
+    P = \epsilon \sigma A T^4
+    \label{eq:SBGreal}
+\end{equation}
+For the following measurments it is important to note, that the Leslie's cube also absorbs radiation from the environment and re-emits it with respect to the Kirchhoff's law.
+Kirchhoff's law states that the emissivity $\epsilon$ of a surface is equal to its absorptivity $\alpha$.
+Therefore the radiation generated only by the temperature of the cube is the difference between the emitted radiation and the absorbed radiation.
+$T_0$ is the temperature of the environment, which we will assume to be room temperature.
+It follows:
+\begin{equation}
+    P \propto T^4 - T_0^4
+\end{equation}

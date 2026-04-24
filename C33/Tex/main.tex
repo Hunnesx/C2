@@ -1,0 +1,95 @@
+%Diese LaTeX-Vorlage f�r Praktikumsprotokolle in Form einer Ver�ffentlichung f�r das 
+%F-Praktikum wurde erstellt von Andreas Nuber EP II, Uni W�rzburg.
+%Es wurde das Koma-Skript verwendet und sollte somit installiert sein
+%desweiteren sollten alle packages installiert sein, die mit \usepackage{} 
+%eingebunden werden.
+%Zum Testen dieser Vorlage wurde MikTex verwendet sowie TeXnicCenter als Editor
+%beim Compilieren waren 0 Fehler, 1 Warnung und 3 zu volle/leere Boxen. Das ist ok :)
+
+%F�r das Erstellen einfach den sinnfreien Text, der zum ausf�llen genommen wurde 
+%ersetzen. Was sonst noch ver�ndert werden sollte steht in den Kommentaren!
+
+
+\documentclass[a4paper,10pt,twocolumn]{scrartcl} %Koma-Skript-�quivalent zu "article"
+
+\usepackage{german}            %macht deutsche �berschriften
+\usepackage{amsmath}           %macht
+\usepackage{amsfonts}          %       Mathe
+\usepackage{amssymb}           %              m�chtiger
+\usepackage{graphicx}          %erlaubt Graphiken einzubinden (.eps f�r dvi und ps sowie .jpg f�r pdf)
+\usepackage[T1]{fontenc}       %Zeichenbelegung der verwendeten Schrift
+\usepackage{ae}                %macht sch�neres �
+\usepackage{typearea}	         %erm�glicht �nderung des Seitenspiegels
+\usepackage{scrlayer-scrpage}          %erm�glicht �nderung der Kopf-/Fu�zeile
+\usepackage{lastpage}         %l�sst auf die Seienanzahl zugreifen
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{xcolor}			  % macht Farbe
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{comment}
+\usepackage[normalem]{ulem}
+
+\renewcommand{\figurename}{Abb.}
+
+\pagestyle{scrheadings}        %sagt Koma-Skript, dass selbstdefiniers Kopfzeilen verwendet werden
+\typearea{16}                  %stellt Seitenspiegel ein
+\columnsep25pt								 %definiert Breite zwischen den zwei Spalten von \twocolumns
+
+\renewcommand{\pnumfont}{%     %�ndert die Schriftart der Seitennummerierung
+\normalfont\rmfamily\slshape}  %�ndert die Schriftart der Seitennummerierung 
+
+
+
+\begin{document}
+\cfoot{\thepage /\pageref{LastPage}}     %macht die Seitennumerierung der Fom 2/5 (ausser auf der Titelseite)
+
+\twocolumn[{\csname @twocolumnfalse\endcsname                %erlaubt "Abstrakt" �ber beide Spalten
+\titlehead{                                                  %Kopfzeile
+	\begin{tabular*}{\textwidth}[]{@{\extracolsep{\fill}}lr}   %Kopfzeile
+	Betreuer: Prof. Dr. V. Hinkov & \today\\                          %Kopfzeile      hier den Betreuer eintragen!!!
+	\end{tabular*}                                             %Kopfzeile
+	}
+\title{Thermal radiation of Leslie's cube and a black body}  %Titel der Versuchs
+\author{Nele Wurster \and Hannes Winkler}                     %Namen der Studenten
+\date{}			                                               %ben�tigt um automatisches Datum auszuschalten
+\maketitle                                                      %erzeugt Titelseite
+\vspace{-8ex}                                                   %verringert Abstand zur �berschrift
+\begin{abstract}                                                %Beginn des Abstracts
+\vspace{1em}
+
+    this abstract is indeed abstract
+
+\end{abstract}
+\vspace{1em}
+\noindent Executed: 22. April 2026\\% Datum ändern!
+\noindent Submitted: -------% Datum ändern!
+\vspace{1em}
+}]
+
+\input{Introduction}
+
+\input{Theory}	
+
+\input{Experiment}
+
+\input{Evaluation}
+
+\input{Conclusion}
+	
+\begin{thebibliography}{}    %so wird das Literaturverzeicnis erstellt
+\bibitem{thermostat}
+	\url{https://www.physik.uni-wuerzburg.de/fileadmin/11000000/03_Studium/02_Bachelor/Grundpraktikum/_imported/fileadmin/11016800/Geraete/RE104.pdf} last visited on 24.04.2026
+\bibitem{Voltmeter}
+	\url{https://www.physik.uni-wuerzburg.de/fileadmin/11000000/03_Studium/02_Bachelor/Grundpraktikum/_imported/fileadmin/11016800/Geraete/Agilent-34405a.pdf} last visited on 24.04.2025
+\bibitem{Gaskonstante} 
+	\url{https://physics.nist.gov/cgi-bin/cuu/Value?r } Zuletzt besucht 10.01.2026
+\bibitem{Verdampfungsenergie}
+	\url{https://www.chemeo.com/cid/68-061-9/Sulfur-hexafluoride} zuletzt besucht am 10.01.2026
+\bibitem{KritischeKoeffizienten}
+	H. J. Eichler, H. Kronfeld, J. Sahm: Das neue physikalische Praktikum, 3. Auflage, Springer Spektrum, 2016, Tabelle 17.3
+\bibitem{Praktikumsanleitung}
+	JMU Würzburg, Fakultät für Physik und Astronomie: Praktikumsanleitung zum Versuch C31\\
+	\url{https://www.physik.uni-wuerzburg.de/fileadmin/11000000/03_Studium/02_Bachelor/Grundpraktikum/_imported/fileadmin/11016800/Modulbeschreibungen/C-Modul/31.pdf}
+\end{thebibliography}
+\end{document}
