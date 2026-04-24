@@ -38,6 +38,7 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     fit = np.poly1d(coeffs)
 
     x_fit = np.linspace(T4.min(), T4.max(), 200)
+    
 
     # --- plot U(T^4)
     plt.figure()
@@ -54,17 +55,23 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
     plt.tight_layout()
     plt.savefig(img_path / f"{name}_U_T4.png")
- #   plt.show()
+    plt.show()
 
     # --- plot U(T)
-    coeffs2 = np.polyfit(T_K, U, 1)
+    ##coeffs2 = np.polyfit(T_K, U, 1)
+    ##fit2 = np.poly1d(coeffs2)
+
+    ##x_fit2 = np.linspace(T_K.min(), T_K.max(), 200)
+
+    # quadratic fit: U = a*T^2 + b*T + c
+    coeffs2 = np.polyfit(T_K, U, 2)
     fit2 = np.poly1d(coeffs2)
 
     x_fit2 = np.linspace(T_K.min(), T_K.max(), 200)
 
     plt.figure()
     plt.errorbar(T_K, U, xerr=errT, yerr=errU, fmt='x', label='data', color='black', capsize=4)
-    plt.plot(x_fit2, fit2(x_fit2), label=f'fit: U = {coeffs2[0]:.3e} T + {coeffs2[1]:.3e}', color='black')
+    plt.plot(x_fit2, fit2(x_fit2), label=f'fit: U = {coeffs2[0]:.3e} T² + {coeffs2[1]:.3e} T + {coeffs2[2]:.3e}', color='black')
     plt.xlabel("T [K]")
     plt.ylabel("U [mV]")
     plt.title(f"{name} - U(T)")
@@ -77,7 +84,7 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
     plt.tight_layout()
     plt.savefig(img_path / f"{name}_U_T.png")
-   # plt.show()
+    plt.show()
 
     ##calling every data set
 plot_and_fit(SeiteSchwarz, "Measurement of the Leslie Cube with a black surface")
