@@ -9,7 +9,7 @@ from scipy.optimize import curve_fit
 #Import data from path
 base_path = Path.cwd()
 
-data_path = base_path / 'C33' / 'Data' / 'Versuch_33.xlsx'
+data_path = base_path / 'C33' / 'Data' / 'Versuch_33(1).xlsx'
 img_path = base_path.parent / 'C2-Praktikum' / 'C33' /  'Images'
 Data = pd.read_excel(data_path, sheet_name='schwarze Körper SBG', engine='openpyxl')
 
@@ -53,7 +53,7 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     plt.figure()
     plt.errorbar(T_K, U, xerr=errT, yerr=errU, fmt='x', label='data', color='black', capsize=4)
     #plt.plot(T_K, fit(T_K), label=f'fit: U = {coeffs[0]:.3e} T + {coeffs[1]:.3e}', color='black')
-    plt.plot(x_fit, fit(x_fit), label=f'U = {coeffs[0]:.3e} T² + {coeffs[1]:.3e} T + {coeffs[2]:.3e}', color='black')
+    plt.plot(x_fit, fit(x_fit), label=f'U = {coeffs[0]:.3e} T² + {coeffs[1]:.3e} T + {coeffs[2]:.3e}', color='red')
     ###plt.plot(x_fit, model(x_fit, *params), label=f'U = {params[0]:.3e} T⁴ + {params[1]:.3e}', color='black')
     plt.xlabel("T [K]")
     plt.ylabel("U [mV]")
@@ -79,7 +79,7 @@ def plot_and_fit(data, name, errU=0.1, errT=0.1):
     # --- plot U(T^4)
     plt.figure()
     plt.errorbar(T4, U, xerr=4*T_K**3*errT, yerr=errU, fmt='x', label='data', color='black', capsize=4)
-    plt.plot(x_fit2, fit2(x_fit2), label=f'fit: U = {coeffs2[0]:.3e} T⁴ + {coeffs2[1]:.3e}', color='black')
+    plt.plot(x_fit2, fit2(x_fit2), label=f'fit: U = {coeffs2[0]:.3e} T⁴ + {coeffs2[1]:.3e}', color='red')
     plt.xlabel("T⁴ [K⁴]")
     plt.ylabel("U [mV]")
     plt.title(f"{name} - U(T⁴)")

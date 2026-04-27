@@ -41,8 +41,51 @@
             \caption{The exponents determined by the $U = A (T^b - T_0^b)$ fit to the data obtained by measurements on Leslie's cube.}
             \label{tab:SBLeslie}
         \end{table}
-        The expected values of the exponents is $b=4$ according to the Stefan-Boltzmann law. The values obtained for the black and matte nickel-plated surfaces match that within their error, while the value obtained for the white and polished nickel-plated surface are a bit off.
-        The value obtained for the white surface is close to the expected value, but the error is small enough to exclude $b=4$. The value obtained for the polished nickel-plated does match $b=4$ within the error, but the error is very large which is a good representation of the poor quality of the measurement. 
-        This poor quality is due to the fact that the polished side reflects a lot of thermal radiation from the environment, which is also measured by the thermopile and can not be easily seperated from the radiation emitted by the surface itself. A solution to this would be to place the setup in a more contained environment and shield it further from external radiation. \\
+        The expected values of the exponents is $b=4$ according to the Stefan-Boltzmann law. The values obtained for the black and matte nickel-plated surfaces match 
+        that within their error, while the value obtained for the white and polished nickel-plated surface are a bit off.
+        The value obtained for the white surface is close to the expected value, but the error is small enough to exclude $b=4$. The value obtained for the polished 
+        nickel-plated does match $b=4$ within the error, but the error is very large which is a good representation of the poor quality of the measurement. 
+        This poor quality is due to the fact that the polished side reflects a lot of thermal radiation from the environment, which is also measured by the thermopile 
+        and can not be easily seperated from the radiation emitted by the surface itself. A solution to this would be to place the setup in a more contained environment 
+        and shield it further from external radiation. \\
         
 
+        \subsubsection{Infrared permeability for several materials} \label{sec:Ultrarotdurchlässigkeit}
+
+        In this part of the experiment the setup in figure \ref{fig:setup} was reused, but only the black side of the cube was used, now with 
+        different optical filters placed in front of the thermopile. The used filters were: window glass, silicon and sodium chloride. \\
+        The temperature was set to $T = 77^\circ$C with an environmental temperature of $T_{0} = 20^\circ$C. The thermal radiation emitted by the black surface
+        was measured first, after that the filters were placed in front of the thermopile and the measurements were repeated. 
+        The results are given in percentages of the voltage measured without a filter and shown in table \ref{tab:filters}.
+        
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{c|c}
+                Filter & infrared permeability (\%)\\
+                \hline
+                Window glass & $2.27 \pm 0.48$ \\
+                Silicon & $46.82 \pm 0.48$ \\
+                Sodium chloride & $73.32 \pm 0.48$ \\
+            \end{tabular}
+            \caption{Transmittance of infrared radiation through different filters at $T = 77^\circ$C.}
+            \label{tab:filters}
+        \end{table}
+
+        It shows that thus although the window glass transmits visible light very well, the infrared transmittance is the lowest of the three. 
+        Since glass is an amorphous material, it has a lot of vibrational modes which can be excited by the infrared radiation, which leads 
+        to a high absorption and thus low transmittance. Silicone however lets almost half of the infrared radiation through, 
+        which is due to the fact that it is a crystalline material with covalent bonds and to be more precise, it is a indirect band gap semiconductor.
+        This means that it has a band gap which can be excited by the infrared radiation, but for cristal-momentum conservation, a phonon also needs 
+        to be involved, which is less likely to happen than just exciting the band gap, which leads to a higher transmittance than glass but not as high as 
+        sodium chloride. Sodium chloride has the highest transmittance of the three, which can be referred to the fact that it is an ionic crystal with a 
+        large band gap, which can not be excited by the infrared radiation, leading to a very low absorption and thus high transmittance. \\
+
+        With Wien's displacement law one can also calculate the wavelength of the maximum spectral intensity of the thermal radiation:
+        \begin{equation}
+            \lambda_{max} = \frac{b}{T}
+        \end{equation}
+        where $b = 2897.771955 \mu m * K$ is Wien's displacement constant and $T$ is the temperature of the black surface in Kelvin. 
+        For the measured room temperature of $T_0 = 20^\circ$C and the temperature of the black surface of $T = 77^\circ$C, 
+        one obtains a wavelength of $\lambda_{max,0} = 9.885 \pm 0.033 \mu m$ and $\lambda_{max,leslie} = 8.276 \pm 0.020 \mu m$ respectively.
+        Both are in the infrared range, which is consistent with the fact that the filters used in this part of the experiment are designed to 
+        filter infrared radiation.

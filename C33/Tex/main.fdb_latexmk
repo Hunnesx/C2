@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1777121018 "/home/hannes/Desktop/Uni/C2-Praktikum/C33/Tex/main.tex" "main.pdf" "main" 1777121020
+["pdflatex"] 1777319661 "/home/hannes/Desktop/Uni/C2-Praktikum/C33/Tex/main.tex" "main.pdf" "main" 1777319662
   "../Images/Setup.png" 1777042333 17830 e1ad3966d0d210d434c884d72ab67bdd ""
   "../Images/individual_fits_U(T).png" 1777047685 79414 300061807c668ecb938024b52bc779fd ""
   "/etc/texmf/web2c/texmf.cnf" 1702837203 475 c0e671620eb5563b2130f56340a5fde8 ""
@@ -57,6 +57,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1248133631 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1248133631 28902 2f5c04fd2884d1878057baa5aad22765 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
@@ -153,11 +154,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1769778552 2797460 6093d94cfe0eddad1fb6bdd349606a08 ""
   "Conclusion.tex" 1777038454 20 b50204e17c0a475d3d65191e029fdf1d ""
   "Evaluation.tex" 1777038436 20 f0f8a8ab01e2fe64add10df72a0b84d5 ""
-  "Experiment.tex" 1777121018 4028 ceb49c6072e06f19131c99676b53af0f ""
+  "Experiment.tex" 1777319659 7333 51f1ff9ae75a3928943ed2f72c53a211 ""
   "Introduction.tex" 1777038398 22 5c23bcd9d46cf48d2292896666a8a8fc ""
   "Theory.tex" 1777040940 2305 27bf307eeb2b3b5bcb80f04208befb6e ""
-  "main.aux" 1777121020 4960 04856ebafc8dddf36cb9d210e8182fac "pdflatex"
-  "main.out" 1777121020 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1777319662 6135 4b943292503eb60e100278f2d51ac821 "pdflatex"
+  "main.out" 1777319662 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1777043981 4668 3b03d1285d58ff40e3afe654207da5d1 ""
   (generated)
   "main.aux"
