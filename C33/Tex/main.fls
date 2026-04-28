@@ -897,6 +897,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/ae/aesl10.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/ae/aeb10.tfm
 INPUT ../Images/individual_fits_U(T).png
 INPUT ../Images/individual_fits_U(T).png
 INPUT ../Images/individual_fits_U(T).png
@@ -927,6 +928,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/ae/aeb10.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmb10.tfm
+INPUT ../Images/setup2.png
+INPUT ../Images/setup2.png
+INPUT ../Images/setup2.png
+INPUT ../Images/setup2.png
+INPUT ../Images/setup2.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/ae/aer7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/ae/aer5.tfm
 INPUT ./Evaluation.tex
 INPUT ./Evaluation.tex
 INPUT ./Evaluation.tex

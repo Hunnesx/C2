@@ -1,4 +1,3 @@
-from matplotlib import ticker
 import numpy as np
 from pathlib import Path
 import pandas as pd
@@ -6,91 +5,118 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
 from scipy.optimize import curve_fit
 
-#Import data from path
+# --- paths ---
 base_path = Path.cwd()
-
 data_path = base_path / 'C33' / 'Data' / 'Versuch_33(1).xlsx'
-img_path = base_path.parent / 'C2-Praktikum' / 'C33' /  'Images'
-Data = pd.read_excel(data_path, sheet_name='schwarze Körper SBG', engine='openpyxl')
+img_path = base_path.parent / 'C2-Praktikum' / 'C33' / 'Images'
 
-#pick out data from excel sheet 3
+# --- load data ---
+Data = pd.read_excel(
+    data_path,
+    sheet_name='schwarze Körper SBG',
+    engine='openpyxl'
+)
 
-Spannung = np.array([[x, y] for x, y in zip(Data['Spannung in mV'].tolist(), Data['Temperatur in °C'].tolist())])
+# --- extract data ---
+U = np.array(Data['Spannung in mV'])
+T_K = np.array(Data['Temperatur in °C']) + 273.15
 
-##Errors
-errT = 0.1 #Temperatur in °C
-errU = 0.1 #Spannung in mV
+# --- constants ---
+T0_K = 293.15  # 20°C
 
-def model(T, a, b):
-    return a * T**4 + b
+# --- errors ---
+errT = 0.1
+errU = 0.1
 
-##plot data as U(T) for all 4 surfaces in 4 different plots
-###def plot
-def plot_and_fit(data, name, errU=0.1, errT=0.1):
-    U = data[:, 0]
-    T_C = data[:, 1]
+def model(T, A, b):
+    return A * (T**b - T0_K**b)
 
-    # convert to Kelvin
-    T_K = T_C + 273.15
-    T4 = T_K**4
+# --- fit ---
+popt, pcov = curve_fit(model, T_K, U, p0=[1e-10, 4])
+A_fit, b_fit = popt
 
-    # linear fit: U = a * x + b
-    #coeffs = np.polyfit(T_K, U, 1)
-    #fit = np.poly1d(coeffs)
+# --- parameter error ---
+b_err = np.sqrt(pcov[1, 1])
 
-    #x_fit = np.linspace(T_K.min(), T_K.max(), 200)
+print("Fit results:")
+print(f"A = {A_fit:.3e}")
+print(f"b = {b_fit:.4f} ± {b_err:.4f}")
 
-    # quadratic fit: U = a*T^2 + b*T + c
-    coeffs = np.polyfit(T_K, U, 2)
-    fit = np.poly1d(coeffs)
+# --- plotting ---
+plt.figure(figsize=(8, 6))
 
-    x_fit = np.linspace(T_K.min(), T_K.max(), 200)
+# data
+plt.errorbar(
+    T_K, U,
+    xerr=errT, yerr=errU,
+    fmt='x',
+    capsize=3,
+    label="data"
+)
 
-    ###params, _ = curve_fit(model, T_K, U)
-    ###x_fit = np.linspace(T_K.min(), T_K.max(), 200)
+# fit curve
+T_fit = np.linspace(min(T_K), max(T_K), 300)
+plt.plot(
+    T_fit,
+    model(T_fit, *popt),
+    label=f"fit: b = {b_fit:.3f} ± {b_err:.3f}"
+)
 
-    # --- plot U(T)
-    plt.figure()
-    plt.errorbar(T_K, U, xerr=errT, yerr=errU, fmt='x', label='data', color='black', capsize=4)
-    #plt.plot(T_K, fit(T_K), label=f'fit: U = {coeffs[0]:.3e} T + {coeffs[1]:.3e}', color='black')
-    plt.plot(x_fit, fit(x_fit), label=f'U = {coeffs[0]:.3e} T² + {coeffs[1]:.3e} T + {coeffs[2]:.3e}', color='red')
-    ###plt.plot(x_fit, model(x_fit, *params), label=f'U = {params[0]:.3e} T⁴ + {params[1]:.3e}', color='black')
-    plt.xlabel("T [K]")
-    plt.ylabel("U [mV]")
-    plt.title(f"{name} - U(T)")
-    plt.legend()
-    plt.grid(False)
-    plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
-    plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
-    plt.tick_params(axis='both', which='minor', direction='in', right=True, top=True)
-    plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
-    plt.tight_layout()
-    plt.savefig(img_path / f"{name}_U_T.png")
-    plt.show()
+# --- styling ---
+plt.xlabel("temperature T [K]")
+plt.ylabel("U [mV]")
+plt.title("U(T) fit: U = A(T^b - T0^b)")
+plt.legend()
+plt.grid(False)
+
+plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
+plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
+
+plt.tick_params(axis='both', which='major', direction='in', top=True, right=True)
+plt.tick_params(axis='both', which='minor', direction='in', top=True, right=True)
+
+plt.tight_layout()
+plt.savefig(img_path / "fit_U_T_blackbody.png")
+plt.show()
 
 
-    # linear fit: U = a * x + b
-    coeffs2 = np.polyfit(T4, U, 1)
-    fit2 = np.poly1d(coeffs2)
+#lin fit
+X = T_K**4 - T0_K**4
 
-    x_fit2 = np.linspace(T4.min(), T4.max(), 200)
-    
+coeffs = np.polyfit(X, U, 1)
+A_lin = coeffs[0]
+offset = coeffs[1]
 
-    # --- plot U(T^4)
-    plt.figure()
-    plt.errorbar(T4, U, xerr=4*T_K**3*errT, yerr=errU, fmt='x', label='data', color='black', capsize=4)
-    plt.plot(x_fit2, fit2(x_fit2), label=f'fit: U = {coeffs2[0]:.3e} T⁴ + {coeffs2[1]:.3e}', color='red')
-    plt.xlabel("T⁴ [K⁴]")
-    plt.ylabel("U [mV]")
-    plt.title(f"{name} - U(T⁴)")
-    plt.legend()
-    plt.grid(False)
-    plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
-    plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
-    plt.tick_params(axis='both', which='minor', direction='in', right=True, top=True)
-    plt.tick_params(axis='both', which='major', direction='in', right=True, top=True, length=5)
-    plt.tight_layout()
-    plt.savefig(img_path / f"{name}_U_T4.png")
-    plt.show()
+print("\nLinear fit (recommended):")
+print(f"A = {A_lin:.3e}")
+print(f"offset = {offset:.3e}")
 
-plot_and_fit(Spannung, "Black body  - Stefan-Boltzmann law", errU, errT)
+# plot linear fit
+plt.figure(figsize=(8, 6))
+
+plt.errorbar(
+    X, U,
+    xerr=4*T_K**3*errT,
+    yerr=errU,
+    fmt='x',
+    capsize=3,
+    label='data',
+    color='black'
+)
+
+x_fit = np.linspace(min(X), max(X), 300)
+plt.plot(x_fit, A_lin * x_fit + offset,
+         label=f'U = {A_lin:.3e}·(T⁴-T₀⁴) + {offset:.2e}', color='red')
+
+plt.xlabel("T⁴ - T₀⁴ [K⁴]")
+plt.ylabel("U [mV]")
+plt.title("U(T^4) linear fit")
+plt.legend()
+
+plt.gca().xaxis.set_minor_locator(AutoMinorLocator(4))
+plt.gca().yaxis.set_minor_locator(AutoMinorLocator(4))
+plt.tick_params(axis='both', which='both', direction='in', top=True, right=True)
+
+plt.tight_layout()
+plt.savefig(img_path / "fit_U_T4_Blackbody.png")
+plt.show()
