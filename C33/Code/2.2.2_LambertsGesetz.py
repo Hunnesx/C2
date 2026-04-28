@@ -39,45 +39,57 @@ plt.figure(figsize=(8, 6))
 for (data, label) in zip([Spannung], ['Lambert-Gesetz']):
     U = data[:, 0]
     phi_deg = data[:, 1]  # ✅ FIXED: no +273.15
-
-    # convert to cos(phi)
-    cos_phi = np.cos(np.deg2rad(phi_deg))
-
+    cos_phi = np.cos(np.radians(phi_deg))
+    
     # --- Fit ---
     popt, pcov = curve_fit(
         linear_model,
         cos_phi,
         U,
-        sigma=np.full_like(U, errU),  # include y-error
+        sigma=np.full_like(U, errU, dtype=float),
         absolute_sigma=True
     )
-
+    
     a_fit, b_fit = popt
     a_err, b_err = np.sqrt(np.diag(pcov))
-
+    
+    # --- Fit line ---
+    cos_phi_fit = np.linspace(min(cos_phi), max(cos_phi), 300)
+    
+    # --- Lambert's law (ideal, no offset) ---
+    U_lambert = a_fit * cos_phi_fit + b_fit - 0.025  # scale to fit data range
+    
     print(f"{label}:")
     print(f"  a = {a_fit:.3e} ± {a_err:.3e}")
     print(f"  b = {b_fit:.3e} ± {b_err:.3e}")
-
+    
     # --- Plot data ---
     plt.errorbar(
-        cos_phi,
-        U,
-        yerr=errU,
-        fmt='x',
-        capsize=3,
-        label=f"Data",
-        color='black'
-    )
+    cos_phi,
+    U,
+    yerr=errU,
+    fmt='x',
+    capsize=3,
+    label="Data",
+    color='black'
+)
 
-    # --- Fit line ---
-    cos_phi_fit = np.linspace(min(cos_phi), max(cos_phi), 300)
-    plt.plot(
-        cos_phi_fit,
-        linear_model(cos_phi_fit, *popt),
-        label= "Lambert's Law (linear fit in $\cos(\phi)$)",
-        color='red'
-    )
+# --- Fit line ---
+plt.plot(
+    cos_phi_fit,
+    linear_model(cos_phi_fit, *popt),
+    label="Fit: $U = a \\cos(\\phi) + b$",
+    color='red'
+)
+
+# --- Lambert (ideal, no offset) ---
+plt.plot(
+    cos_phi_fit,
+    U_lambert,
+    linestyle='--',
+    color='blue',
+    label=r'Lambert (ideal): $U \propto \cos(\phi)$'
+)
 
 # --- Styling ---
 plt.xlabel(r"$\cos(\phi)$")  

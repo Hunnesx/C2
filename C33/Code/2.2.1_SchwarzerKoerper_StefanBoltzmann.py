@@ -51,7 +51,8 @@ plt.errorbar(
     xerr=errT, yerr=errU,
     fmt='x',
     capsize=3,
-    label="data"
+    label="data",
+    color='black'
 )
 
 # fit curve
@@ -59,13 +60,14 @@ T_fit = np.linspace(min(T_K), max(T_K), 300)
 plt.plot(
     T_fit,
     model(T_fit, *popt),
-    label=f"fit: b = {b_fit:.3f} ± {b_err:.3f}"
+    label=f"fit: b = {b_fit:.3f} ± {b_err:.3f}",
+    color='red'
 )
 
 # --- styling ---
 plt.xlabel("temperature T [K]")
 plt.ylabel("U [mV]")
-plt.title("U(T) fit: U = A(T^b - T0^b)")
+plt.title("U(T) - dependency fitted to U = A·(T^b - T₀^b)")
 plt.legend()
 plt.grid(False)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  28 APR 2026 14:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  28 APR 2026 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,22 +519,22 @@ Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count301
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+aess on input line 68.
+LaTeX Font Info:    Trying to load font information for T1+aess on input line 70.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 68.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <20.74> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 68.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
  (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 1.
@@ -551,10 +551,7 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 12--13
  [][] 
  []
 
-
-Underfull \vbox (badness 2990) has occurred while \output is active []
-
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -564,7 +561,7 @@ Underfull \vbox (badness 2990) has occurred while \output is active []
 
 LaTeX Warning: Reference `tab:SBBlackbody' on page 2 undefined on input line 19.
 
-<../Images/individual_fits_U(T).png, id=40, 578.16pt x 433.62pt>
+<../Images/individual_fits_U(T).png, id=35, 578.16pt x 433.62pt>
 File: ../Images/individual_fits_U(T).png Graphic file (type png)
 <use ../Images/individual_fits_U(T).png>
 Package pdftex.def Info: ../Images/individual_fits_U(T).png  used on input line 23.
@@ -575,56 +572,82 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 23--24
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
+Underfull \hbox (badness 10000) in paragraph at lines 44--52
 
  []
 
+<../Images/individual_fits_U(T4).png, id=39, 578.16pt x 433.62pt>
+File: ../Images/individual_fits_U(T4).png Graphic file (type png)
+<use ../Images/individual_fits_U(T4).png>
+Package pdftex.def Info: ../Images/individual_fits_U(T4).png  used on input line 56.
+(pdftex.def)             Requested size: 242.73761pt x 182.053pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
-[][]|\T1/aer/m/n/9 Trans-mit-tan-ce of in-fra-red ra-dia-ti-on
- []
-
-
-Underfull \hbox (badness 2197) in paragraph at lines 74--82
-\T1/aer/m/n/10 low trans-mit-tan-ce. Si-li-co-ne ho-we-ver lets al-most
- []
-
-
-Underfull \hbox (badness 1097) in paragraph at lines 74--82
-\T1/aer/m/n/10 half of the in-fra-red ra-dia-ti-on through, which is
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 74--82
-\T1/aer/m/n/10 a in-di-rect band gap se-mi-con-duc-tor. This means
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--82
-
- []
-
-[2 <../Images/Setup.png> <../Images/individual_fits_U(T).png>]
-<../Images/setup2.png, id=65, 385.44pt x 243.91125pt>
-File: ../Images/setup2.png Graphic file (type png)
-<use ../Images/setup2.png>
-Package pdftex.def Info: ../Images/setup2.png  used on input line 101.
-(pdftex.def)             Requested size: 242.73761pt x 153.60535pt.
-
-Overfull \hbox (12.5pt too wide) in paragraph at lines 101--102
+Overfull \hbox (12.5pt too wide) in paragraph at lines 56--57
  [][] 
  []
 
+[2 <../Images/Setup.png> <../Images/individual_fits_U(T).png>]
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[][]|\T1/aer/m/n/9 Trans-mit-tan-ce of in-fra-red ra-dia-ti-on
+ []
 
-LaTeX Warning: Reference `fig:SBBlackbody' on page 3 undefined on input line 111.
+<../Images/setup2.png, id=66, 385.44pt x 243.91125pt>
+File: ../Images/setup2.png Graphic file (type png)
+<use ../Images/setup2.png>
+Package pdftex.def Info: ../Images/setup2.png  used on input line 112.
+(pdftex.def)             Requested size: 242.73761pt x 153.60535pt.
 
+Overfull \hbox (12.5pt too wide) in paragraph at lines 112--113
+ [][] 
+ []
 
-LaTeX Warning: Reference `tab:SBBlackbody' on page 3 undefined on input line 111.
+<../Images/fit_U_T_blackbody.png, id=69, 578.16pt x 433.62pt>
+File: ../Images/fit_U_T_blackbody.png Graphic file (type png)
+<use ../Images/fit_U_T_blackbody.png>
+Package pdftex.def Info: ../Images/fit_U_T_blackbody.png  used on input line 125.
+(pdftex.def)             Requested size: 242.73761pt x 182.053pt.
 
-) (./Evaluation.tex) (./Conclusion.tex)
+Overfull \hbox (12.5pt too wide) in paragraph at lines 125--126
+ [][] 
+ []
+
+[3 <../Images/individual_fits_U(T4).png> <../Images/setup2.png>]
+<../Images/fit_U_T4_blackbody.png, id=84, 578.16pt x 433.62pt>
+File: ../Images/fit_U_T4_blackbody.png Graphic file (type png)
+<use ../Images/fit_U_T4_blackbody.png>
+Package pdftex.def Info: ../Images/fit_U_T4_blackbody.png  used on input line 140.
+(pdftex.def)             Requested size: 242.73761pt x 182.053pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 140--141
+ [][] 
+ []
+
+<../Images/lambert_U_phi.png, id=87, 578.16pt x 433.62pt>
+File: ../Images/lambert_U_phi.png Graphic file (type png)
+<use ../Images/lambert_U_phi.png>
+Package pdftex.def Info: ../Images/lambert_U_phi.png  used on input line 164.
+(pdftex.def)             Requested size: 242.73761pt x 182.053pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 164--165
+ [][] 
+ []
+
+<../Images/individual_fits_U_cos_phi.png, id=91, 578.16pt x 433.62pt>
+File: ../Images/individual_fits_U_cos_phi.png Graphic file (type png)
+<use ../Images/individual_fits_U_cos_phi.png>
+Package pdftex.def Info: ../Images/individual_fits_U_cos_phi.png  used on input line 181.
+(pdftex.def)             Requested size: 242.73761pt x 182.053pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
+
+[4 <../Images/fit_U_T_blackbody.png> <../Images/fit_U_T4_Blackbody.png> <../Images/lambert_U_phi.png>]) (./Conclusion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+)
 LaTeX Font Info:    Trying to load font information for T1+aett on input line 82.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -669,43 +692,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-[][]$\T1/aett/m/n/10 https : / / physics . nist . gov / cgi-[]bin / cuu /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-[][]$\T1/aett/m/n/10 https : / / www . chemeo . com / cid / 68-[]061-[]9 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-\T1/aett/m/n/10 Sulfur-[]hexafluoride$[] \T1/aer/m/n/10 zu-letzt be-sucht am
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-[]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-\T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
- []
-
-
 AED: lastpage setting LastPage
-[3 <../Images/setup2.png>] (./main.aux)
+[5 <../Images/individual_fits_U_cos_phi.png>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -713,18 +701,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16636 strings out of 478287
- 314811 string characters out of 5849289
- 761815 words of memory out of 5000000
- 34536 multiletter control sequences out of 15000+600000
+ 16670 strings out of 478287
+ 315984 string characters out of 5849289
+ 763815 words of memory out of 5000000
+ 34564 multiletter control sequences out of 15000+600000
  505099 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,106p,10645b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,20n,106p,10645b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (3 pages, 326991 bytes).
+Output written on main.pdf (5 pages, 520424 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
