@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  29 APR 2026 09:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  29 APR 2026 10:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -125,10 +125,6 @@ Package tocbasic Info: babel extension for `lot' omitted
 \c@table=\count193
 Class scrartcl Info: Redefining `\numberline' on input line 6258.
 \bibindent=\dimen138
-) (/usr/share/texlive/texmf-dist/tex/generic/german/german.sty v2.5e 1998-07-08
-Package: german 1998/07/08 v2.5e Support for writing german texts (br)
-\grmnU@D=\dimen139
-german -- \language number for Austrian undefined, default 51 used.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip63
@@ -139,10 +135,10 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen140
+\ex@=\dimen139
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen141
+\pmbraise@=\dimen140
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
@@ -158,7 +154,7 @@ LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box52
 \strutbox@=\box53
-\big@size=\dimen142
+\big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count199
@@ -171,12 +167,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \column@=\count270
 \maxfields@=\count271
 \andhelp@=\toks19
-\eqnshift@=\dimen143
-\alignsep@=\dimen144
-\tagshift@=\dimen145
-\tagwidth@=\dimen146
-\totwidth@=\dimen147
-\lineht@=\dimen148
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
 \@envbody=\toks20
 \multlinegap=\skip64
 \multlinetaggap=\skip65
@@ -205,8 +201,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/ae/ae.sty
@@ -234,13 +230,13 @@ Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen151
-\captionmargin@=\dimen152
-\captionwidth=\dimen153
-\caption@tempdima=\dimen154
-\caption@indent=\dimen155
-\caption@parindent=\dimen156
-\caption@hangindent=\dimen157
+\captionmargin=\dimen150
+\captionmargin@=\dimen151
+\captionwidth=\dimen152
+\caption@tempdima=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
 Package caption Info: KOMA-Script document class detected.
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
 File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
@@ -266,7 +262,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count274
 \sf@farskip=\skip66
-\sf@captopadj=\dimen158
+\sf@captopadj=\dimen157
 \sf@capskip=\skip67
 \sf@nearskip=\skip68
 \c@subfigure=\count275
@@ -306,7 +302,7 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen159
+\@linkdim=\dimen158
 \Hy@linkcounter=\count281
 \Hy@pagecounter=\count282
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -339,15 +335,15 @@ Package hyperref Info: Bookmarks ON on input line 4445.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen160
+\XeTeXLinkMargin=\dimen159
  (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count285
-\Field@Width=\dimen161
-\Fld@charsize=\dimen162
+\Field@Width=\dimen160
+\Fld@charsize=\dimen161
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -396,14 +392,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \UL@hyphenbox=\box57
 \UL@skip=\skip72
 \UL@hook=\toks24
-\UL@height=\dimen163
+\UL@height=\dimen162
 \UL@pe=\count292
-\UL@pixel=\dimen164
+\UL@pixel=\dimen163
 \ULC@box=\box58
 Package: ulem 2019/11/18
-\ULdepth=\dimen165
+\ULdepth=\dimen164
 )
-LaTeX Font Info:    Trying to load font information for T1+aer on input line 36.
+LaTeX Font Info:    Trying to load font information for T1+aer on input line 34.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )
@@ -429,7 +425,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 36.
+(typearea)              on input line 34.
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
@@ -437,34 +433,37 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+Package scrbase Info: activating english \contentsname on input line 42.
+Package scrbase Info: activating english \listfigurename on input line 42.
+Package scrbase Info: activating english \listtablename on input line 42.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count294
-\scratchdimen=\dimen166
+\scratchdimen=\dimen165
 \scratchbox=\box60
 \nofMPsegments=\count295
 \nofMParguments=\count296
 \everyMPshowfont=\toks25
 \MPscratchCnt=\count297
-\MPscratchDim=\dimen167
+\MPscratchDim=\dimen166
 \MPnumerator=\count298
 \makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks26
@@ -482,13 +481,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 44.
+(lastpage)             ! on input line 42.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 44.
+Package hyperref Info: Link coloring OFF on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -498,9 +497,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count300
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -512,29 +511,29 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 44.
+(scrartcl)           before \begin{document} on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count301
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+aess on input line 70.
+LaTeX Font Info:    Trying to load font information for T1+aess on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <20.74> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 68.
  (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 1.
@@ -572,6 +571,16 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 23--24
  []
 
 
+Underfull \hbox (badness 1708) in paragraph at lines 44--52
+\T1/aer/m/n/10 which is also mea-sured by the ther-mopile and
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 44--52
+\T1/aer/m/n/10 can not be eas-ily seper-ated from the ra-di-a-tion
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 44--52
 
  []
@@ -587,10 +596,6 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 56--57
  []
 
 [2 <../Images/Setup.png> <../Images/individual_fits_U(T).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
-[][]|\T1/aer/m/n/9 Trans-mit-tan-ce of in-fra-red ra-dia-ti-on
- []
-
 <../Images/setup2.png, id=66, 385.44pt x 243.91125pt>
 File: ../Images/setup2.png Graphic file (type png)
 <use ../Images/setup2.png>
@@ -648,46 +653,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--10
  []
 
 )
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 82.
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 80.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \T1/aett/m/n/10 fileadmin / 11016800 / Geraete / RE104 . pdf$[] \T1/aer/m/n/10 last
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/aett/m/n/10 fileadmin / 11016800 / Geraete /
  []
 
@@ -701,15 +706,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16670 strings out of 478287
- 315984 string characters out of 5849289
- 763815 words of memory out of 5000000
- 34564 multiletter control sequences out of 15000+600000
+ 16489 strings out of 478287
+ 313594 string characters out of 5849289
+ 760138 words of memory out of 5000000
+ 34387 multiletter control sequences out of 15000+600000
  505099 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,106p,10645b,520s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,20n,106p,10645b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (5 pages, 508217 bytes).
+Output written on main.pdf (5 pages, 509081 bytes).
 PDF statistics:
  243 PDF objects out of 1000 (max. 8388607)
  182 compressed objects within 2 object streams
