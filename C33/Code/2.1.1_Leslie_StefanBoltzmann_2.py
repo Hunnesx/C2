@@ -7,8 +7,8 @@ from scipy.optimize import curve_fit
 
 # --- paths ---
 base_path = Path.cwd()
-data_path = base_path / 'Data' / 'Versuch_33.xlsx'
-img_path = base_path.parent / 'C33' / 'Images'
+data_path = base_path / 'C33' / 'Data' / 'Versuch_33.xlsx'
+img_path = base_path.parent / 'C2-Praktikum' / 'C33' / 'Images'
 
 # --- load data ---
 Data = pd.read_excel(
@@ -30,11 +30,6 @@ datasets = [
     (SeiteNickelMatt, "nickel matt")
 ]
 
-# --- constants ---
-T0_K = 20 + 273.15
-errT = 0.1
-errU = 0.1
-
 # --- model ---
 def model(T, A, b):
     return A * (T**b - T0_K**b)
@@ -50,6 +45,12 @@ b_values = []
 for (data, label), color in zip(datasets, colors):
     U = data[:, 0]
     T_K = data[:, 1] + 273.15
+
+    # --- constants ---
+    T0_K = 20 + 273.15
+    errT = 0.1
+    errU = 0.00025 * U + 0.00008 * 100
+
 
     # --- fit ---
     popt, pcov = curve_fit(model, T_K, U, p0=[1e-10, 4])

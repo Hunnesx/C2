@@ -7,8 +7,8 @@ from scipy.optimize import curve_fit
 
 # --- paths ---
 base_path = Path.cwd()
-data_path = base_path / 'Data' / 'Versuch_33.xlsx'
-img_path = base_path.parent / 'C33' / 'Images'
+data_path = base_path / 'C33' / 'Data' / 'Versuch_33.xlsx'
+img_path = base_path.parent / 'C2-Praktikum' / 'C33' / 'Images'
 
 # --- load data ---
 Data = pd.read_excel(
@@ -33,8 +33,7 @@ datasets = [
 colors = ["black", "tab:red", "tab:blue", "tab:green"]
 
 T0_K = 20 + 273.15
-errT = 0.1
-errU = 0.1
+
 
 # --- linear model for U(T^4) ---
 def linear_model(T4, a, c):
@@ -46,6 +45,9 @@ for (data, label), color in zip(datasets, colors):
     U = data[:, 0]
     T_K = data[:, 1] + 273.15
     T4 = T_K**4 - T0_K**4
+
+    errT = 0.1
+    errU = 0.00025 * U + 0.00008 * 100
 
     # --- fit ---
     popt, _ = curve_fit(linear_model, T4, U)

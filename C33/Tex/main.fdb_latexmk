@@ -1,12 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1777395333 "/home/hannes/Desktop/Uni/C2-Praktikum/C33/Tex/main.tex" "main.pdf" "main" 1777395335
+["pdflatex"] 1777448258 "/home/hannes/Desktop/Uni/C2-Praktikum/C33/Tex/main.tex" "main.pdf" "main" 1777448259
   "../Images/Setup.png" 1777042333 17830 e1ad3966d0d210d434c884d72ab67bdd ""
-  "../Images/fit_U_T4_Blackbody.png" 1777388253 41030 ec089e1a7c58f8d13db129cd3f7527ce ""
-  "../Images/fit_U_T_blackbody.png" 1777388251 40392 f4913e9af7e73a1d683d8d28cda46811 ""
-  "../Images/individual_fits_U(T).png" 1777047685 79414 300061807c668ecb938024b52bc779fd ""
-  "../Images/individual_fits_U(T4).png" 1777049541 78074 5c64febf8e6c09f5493d3a830a2ec49a ""
-  "../Images/individual_fits_U_cos_phi.png" 1777391636 44769 dc09c904cfe23b3b69ca8503a7b46f74 ""
-  "../Images/lambert_U_phi.png" 1777391050 47437 ee4a9224e9caa22d92eb5f5a4764e35e ""
+  "../Images/fit_U_T4_Blackbody.png" 1777448258 36784 64d45d5595c109bba8ea2baf52ad6882 ""
+  "../Images/fit_U_T_blackbody.png" 1777448252 40134 0c006e77dd730145f656c31af849732f ""
+  "../Images/individual_fits_U(T).png" 1777447931 75910 a09a252c85dad9015c1d38d7a867d305 ""
+  "../Images/individual_fits_U(T4).png" 1777448178 72875 a7d86600d0c3160177f985af4094328c ""
+  "../Images/individual_fits_U_cos_phi.png" 1777448107 43673 b8fafd3010778332099b27e2139640c1 ""
+  "../Images/lambert_U_phi.png" 1777448192 47348 b6911a75ed9df092dc8c2af027a9c115 ""
   "../Images/setup2.png" 1777374412 39920 aa0366a87bca2eaad33ea5ff71eeb55f ""
   "/etc/texmf/web2c/texmf.cnf" 1702837203 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/hannes/Desktop/Uni/C2-Praktikum/C33/Tex/main.tex" 1777394235 4453 f511c9329e6c8ad8df2b79ab4832c6c8 ""
@@ -164,8 +164,8 @@
   "Experiment.tex" 1777395332 14220 d8bf58458abdf0db9f59447e74e26d82 ""
   "Introduction.tex" 1777395176 718 750531f600dc1007badf841fd9e37e97 ""
   "Theory.tex" 1777040940 2305 27bf307eeb2b3b5bcb80f04208befb6e ""
-  "main.aux" 1777395335 10334 d2aac4e2c37d4d0eec052323e9a13701 "pdflatex"
-  "main.out" 1777395334 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1777448259 10334 d2aac4e2c37d4d0eec052323e9a13701 "pdflatex"
+  "main.out" 1777448259 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1777394235 4453 f511c9329e6c8ad8df2b79ab4832c6c8 ""
   (generated)
   "main.aux"

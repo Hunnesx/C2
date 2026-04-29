@@ -26,7 +26,7 @@ T0_K = 293.15  # 20°C
 
 # --- errors ---
 errT = 0.1
-errU = 0.1
+errU = 0.00025 * U + 0.00008 * 100
 
 def model(T, A, b):
     return A * (T**b - T0_K**b)
@@ -48,7 +48,7 @@ plt.figure(figsize=(8, 6))
 # data
 plt.errorbar(
     T_K, U,
-    xerr=errT, yerr=errU,
+    xerr=0.1, yerr=0.00025 * U + 0.00008 * 100,
     fmt='x',
     capsize=3,
     label="data",

@@ -67,7 +67,7 @@ I_lambert = np.cos(np.deg2rad(phi_fit))
 # --- Plot ---
 plt.figure(figsize=(8,6))
 
-plt.errorbar(phi, U_norm, yerr=0.1/U0, fmt='o', label='Data', capsize=3, color='black')
+plt.errorbar(phi, U_norm, yerr=0.00025 * U + 0.00008 * 100/U0, fmt='o', label='Data', capsize=3, color='black')
 plt.plot(phi_fit, U_fit, 
          label=f'Fit: U = {a:.2f} cos({b:.2f} $\phi$ + {c:.2f}) + {d:.2f}', 
          color='red')

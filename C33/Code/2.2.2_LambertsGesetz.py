@@ -26,10 +26,6 @@ Spannung = np.array([
     )
 ])
 
-# --- Errors ---
-errU = 0.1  # mV
-errW = 0.1  # degrees (not used in fit here)
-
 # --- Linear model U = a*cos(phi) + b ---
 def linear_model(cos_phi, a, b):
     return a * cos_phi + b
@@ -40,6 +36,10 @@ for (data, label) in zip([Spannung], ['Lambert-Gesetz']):
     U = data[:, 0]
     phi_deg = data[:, 1]  # ✅ FIXED: no +273.15
     cos_phi = np.cos(np.radians(phi_deg))
+
+    # --- Errors ---
+    errU = errU = 0.00025 * U + 0.00008 * 100  # mV
+    errW = 0.1  # degrees (not used in fit here)
     
     # --- Fit ---
     popt, pcov = curve_fit(
