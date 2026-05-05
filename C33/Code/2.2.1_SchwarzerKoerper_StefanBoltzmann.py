@@ -26,7 +26,7 @@ T0_K = 293.15  # 20°C
 
 # --- errors ---
 errT = 0.1
-errU = 0.00025 * U + 0.00008 * 100
+errU = 0.00025 * U + 0.00008 * 100  # 0.25% of U + 0.08 mV (systematic)
 
 def model(T, A, b):
     return A * (T**b - T0_K**b)
@@ -37,6 +37,29 @@ A_fit, b_fit = popt
 
 # --- parameter error ---
 b_err = np.sqrt(pcov[1, 1])
+'''
+
+# --- improved model ---
+def model(T, A, b):
+    return A * (T**b - T0_K**b)
+
+# --- better initial guess ---
+A0 = U.max() / (T_K.max()**4 - T0_K**4)
+
+# --- fit with weighting + bounds ---
+popt, pcov = curve_fit(
+    model,
+    T_K,
+    U,
+    p0=[A0, 4],
+    sigma=errU,
+    absolute_sigma=True,
+    bounds=([0, 3], [np.inf, 5])  # physics: exponent near 4
+)
+
+A_fit, b_fit = popt
+A_err, b_err = np.sqrt(np.diag(pcov))
+'''
 
 print("Fit results:")
 print(f"A = {A_fit:.3e}")
