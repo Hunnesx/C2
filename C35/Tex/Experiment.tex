@@ -1,1 +1,65 @@
-\section{Experiment}
+\section{Experiment} \label{sec:Experiment}
+
+    \subsection{Velocity of ultrasound in polyacryl} \label{subsec:schallgeschwindigkeit}
+
+        To measure the propagation speed of sound waves through media, three polyacryl cylinders with different lenghts were used. The time that the wave
+        took to travel through the cylinder was measured via the method of reflection, where the ultrasound transmitter also worked as the detector of the signal.
+        The time was then captured with the echoscope. With the method of reflection one has to notice that the length in the formula for the propagation speed
+        is no double the length of the cylinder, concluding in:
+
+        \begin{equation}
+            v_{poly} = \frac{2 \cdot l}{\Delta t}
+            \label{eq:schallgeschwindigkeit}
+        \end{equation}
+        \noindent
+        As noted above l is the total length of the cylinder, $\Delta t$ is the time the wave took to travel twice through the cylinder and $v_{poly}$ is the
+        resulting speed of sound. \\
+        This method was then applied to all three different cylinder-lengths, each with three different frequencies $f_{1MHz} = 1 MHz$, $f_{2MHz} = 2 MHz$
+        and $f_{4MHz} = 4 MHz$. Since the absorption for $f_{4MHz}$ was big, the largest cylinder could not be measured. \\
+        With the relevant data shown in \ref{subsec:AppendixA}, Tab. \ref{tab:DataSchallgeschwindigkeit} the mean sound velocitys for each frequency is calculated:
+
+        \begin{equation*}
+        \begin{split}
+            v_{poly. 1MHz} & = (2.619 \pm 0.032) \frac{km}{s}\\
+            v_{poly. 2MHz} & = (2.677 \pm 0.033) \frac{km}{s}\\
+            v_{poly. 4MHz} & = (2.746 \pm 0.052) \frac{km}{s}
+        \end{split}
+        \end{equation*}
+
+        It is clearly visible, that the speed of sound in polyacryl depends on the frequency of the wave traveling through it. Thus it indicates dispersion in
+        the sound velocity. \\
+        In the data sheet from a manufacutrer, the longitunal wave velocity for the frequency of 1Mhz is given by
+        $v_{poly,Lit} = 2.7 \frac{km}{s}$ \cite{SchallgeschwindigkeitPolyacryl}, therefore the measured value does not match the literature within the error.
+        This could be due to the fact that the measurement was done in saturation of the used piezoelectric ultrasound emitter. Also because of the absorption 
+        of the material, the gain on the echoscope had to be increased, which also increased the noise of the measurement thus increasing the uncertainty.
+        
+    \subsection{Absorption of ultrasound in PVC} \label{subsec:absorption}
+
+    \subsection{Measurements on a polyacrylic test block} \label{subsec:Laengenmessung}
+
+    \subsection{Resolution of an echoscope} \label{subsec:Aufloesungsvermoegen}
+
+    \subsection{Spectral methods of an echoscope} \label{subsec:SpectraleMethoden}
+
+    \subsection{Debye-Sears effect} \label{subsec:Dabye-Sears-Effekt}
+
+        The Dabye-Sears effect describes an acousto-optic effect, where the ultrasound probe creates a standing wave with lattice constant $g = \lambda_S$
+        perpendicular to an incoming laser beam. The beam then diffracts as it does with a classical optical lattice. With the formula for the
+        lattice spectrum from classical optics one can determine the wavelength $\lambda_S$ of the ultrasound. \\
+        The setup of the measurement is shown in fig. \ref{fig:setup2.8}.
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.5\textwidth]{../Images/setup_2.8.png}
+            \caption{Setup used to measure the wavelength of ultrasound utilizing the Dabye-Sears effect}
+            \label{fig:setup2.8}
+        \end{figure}
+
+        \begin{equation}
+            \lambda_S = \frac{n \cdot \lambda_{laser}}{sin(\alpha)} \overset{(1)}{\approx} \frac{n \cdot \lambda_{laser} \cdot s}{x}
+        \label{eq:Dabye-Sears}
+        \end{equation}
+        \noindent
+        In eq. \ref{eq:Dabye-Sears} n is the number of the maxima, $\lambda_{laser}$ is the wavelenght of the laser and $\alpha$ is the angle of diffraction.
+        The approximation (1) in eq. \ref{eq:Dabye-Sears} follows from the large difference in distance $x \ll s$. \\
+
