@@ -19,8 +19,12 @@ s = 2851.5 #mm
 n = 1
 frequenzen = [3, 5, 7, 9, 11, 12]
 
+all_v = []
+all_v_err = []
+
+
 #laser rot
-laser_rot = 632.8 #nm
+laser_rot = 650 #nm
 x_rot = [2.5, 6, 8, 12, 14, 16] #mm
 
 for i in range(len(frequenzen)):
@@ -42,7 +46,7 @@ for i in range(len(frequenzen)):
 print("\n\n")
 
 #laser blau
-laser_blau = 488.0 #nm
+laser_blau = 405 #nm
 x_blau = [3, 4, 5.5, 7, 9, 11] #mm
 
 for i in range(len(frequenzen)):
