@@ -298,8 +298,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/ae/aett10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/ae/aett10.vf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
@@ -315,6 +313,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/ae/aett10.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

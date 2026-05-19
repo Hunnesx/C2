@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  20 MAY 2026 00:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  20 MAY 2026 01:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -472,7 +472,11 @@ Package typearea Info: These are the values describing the layout:
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count309
 \l__pdf_internal_box=\box63
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `tab:Resolution' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -551,22 +555,22 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count316
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+aess on input line 69.
+LaTeX Font Info:    Trying to load font information for T1+aess on input line 82.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 69.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 82.
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <20.74> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 69.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 82.
  (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 1.
@@ -593,6 +597,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--51
 
  []
 
+
+
 <../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png, id=26, 478.78876pt x 252.945pt>
 File: ../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png Graphic file (type png)
 <use ../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png>
@@ -604,11 +610,6 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 56--57
  []
 
 
-Underfull \vbox (badness 2884) has occurred while \output is active []
-
-
-
-
 Overfull \hbox (23.01727pt too wide) in paragraph at lines 72--99
 [][] 
  []
@@ -616,85 +617,105 @@ Overfull \hbox (23.01727pt too wide) in paragraph at lines 72--99
 
 
 [2 <../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 154--157
 
+
+Overfull \hbox (25.58876pt too wide) in paragraph at lines 149--160
+[][] 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 168--171
 
-<../Images/setup_2.8.png, id=51, 1916.15875pt x 827.09pt>
+ []
+
+<../Images/setup_2.8.png, id=50, 1916.15875pt x 827.09pt>
 File: ../Images/setup_2.8.png Graphic file (type png)
 <use ../Images/setup_2.8.png>
-Package pdftex.def Info: ../Images/setup_2.8.png  used on input line 160.
+Package pdftex.def Info: ../Images/setup_2.8.png  used on input line 174.
 (pdftex.def)             Requested size: 242.73761pt x 104.77423pt.
 
-Overfull \hbox (12.5pt too wide) in paragraph at lines 160--161
+Overfull \hbox (12.5pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
-) (./Conclusion.tex)
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 81.
+
+
+[3 <../Images/setup_2.8.png (PNG copy)>]) (./Conclusion.tex
+Underfull \hbox (badness 3108) in paragraph at lines 3--15
+\T1/aer/m/n/10 ap-pli-ca-tion of ul-tra-sound in dif-fer-ent ma-te-ri-als
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 3--15
+\T1/aer/m/n/10 us-ing an echo-scope. The mea-sure-ments of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--15
+
+ []
+
+)
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 94.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 \T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 \T1/aett/m/n/10 fileadmin / 11016800 / Geraete / gs _ 200 . pdf$[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 [][]$\T1/aett/m/n/10 https : / / www . 3bscientific . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 \T1/aett/m/n/10 product-[]manual / UE1070530 _ de . pdf$[] \T1/aer/m/n/10 last vis-
  []
 
 
-
-[3 <../Images/setup_2.8.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 [][]$\T1/aett/m/n/10 https : / / www . schweizer-[]fn . de / stoff /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 \T1/aett/m/n/10 akustik / schallgeschwindigkeit . php$[] \T1/aer/m/n/10 last
  []
 
@@ -704,39 +725,41 @@ Overfull \hbox (29.59332pt too wide) in paragraph at lines 5--33
  []
 
 
+
+
 Overfull \hbox (130.24709pt too wide) in paragraph at lines 39--58
 [][] 
  []
 
 )
 
-
-
-[4
-
-] 
+[4] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17304 strings out of 473190
- 325378 string characters out of 5715799
- 899954 words of memory out of 5000000
+ 17305 strings out of 473190
+ 325393 string characters out of 5715799
+ 901954 words of memory out of 5000000
  40256 multiletter control sequences out of 15000+600000
  592882 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,107p,10950b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,107p,10950b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (4 pages, 999222 bytes).
+Output written on main.pdf (4 pages, 1004857 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

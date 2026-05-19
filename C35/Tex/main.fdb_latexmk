@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1779229336.37325 "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" "main.pdf" "main" 1779229337.18955 0
+["pdflatex"] 1779232206.98593 "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" "main.pdf" "main" 1779232207.74224 0
   "../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png" 1779213721.03721 41553 48509f89645efa7ea856f18bb3e4a67e ""
   "../Images/setup_2.8.png" 1779183047.93749 794926 4cae4da5dd31e04ec471d01f304bd4ff ""
-  "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" 1779213721.0474 4253 7aa1a34e04bebec54d4ae1fd47185768 ""
+  "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" 1779232206.79533 5312 ad47baed48a6f4436aa3556b34c1a71a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/ae/aeb10.tfm" 1136768653 6132 78e5594f4fe2bad148a7cb22806d1f42 ""
@@ -153,13 +153,13 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761778857 3345736 e9d28c2ffe8989ad069d1ad234da6ff9 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Appendix.tex" 1779213721.03822 2059 f7cdbb327b081a9cbbac55589c39611f ""
-  "Conclusion.tex" 1778230709.56335 20 b50204e17c0a475d3d65191e029fdf1d ""
-  "Experiment.tex" 1779229336.16423 11482 00fcd1c52461491370769880261c123d ""
+  "Conclusion.tex" 1779231843.16125 1178 e611b4800022ce4a632aa9602f053e72 ""
+  "Experiment.tex" 1779231236.99376 11925 7261f00422503ea981242a6f7b2caea2 ""
   "Introduction.tex" 1779183047.93853 617 5736fe66ba5e3ae55d2b2f609c6708f0 ""
   "Theory.tex" 1779183047.93878 1635 fbf779d8ee94ac8bda80c34cce1b338b ""
-  "main.aux" 1779229337.14055 9826 938a48e1612af6971ef1457f0209e14f "pdflatex"
-  "main.out" 1779229336.97389 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1779213721.0474 4253 7aa1a34e04bebec54d4ae1fd47185768 ""
+  "main.aux" 1779232207.69974 10052 e886960be40df124915f8d3f8003bab8 "pdflatex"
+  "main.out" 1779232207.54392 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1779232206.79533 5312 ad47baed48a6f4436aa3556b34c1a71a ""
   (generated)
   "main.aux"
   "main.log"
