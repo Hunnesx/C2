@@ -9,7 +9,7 @@ import pandas as pd
 # =========================
 
 # Schallgeschwindigkeit in Polyacryl, z.B. in mm/us
-c = 2,619   # mm/µs
+c = 2.619   # mm/µs
 
 # Fehler der Schallgeschwindigkeit, falls bekannt
 c_err = 0.032   # mm/µs
@@ -58,9 +58,13 @@ namen = [
 tiefe = c * delta_t / 2
 
 # Fehlerfortpflanzung
-tiefe_err = 0.5 * np.sqrt(
-    (delta_t * c_err) ** 2 +
-    (c * delta_t_err) ** 2
+# tiefe_err = 0.5 * np.sqrt(
+#     (delta_t * c_err) ** 2 +
+#     (c * delta_t_err) ** 2
+# )
+tiefe_err =  tiefe * np.sqrt(
+    (delta_t_err/delta_t) ** 2 +
+    (c_err/c) ** 2
 )
 
 
@@ -93,4 +97,4 @@ t_ges_err = 0.5 * np.sqrt(
 )
 
 print()
-print(f"Gesamtdicke des Blocks: {t_ges:.2f} ± {t_ges_err:.2f} mm")
+# print(f"Gesamtdicke des Blocks: {t_ges:.2f} ± {t_ges_err:.2f} mm")
