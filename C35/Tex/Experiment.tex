@@ -44,8 +44,8 @@
 
         where $\lambda$ is the absorption coefficient. To determine this coefficient, the signal's reflected amplitude was measured at different lengths of PVC cylinders. By fitting an
         exponential curve to the data, the absorption coefficient can be determined for the different frequencies. \\
-        For the $f=1MHz$ messuarment, $\lambda_{1 MHz}$ was determined to be $\lambda_{1 MHz} = (0.15 \pm 0.05) \frac{1}{mm}$ and for $f=2MHz$ it was 
-        $\lambda_{2 MHz} = (0.30 \pm 0.10) \frac{1}{mm}$.
+        For the $f=1MHz$ messuarment, $\lambda_{1 MHz}$ was determined to be $\lambda_{1 MHz} = (0.0346 \pm 0.0313) \frac{1}{cm}$ and for $f=2MHz$ it was 
+        $\lambda_{2 MHz} = (0.0443 \pm 0.1297) \frac{1}{cm}$.
         The absorption coefficient increases with the frequency, which is a common behavior in materials. This can be explained by the fact that atoms oscillate faster at higher frequencies, 
         leading to stronger scattering of the waves. The orderes wave increasingly transforms into disordered oscillations, resulting in energy loss. \\
 
@@ -112,11 +112,11 @@
     \begin{table}[H]
         \begin{tabular}{|c|c|}
         \hline
-        Frequency & Distance \\
+        Frequency & Distance $[mm]$\\
         \hline
-        $2MHz$ & $(1.65 \pm 0.10)$ \\
+        $2MHz$ & $(1.70 \pm 0.13)$ \\
         \hline
-        $4MHz$ & $(0.65 \pm 0.10)$ \\
+        $4MHz$ & $(1.75 \pm 0.14)$ \\
         \hline
         \end{tabular}
         \caption{Resolution of the echoscope}
@@ -132,6 +132,22 @@
     
     
     \subsection{Spectral methods of an echoscope} \label{subsec:SpectraleMethoden}
+
+    To investigate the spectral methods, the reflection signal of a polyacrylic plate was analyzed using the A-scan. In addition, an FFT and the cepstrum of the signal were evaluated in order to 
+    determine the thickness of the plate.
+
+    In the A-scan, several reflection peaks are visible, which originate from multiple reflections within the plate. After applying the FFT, approximately equidistant peaks appear in the frequency 
+    spectrum. From the spacing $\Delta \nu$ between neighboring peaks, the pulse travel time can be determined using
+
+    \[
+    \Delta t = \frac{1}{\Delta \nu}.
+    \]
+
+    With the known speed of sound in the material, the thickness of the plate can then be calculated.
+
+    In the cepstrum, only a few dominant peaks are visible, corresponding to the periodic travel-time components of the signal. This also allows the reflection distances to be determined.
+
+    The results obtained from the FFT and the cepstrum agree within the error margins with the direct travel-time measurement and the measurement performed using a caliper.
 
     \subsection{Debye-Sears effect} \label{subsec:Dabye-Sears-Effekt}
 

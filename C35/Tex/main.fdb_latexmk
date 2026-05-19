@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779225145.59221 "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" "main.pdf" "main" 1779225146.34341 0
+["pdflatex"] 1779229336.37325 "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" "main.pdf" "main" 1779229337.18955 0
   "../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png" 1779213721.03721 41553 48509f89645efa7ea856f18bb3e4a67e ""
   "../Images/setup_2.8.png" 1779183047.93749 794926 4cae4da5dd31e04ec471d01f304bd4ff ""
   "/Users/nelewurster/Documents/Uni/GitHub/C2/C35/Tex/main.tex" 1779213721.0474 4253 7aa1a34e04bebec54d4ae1fd47185768 ""
@@ -154,11 +154,11 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Appendix.tex" 1779213721.03822 2059 f7cdbb327b081a9cbbac55589c39611f ""
   "Conclusion.tex" 1778230709.56335 20 b50204e17c0a475d3d65191e029fdf1d ""
-  "Experiment.tex" 1779225145.38835 10395 1d1ac9635a8fb03bc089ae45b1b0bcdd ""
+  "Experiment.tex" 1779229336.16423 11482 00fcd1c52461491370769880261c123d ""
   "Introduction.tex" 1779183047.93853 617 5736fe66ba5e3ae55d2b2f609c6708f0 ""
   "Theory.tex" 1779183047.93878 1635 fbf779d8ee94ac8bda80c34cce1b338b ""
-  "main.aux" 1779225146.30136 9826 e674040ecdbd7bb35acd5b54186b67fa "pdflatex"
-  "main.out" 1779225146.15175 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1779229337.14055 9826 938a48e1612af6971ef1457f0209e14f "pdflatex"
+  "main.out" 1779229336.97389 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1779213721.0474 4253 7aa1a34e04bebec54d4ae1fd47185768 ""
   (generated)
   "main.aux"

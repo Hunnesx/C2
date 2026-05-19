@@ -298,13 +298,13 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/ae/aett10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/ae/aett10.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT Appendix.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/ae/aett10.vf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/ae/aer5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm

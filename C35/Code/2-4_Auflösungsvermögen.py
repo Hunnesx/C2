@@ -4,14 +4,14 @@ from scipy.optimize import curve_fit
 import pandas as pd
 
 #1MHz
-c = 2.619   # mm/µs
-c_err = 0.032   # mm/µs
-delta_t = 0.769230 
+# c = 2.619   # mm/µs
+# c_err = 0.032   # mm/µs
+# delta_t = 0.769230 
 
-# #2MHz
-# c = 2.667
-# c_err = 0.033   # mm/µs
-# delta_t = 1.2727272727
+#2MHz
+c = 2.667
+c_err = 0.033   # mm/µs
+delta_t = 1.2727272727
 
 # #4MHz
 # c = 2.746
