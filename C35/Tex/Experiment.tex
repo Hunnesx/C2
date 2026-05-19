@@ -35,10 +35,102 @@
         
     \subsection{Absorption of ultrasound in PVC} \label{subsec:absorption}
 
+        The coefficient of absorption is a material-specific quantity which indicates how strongly a wave is attenuated propagading a medium. The attenuation follows an exponetial behavior.
+        The intesity $I$ as a function of the distance $x$ can approximately be described by:
+
+        \begin{equation}
+            I(x) \sim e^{-\lambda x}
+        \end{equation}
+
+        where $\lambda$ is the absorption coefficient. To determine this coefficient, the signal's reflected amplitude was measured at different lengths of PVC cylinders. By fitting an
+        exponential curve to the data, the absorption coefficient can be determined for the different frequencies. \\
+        For the $f=1MHz$ messuarment, $\lambda_{1 MHz}$ was determined to be $\lambda_{1 MHz} = (0.15 \pm 0.05) \frac{1}{mm}$ and for $f=2MHz$ it was 
+        $\lambda_{2 MHz} = (0.30 \pm 0.10) \frac{1}{mm}$.
+        The absorption coefficient increases with the frequency, which is a common behavior in materials. This can be explained by the fact that atoms oscillate faster at higher frequencies, 
+        leading to stronger scattering of the waves. The orderes wave increasingly transforms into disordered oscillations, resulting in energy loss. \\
+
     \subsection{Measurements on a polyacrylic test block} \label{subsec:Laengenmessung}
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\textwidth]{../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png}
+            \caption{Schematics of the test block}
+            \label{fig:testblock}
+        \end{figure}
+
+        As we know the speed of sound in polyacryl for the freuquency of $1MHz$ \ref{subsec:schallgeschwindigkeit}, we can use th echoscope to measure the depth $d_i$ of the holes in
+         the test block. 
+        We used the $1MHz$ Probe for a clear runtime measurement. The depth can be calculated from the time difference $\Delta t$ between the first and second reflection of the signal:
+
+        \begin{equation}
+            d_i = \frac{v_{poly,1MHz} \cdot \Delta t}{2}
+        \end{equation}
+        
+        For reference, the depth were mearured with a caliper. The results are shown in tab. \ref{tab:Testwürfel}. 
+
+        \begin{table}[H]
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+            $i$ & $d_{i,caliper}$ [mm] & $\Delta t$ [$\mu s$] & $d_{i}$ [mm] \\
+            \hline
+            1 & $(7.00 \pm 0.10)$ & $(5.825 \pm 0.010)$ & $(7.63 \pm 0.16)$ \\
+            \hline
+            2 & $(14.95 \pm 0.10)$ & $(11.606 \pm 0.010)$ & $(15.20 \pm 0.23)$ \\
+            \hline
+            3 & $(22.95 \pm 0.10)$ & $(17.574 \pm 0.010)$ & $(23.01 \pm 0.31)$ \\
+            \hline
+            4 & $(31.00 \pm 0.10)$ & $(23.358 \pm 0.010)$ & $(30.59 \pm 0.40)$ \\
+            \hline
+            5 & $(39.05 \pm 0.10)$ & $(29.489 \pm 0.010) $ & $(38.62 \pm 0.49)$ \\
+            \hline
+            6 & $(46.75 \pm 0.10)$ & $(35.182\pm 0.01)$ & $(46.07 \pm 0.58)$ \\
+            \hline
+            7 & $(54.15 \pm 0.10)$ & $(40.511 \pm 0.010)$ & $(53.05 \pm 0.66)$ \\
+            \hline
+            8 & $(61.65 \pm 0.10)$ & $(46.058 \pm 0.010)$ & $(60.31 \pm 0.75)$ \\
+            \hline
+            9a & $(17.45 \pm 0.10)$ & $(14.567 \pm 0.010)$ & $(19.08 \pm 0.27)$ \\
+            \hline
+            9b & $(19.10 \pm 0.10)$ & $(15.906 \pm 0.010)$ & $(20.83 \pm 0.29)$ \\
+            \hline
+            10 & $(55.45 \pm 0.10)$ & $(41.505 \pm 0.010)$ & $(54.35 \pm 0.68)$ \\
+            \hline
+            \end{tabular}
+        \caption{Measurement of the testblock}
+        \label{tab:Testwürfel}
+        \end{table}
+
+        Most measured values agree within their margin of error. However, it is noticeable that holes 9a and 9b show deviating values. This is due to the fact that the holes are located very 
+        close to each other, meaning that a higher frequency would be beneficial in order to achieve a more precise resolution.
 
     \subsection{Resolution of an echoscope} \label{subsec:Aufloesungsvermoegen}
 
+    As mentioned in \ref{subsec:Laengenmessung} can a higher frequency be used to achieve a better resolution. To determine the resolution of the echoscope, the distance between two holes, 
+    $(9a$ und $9b)$, was measured with different frequencies. The resolution can be defined as the minimum distance between two holes, where they can still be distinguished as two separate holes. 
+    Measurement for all three frequencies is shown in tab. \ref{tab:Resolution}.
+    
+    \begin{table}[H]
+        \begin{tabular}{|c|c|}
+        \hline
+        Frequency & Distance \\
+        \hline
+        $2MHz$ & $(1.65 \pm 0.10)$ \\
+        \hline
+        $4MHz$ & $(0.65 \pm 0.10)$ \\
+        \hline
+        \end{tabular}
+        \caption{Resolution of the echoscope}
+        \label{tab:Resolution}
+    \end{table}
+
+    For a freuqueny of $1MHz$, the amplitude peaks could not be resolved as two distinct peaks; therefore, the distance between the reflectors could not be determined. In contrast, the measurements 
+    performed at the higher frequencies showed a clear separation of the two peaks, making the distance measurable and allowing the axial resolution to be determined from the spacing 
+    between the two holes.
+    The resolution of the echoscope increases with increasing frequency, which is a characteristic behavior of ultrasound imaging systems. This can be explained by the shorter wavelengths associated 
+    with higher frequencies, enabling improved spatial resolution and therefore a better distinction between closely spaced objects. However, higher frequencies are also subject to stronger 
+    attenuation within the material, which reduces the penetration depth and consequently limits the effective measurement range in practical applications.
+    
+    
     \subsection{Spectral methods of an echoscope} \label{subsec:SpectraleMethoden}
 
     \subsection{Debye-Sears effect} \label{subsec:Dabye-Sears-Effekt}
