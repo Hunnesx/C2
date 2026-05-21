@@ -25,7 +25,7 @@
             v_{poly. 4MHz} & = (2.746 \pm 0.052) \frac{km}{s}
         \end{split}
         \end{equation*}
-
+        \noindent
         It is clearly visible, that the speed of sound in polyacryl depends on the frequency of the wave traveling through it. Thus it indicates dispersion in
         the sound velocity. \\
         In the data sheet from a manufacutrer, the longitunal wave velocity for the frequency of 1Mhz is given by
@@ -41,7 +41,7 @@
         \begin{equation}
             I(x) \sim e^{-\lambda x}
         \end{equation}
-
+        \noindent
         where $\lambda$ is the absorption coefficient. To determine this coefficient, the signal's reflected amplitude was measured at different lengths of PVC cylinders. By fitting an
         exponential curve to the data, the absorption coefficient can be determined for the different frequencies. \\
         For the $f=1MHz$ messuarment, $\lambda_{1 MHz}$ was determined to be $\lambda_{1 MHz} = (0.0346 \pm 0.0313) \frac{1}{cm}$ and for $f=2MHz$ it was 
@@ -69,8 +69,8 @@
             \label{fig:testblockUltraschall}
         \end{figure}
 
-
-        As we know the speed of sound in polyacryl for the freuquency of $1MHz$ \ref{subsec:schallgeschwindigkeit}, we can use th echoscope to measure the depth $d_i$ of the holes in
+        \noindent
+        As we know the speed of sound in polyacryl for the freuquency of $1MHz$ \ref{subsec:schallgeschwindigkeit}, we can use the echoscope to measure the depth $d_i$ of the holes in
          the test block. 
         We used the $1MHz$ Probe for a clear runtime measurement. The depth can be calculated from the time difference $\Delta t$ between the first and second reflection of the signal:
 
@@ -81,7 +81,8 @@
         For reference, the depth were mearured with a caliper. The results are shown in tab. \ref{tab:Testwürfel}. 
 
         \begin{table}[H]
-            \begin{tabular}{|c|c|c|c|}
+            \raggedright
+            \begin{tabular}{@{}|c|c|c|c|@{}}
             \hline
             $i$ & $d_{i,caliper}$ [mm] & $\Delta t$ [$\mu s$] & $d_{i}$ [mm] \\
             \hline
@@ -111,17 +112,18 @@
         \caption{Measurement of the testblock}
         \label{tab:Testwürfel}
         \end{table}
-
+        \noindent
         Most measured values agree within their margin of error. However, it is noticeable that holes 9a and 9b show deviating values. This is due to the fact that the holes are located very 
         close to each other, meaning that a higher frequency would be beneficial in order to achieve a more precise resolution.
 
     \subsection{Resolution of an echoscope} \label{subsec:Aufloesungsvermoegen}
 
-    As mentioned in \ref{subsec:Laengenmessung} can a higher frequency be used to achieve a better resolution. To determine the resolution of the echoscope, the distance between two holes, 
+    As mentioned in \ref{subsec:Laengenmessung}, a higher frequency can be used to achieve a better resolution. To determine the resolution of the echoscope, the distance between two holes, 
     $(9a$ und $9b)$, was measured with different frequencies. The resolution can be defined as the minimum distance between two holes, where they can still be distinguished as two separate holes. 
     Measurement for all three frequencies is shown in tab. \ref{tab:Resolution}.
     
     \begin{table}[H]
+        \centering
         \begin{tabular}{|c|c|}
         \hline
         Frequency & Distance $[mm]$\\
@@ -134,7 +136,7 @@
         \caption{Resolution of the echoscope}
         \label{tab:Resolution}
     \end{table}
-
+    \noindent
     For a freuqueny of $1MHz$, the amplitude peaks could not be resolved as two distinct peaks; therefore, the distance between the reflectors could not be determined. In contrast, the measurements 
     performed at the higher frequencies showed a clear separation of the two peaks, making the distance measurable and allowing the axial resolution to be determined from the spacing 
     between the two holes.
@@ -147,20 +149,20 @@
 
     To investigate the spectral methods, the reflection signal of a polyacrylic plate was analyzed using the A-scan. In addition, an FFT and the cepstrum of the signal were evaluated in order to 
     determine the thickness of the plate.
-
+    \noindent
     In the A-scan, several reflection peaks are visible, which originate from multiple reflections within the plate. After applying the FFT, approximately equidistant peaks appear in the frequency 
     spectrum. From the spacing $\Delta \nu$ between neighboring peaks, the pulse travel time can be determined using
 
     \[
     \Delta t = \frac{1}{\Delta \nu}
     \]
-
+    \noindent
     With the known speed of sound in the material, the thickness of the plate can then be calculated.
 
     \begin{table}[H]
         \begin{tabular}{|c|c|c|c|}
         \hline
-        & $\delta v [\frac{1}{\mu s}]$ &  $\delta t [\mu s]$ & $d [mm]$ \\
+        & $\Delta v [\frac{1}{\mu s}]$ &  $\Delta t [\mu s]$ & $d [mm]$ \\
         \hline
         runtime & $-$ & $( 7.58 \pm 0.01)$ &  $( 10.15 \pm 0.13)$ \\
         \hline
@@ -169,10 +171,10 @@
         caliper & $-$ & $-$ & $(10.00 \pm 0.10)$\\
         \hline
         \end{tabular}
-        \caption{Resolution of the echoscope}
-        \label{tab:Resolution}
+        \caption{Speed of sound for different spectral methods}
+        \label{tab:SpectralMethods}
     \end{table}
-
+    \noindent
     The values agree within the experimental uncertainties. However, no significant features could be observed in the cepstrum. This is likely caused by attenuation, noise, and weak higher-order 
     reflections, which suppress the periodic structures required for a clear cepstral signal.
     \subsection{Debye-Sears effect} \label{subsec:Dabye-Sears-Effekt}
