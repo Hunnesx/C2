@@ -1,0 +1,47 @@
+\section{Jones-Formalism}
+
+The Jones formalism can be used to describe mathematically the polarization state of light and the effect of polarizers and wave plates.
+Here the polarization state is represented as a two-dimensional vector and the optical elements are represented as a 2x2 matrix. 
+\begin{equation*}
+\begin{aligned}
+\begin{array}{lcl}
+\text{Linearly polarized light in x-direction:} &
+\vec{J}_x = &
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+\\[0.5em]
+
+\text{Linearly polarized light in y-direction:} &
+\vec{J}_y = &
+\begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\\[0.5em]
+
+\text{Linearly polarized light at }45^\circ\text{:} &
+\vec{J}_{45} = &
+\frac{1}{\sqrt{2}}
+\begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\\[0.5em]
+
+\text{Right circularly polarized light:} &
+\vec{J}_R = &
+\frac{1}{\sqrt{2}}
+\begin{pmatrix} 1 \\ -i \end{pmatrix}
+\\[0.5em]
+
+\text{Left circularly polarized light:} &
+\vec{J}_L = &
+\frac{1}{\sqrt{2}}
+\begin{pmatrix} 1 \\ i \end{pmatrix}
+\end{array}
+\end{aligned}
+\end{equation*}
+
+The Jones matrix for the $\lambda/4$-plate with the fast axis along the x-direction is given by:
+\begin{equation*}
+\mathbf{M}_{\lambda/4} = \frac{1}{\sqrt{2}}
+\begin{pmatrix} 1-i & 0 \\
+ 0 & 1 + i \end{pmatrix}
+\end{equation*}
+This matrix introduces a phase shift of $\pi/2$ between the x and y components of the electric field, which is characteristic of a quarter-wave plate.
+When linearly polarized light at 45 degrees passes through this $\lambda/4$-plate, it becomes circularly polarized.
+Conversely, circularly polarized light can be converted back into linearly polarized light by passing it through the same $\lambda/4$-plate
+swith the appropriate orientation.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  1 JUN 2026 10:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  1 JUN 2026 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -558,95 +558,158 @@ LaTeX Font Info:    Font shape `T1/aess/b/n' in size <20.74> not available
  (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 1.
-) (./Malus.tex) (./Experiment.tex) (./Conclusion.tex)
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 79.
- (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-[][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
- []
+) (./Malus.tex
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <12> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 3.
+) (./Kalkspalt.tex) (./LambdaViertel.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-\T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-\T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-\T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-[][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 3.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-\T1/aett/m/n/10 fileadmin / 11016800 / Geraete / gs _ 200 . pdf$[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-[][]$\T1/aett/m/n/10 https : / / www . 3bscientific . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-\T1/aett/m/n/10 product-[]manual / UE1070530 _ de . pdf$[] \T1/aer/m/n/10 last vis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-[][]$\T1/aett/m/n/10 https : / / www . schweizer-[]fn . de / stoff /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
-\T1/aett/m/n/10 akustik / schallgeschwindigkeit . php$[] \T1/aer/m/n/10 last
- []
-
-
-AED: lastpage setting LastPage
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 10.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 10.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 10.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\lambda' on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 18.
+
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 24.
+
+) (./Jones.tex
+Overfull \hbox (31.58pt too wide) detected at line 36
+[][]
+ []
+
+) (./optischeAktivitaet.tex) (./Faraday.tex)
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 85.
+ (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+\T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+\T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+\T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+[][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+\T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+\T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+\T1/aett/m/n/10 fileadmin / 11016800 / Geraete / gs _ 200 . pdf$[]
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[][]$\T1/aett/m/n/10 https : / / www . 3bscientific . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+\T1/aett/m/n/10 product-[]manual / UE1070530 _ de . pdf$[] \T1/aer/m/n/10 last vis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+[][]$\T1/aett/m/n/10 https : / / www . schweizer-[]fn . de / stoff /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+\T1/aett/m/n/10 akustik / schallgeschwindigkeit . php$[] \T1/aer/m/n/10 last
+ []
+
+
+AED: lastpage setting LastPage
+[3
+
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16595 strings out of 478287
- 313601 string characters out of 5849289
- 755409 words of memory out of 5000000
- 34543 multiletter control sequences out of 15000+600000
- 488717 words of font info for 68 fonts, out of 8000000 for 9000
+ 16707 strings out of 478287
+ 315621 string characters out of 5849289
+ 762409 words of memory out of 5000000
+ 34614 multiletter control sequences out of 15000+600000
+ 499905 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,19n,106p,10645b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (1 page, 80882 bytes).
+ 108i,19n,106p,10645b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (3 pages, 155910 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
