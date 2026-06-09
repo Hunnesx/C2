@@ -996,14 +996,14 @@ INPUT Appendix.tex
 INPUT ./Appendix.tex
 INPUT ./Appendix.tex
 INPUT Appendix.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/ae/aer7.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/ae/aett10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/ae/aer7.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/ae/aett10.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm

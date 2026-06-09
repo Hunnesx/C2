@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1781019271 "/home/hannes/Desktop/Uni/C2-Praktikum/C40/Tex/main.tex" "main.pdf" "main" 1781019272
+["pdflatex"] 1781020187 "/home/hannes/Desktop/Uni/C2-Praktikum/C40/Tex/main.tex" "main.pdf" "main" 1781020188
   "../Images/Halbschatten.png" 1781017786 13293 733fc62a798965a43035e17e963beb91 ""
   "../Images/Malus_Fit_Polarplot.png" 1781015066 404124 b45b72b89b92c6de60d1cef24fb5b1c0 ""
   "/etc/texmf/web2c/texmf.cnf" 1702837203 475 c0e671620eb5563b2130f56340a5fde8 ""
@@ -172,10 +172,10 @@
   "Kalkspalt.tex" 1780304034 1243 f3017b89e98d651cb184fc016cef8b24 ""
   "LambdaViertel.tex" 1780305835 3173 5440bd44954f6f76c70f5a0aaeefe175 ""
   "Malus.tex" 1781016033 2542 a5ae438b72192429c41abcc1a769061e ""
-  "main.aux" 1781019272 11115 1170959440449359f1a383aa70109d4b "pdflatex"
-  "main.out" 1781019272 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1781020188 11115 1170959440449359f1a383aa70109d4b "pdflatex"
+  "main.out" 1781020187 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1781015802 4225 4d78644efc469bc4525143207af0eb52 ""
-  "optischeAktivitaet.tex" 1781019271 1670 1d6bd19e741c816a733441fff94384e6 ""
+  "optischeAktivitaet.tex" 1781020186 2433 d269138085998218ca972aa96da7a173 ""
   (generated)
   "main.aux"
   "main.log"
