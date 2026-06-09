@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1779314367 "/home/hannes/Desktop/Uni/C2-Praktikum/C35/Tex/main.tex" "main.pdf" "main" 1779314369
+["pdflatex"] 1780327661 "/home/hannes/Desktop/Uni/C2-Praktikum/C35/Tex/main.tex" "main.pdf" "main" 1780327663
   "../Images/2.3/Bildschirmfoto 2026-05-20 um 01.17.30.png" 1779312949 2222618 d41ea92a19eeb63a1a81bcd177c93f15 ""
   "../Images/Bildschirmfoto 2026-05-19 um 19.38.01.png" 1779312949 41553 48509f89645efa7ea856f18bb3e4a67e ""
   "../Images/setup_2.8.png" 1778752692 794926 4cae4da5dd31e04ec471d01f304bd4ff ""
@@ -155,11 +155,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1769778552 2797460 6093d94cfe0eddad1fb6bdd349606a08 ""
   "Appendix.tex" 1779314158 2069 8495867d2d9efca68bb298788904c3f1 ""
   "Conclusion.tex" 1779314136 1159 99216abaa6ac4db56cc780fa7d847c61 ""
-  "Experiment.tex" 1779314040 12701 735be42fb9d98bc9617a7127685c67de ""
+  "Experiment.tex" 1780327577 12702 97fc0fc2e371201b3f6a72210842c0fc ""
   "Introduction.tex" 1778760053 617 5736fe66ba5e3ae55d2b2f609c6708f0 ""
-  "Theory.tex" 1779313185 1635 d6ce1e39c9093eb3d16b72daaec3fa60 ""
-  "main.aux" 1779314369 11083 4ca67a2c68f33c199cdf2e10e646fe58 "pdflatex"
-  "main.out" 1779314368 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Theory.tex" 1780327661 1635 2abfab78d84793e8299627b5c41ad8ee ""
+  "main.aux" 1780327663 11083 4ca67a2c68f33c199cdf2e10e646fe58 "pdflatex"
+  "main.out" 1780327662 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1779314367 5291 4d1234b8c47b3cf7c13fb5f724f5a31e ""
   (generated)
   "main.aux"
