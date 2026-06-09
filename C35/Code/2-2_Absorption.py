@@ -1,6 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+from pathlib import Path
+
+base_path = Path.cwd()
+img_path = base_path.parent / 'C2-Praktikum' / 'C35' / 'Images'
+
 
 # print("Skript startet")
 # def absorption_fit(d, A_gemessen, main_dB, out_dB, korrigieren=True):
@@ -212,23 +217,26 @@ plt.errorbar(
     yerr=A_korr_err,
     fmt="o",
     capsize=4,
-    label="korrigierte Messwerte"
+    label="Data"
 )
 
 plt.plot(
     d_fit,
     A_fit,
-    label=f"Fit: λ = {lamb:.5f} ± {lamb_err:.5f} 1/mm"
+    label=f"exponential fit: A_0 exp[-2 \lambda d]"
 )
 
-plt.xlabel("Dicke d [mm]")
-plt.ylabel("korrigierte Amplitude [a.u.]")
-plt.title("Bestimmung des Absorptionskoeffizienten")
+plt.xlabel("Width d [mm]")
+plt.ylabel("Amplitude")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.show()
 
+img_path.mkdir(parents=True, exist_ok=True)
+save_file = img_path / 'AbsorptionFit.png'
+plt.savefig(save_file, dpi=300, bbox_inches='tight')
+
+plt.show()
 
 # =========================
 # Ausgabe
