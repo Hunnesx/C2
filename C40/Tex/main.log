@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  1 JUN 2026 11:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.30)  9 JUN 2026 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,7 +561,23 @@ LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 ) (./Malus.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <12> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 3.
-) (./Kalkspalt.tex) (./LambdaViertel.tex
+<../Images/Malus_Fit_Polarplot.png, id=5, 547.8066pt x 450.2421pt>
+File: ../Images/Malus_Fit_Polarplot.png Graphic file (type png)
+<use ../Images/Malus_Fit_Polarplot.png>
+Package pdftex.def Info: ../Images/Malus_Fit_Polarplot.png  used on input line 24.
+(pdftex.def)             Requested size: 242.73761pt x 199.50864pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+ <../Images/Malus_Fit_Polarplot.png>] (./Kalkspalt.tex) (./LambdaViertel.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -586,13 +602,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 10.
@@ -625,91 +634,105 @@ Overfull \hbox (31.58pt too wide) detected at line 36
 [][]
  []
 
-) (./optischeAktivitaet.tex) (./Faraday.tex)
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 85.
+
+Underfull \vbox (badness 2635) has occurred while \output is active []
+
+ [2]) (./optischeAktivitaet.tex
+<../Images/Halbschatten.png, id=53, 339.2675pt x 180.675pt>
+File: ../Images/Halbschatten.png Graphic file (type png)
+<use ../Images/Halbschatten.png>
+Package pdftex.def Info: ../Images/Halbschatten.png  used on input line 5.
+(pdftex.def)             Requested size: 194.18712pt x 103.41312pt.
+) (./Faraday.tex) (./Appendix.tex
+Overfull \hbox (16.52943pt too wide) detected at line 37
+[][]\OMS/cmsy/m/n/10 h[][] \OML/cmm/m/it/10 ^^R\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = [] [][] [][]  \OML/cmm/m/it/10 ^^R \OT1/cmr/m/n/10 d\OML/cmm/m/it/10 ^^R \OT1/cmr/m/n/10 = [] [][] [] d\OML/cmm/m/it/10 ^^R \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 :
+ []
+
+) [3 <../Images/Halbschatten.png>]
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 86.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 \T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 \T1/aett/m/n/10 fileadmin / 11016800 / Geraete / gs _ 200 . pdf$[]
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 [][]$\T1/aett/m/n/10 https : / / www . 3bscientific . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 \T1/aett/m/n/10 product-[]manual / UE1070530 _ de . pdf$[] \T1/aer/m/n/10 last vis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 [][]$\T1/aett/m/n/10 https : / / www . schweizer-[]fn . de / stoff /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 \T1/aett/m/n/10 akustik / schallgeschwindigkeit . php$[] \T1/aer/m/n/10 last
  []
 
 
 AED: lastpage setting LastPage
-[3
+[4
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16707 strings out of 478287
- 315621 string characters out of 5849289
- 762409 words of memory out of 5000000
- 34614 multiletter control sequences out of 15000+600000
- 499905 words of font info for 96 fonts, out of 8000000 for 9000
+ 16781 strings out of 478287
+ 316824 string characters out of 5849289
+ 760409 words of memory out of 5000000
+ 34653 multiletter control sequences out of 15000+600000
+ 507042 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,19n,106p,10645b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (3 pages, 155910 bytes).
+ 108i,20n,106p,10645b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (4 pages, 539163 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

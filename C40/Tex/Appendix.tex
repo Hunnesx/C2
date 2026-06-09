@@ -1,0 +1,43 @@
+\section{Appendix}
+
+    \subsection*{Derivation of Malus's Law}
+    \label{sec:derivationmalus}
+
+Consider linearly polarized light with intensity $I_0$ and polarization direction $\vec{e}_P$
+incident on an analyzer whose transmission axis $\vec{e}_A$ is rotated by an angle $\theta$
+relative to $\vec{e}_P$.
+Only the component of the electric field along $\vec{e}_A$ is transmitted.
+
+The incident electric field can be written as
+\begin{equation}
+    \vec{E} = E_0 \, \vec{e}_P,
+\end{equation}
+where $E_0$ is the amplitude. The transmitted component along $\vec{e}_A$ is
+\begin{equation}
+    E_t = \vec{E} \cdot \vec{e}_A = E_0 \cos\theta.
+\end{equation}
+Since the intensity is proportional to the square of the field amplitude, $I \propto E^2$, it follows that
+\begin{equation}
+    I(\theta) = I_0 \cos^2\!\theta
+\end{equation}
+
+\subsection*{Mean Intensity after the Analyzer}
+
+If unpolarized light of intensity $I_\text{in}$ is incident on the polarizer,
+an ideal polarizer transmits exactly half of it:
+\begin{equation}
+    I_0 = \frac{I_\text{in}}{2}.
+\end{equation}
+This follows from averaging $\cos^2\theta$ over all polarization directions:
+\begin{equation}
+    \langle \cos^2\theta \rangle
+    = \frac{1}{2\pi} \int_0^{2\pi} \cos^2\!\theta \, \mathrm{d}\theta
+    = \frac{1}{2\pi} \int_0^{2\pi} \frac{1 + \cos 2\theta}{2} \, \mathrm{d}\theta
+    = \frac{1}{2}.
+\end{equation}
+Therefore, the intensity of the light incident on the analyzer is
+\begin{equation}
+    I_0 = \frac{I_\text{in}}{2}
+\end{equation}
+i.e.\ the intensity after the polarizer is exactly half of the incoming intensity,
+independent of the orientation of the analyzer.
