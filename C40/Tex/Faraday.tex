@@ -1,1 +1,199 @@
 \section{Measuring the Faraday effect inside a glass body}
+
+In the Faraday effect, the plane of polarisation of linearly polarised light is rotated while propagating through a 
+material placed inside a magnetic field. For an approximately constant magnetic field, the following relation holds:
+
+\[
+\Theta = V \cdot B_{\mathrm{eff}} \cdot l
+\]
+
+where $\Theta$ is the measured rotation angle, $V$ the Verdet constant, $B_{\mathrm{eff}}$ the effective magnetic 
+flux density, and $l$ the length of the glass sample.
+
+In this experiment, a glass body with a length of $l = (30.0 \pm 0.5)\,\mathrm{mm}$ was investigated.
+
+\subsection{Determination of the Effective Magnetic Field}
+
+First, the magnetic field along the optical axis was measured using a Hall probe. Since the magnetic field inside 
+the solenoid is not perfectly homogeneous, an effective magnetic field was determined from the measured field profile.
+
+The effective magnetic field is defined as:
+
+\[
+B_{\mathrm{eff}} = \frac{1}{l}\int_0^l B(x)\,dx
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Images/Figure_1_1.png}
+    \caption{Magnetic flux density $B(x)$ as a function of the position $x$ along the optical axis.}
+    \label{fig:magnetic_field_profile}
+\end{figure}
+
+From this, the effective magnetic field is determined to be:
+\[
+B_{\mathrm{eff}} =(69,7 \pm 1,1)\,\mathrm{mT}
+\]
+
+based on the maximum magnetic field ,$B_{\mathrm{max}} = (96,1 \pm 0.05)\,\mathrm{mT}$, the following value is obtained 
+for the parameter $\alpha$:
+
+\[
+\alpha = \frac{B_{\mathrm{eff}}}{B_{\mathrm{max}}} = 0,725 \pm 0,012
+\]
+
+This factor is later used to determine the effective magnetic field for other coil currents from the measured maximum 
+magnetic field. Therefore, we assume that $\alpha$ remains constant for different currents, as the magnetic field geometry 
+should not change with the glass sample in place.
+
+\subsection{Magnetic flux density per current}
+
+Afterwards, the effective magnetic flux density was determined for different currents. Plotting $B_{\mathrm{eff}}$
+as a function of the current $I$ reveals an approximately linear dependence.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Images/Figure_1_2.png}
+    \caption{Maximal flux densities for different currents. The proportionality constant between the strongest magnetic 
+    flux density and the solenoid current is determined by conducting a linear regression.}
+    \label{fig:magentic_flux_density_per_current}
+\end{figure}
+
+As shown in Fig.~\ref{fig:magentic_flux_density_per_current}, $B_{\mathrm{max}}$ exhibits an approximately linear 
+dependence on $I$. Therefore, a linear function was fitted, yielding the slope to be $C_B = \frac{dB_{\mathrm{max}}}{dI}= (46,245 \pm 0.013)\,\mathrm{mT/A}$.
+
+
+\subsection{Faraday Rotation per current}
+
+For different wavelength ranges, the rotation angle $\Theta$ of the plane of polarisation was measured as a function 
+of the effective magnetic field $B_{\mathrm{eff}}$.
+
+The analyser was rotated until the signal of the photodiode reached a minimum. The corresponding angle was interpreted 
+as the rotation angle caused by the Faraday effect.
+
+For each wavelength range, a linear function fit was performed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Images/Figure_1_3.png}
+    \caption{Rotation angle $\Theta$ as a function of the effective magnetic field $B_{\mathrm{eff}}$ for the wavelength range 400--560 nm. The slope of the linear fit is used to calculate the Verdet constant.}
+    \label{fig:faraday_rotation_400_560}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{cc}
+\hline
+Filter range & slope / $\mathrm{^\circ\,A^{-1}}$ \\
+\hline
+360--460 & $(0.04017 \pm 0.00014)$ \\
+400--560 & $(0.03246 \pm 0.00014)$ \\
+560--630 & $(0.02341 \pm 0.00014)$ \\
+\hline
+\end{tabular}
+\caption{Slopes of the linear fits for the different wavelength ranges.}
+\label{tab:slopes}
+\end{table}
+
+
+\subsection{Calculation of the Verdet Constant}
+
+Using the relation
+
+\[
+\Theta = V B_{\mathrm{eff}} l
+\]
+
+the Verdet constant can be calculated from the slope of the linear fits:
+
+\[
+V
+=
+\frac{\Theta}{B_{\mathrm{eff}}l}
+\]
+
+Since the slope $m$ is obtained in units of $\frac{^\circ}{\mathrm{mT}}$, a conversion into SI units is necessary:
+
+\[
+V
+=
+m
+\cdot
+\frac{\pi}{180}
+\cdot
+1000
+\cdot
+\frac{1}{l}
+\]
+
+with
+
+\[
+l = 0.030\,\mathrm{m}
+\]
+
+The calculated Verdet constants are summarised in Table~\ref{tab:verdet}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccc}
+\hline
+Filter range &
+$\lambda$ / nm &
+$V$ / $\mathrm{rad(Tm)^{-1}}$ \\
+\hline
+
+360--460 &
+$410 \pm 50$ &
+$(23,37 \pm 0,40)$ \\
+
+400--560 &
+$480 \pm 80$ &
+$(18,89 \pm 0,32)$ \\
+
+560--630 &
+$595 \pm 35$ &
+$(13,62 \pm 0,24)$ \\
+
+\hline
+\end{tabular}
+\caption{Verdet constants for different wavelength ranges.}
+\label{tab:verdet}
+\end{table}
+
+\subsection{Dispersion of the Verdet Constant}
+
+Finally, the Verdet constant was plotted as a function of the mean wavelength of the corresponding interference filter.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../Images/Figure_1_4.png}
+    \caption{Dispersion of the Verdet constant as a function of the wavelength.}
+    \label{fig:verdet_dispersion}
+\end{figure}
+
+
+The measurements show that the Verdet constant decreases with increasing wavelength. This behaviour is expected for 
+dispersive optical media such as N-SF6 glass. Shorter wavelengths experience a stronger rotation of the plane of polarisation 
+than longer wavelengths.
+
+The data point corresponding to the wavelength range 360--460 nm should be interpreted carefully, since several measured values 
+deviate more strongly from the linear behaviour. Possible reasons include reduced light intensity in this wavelength range, 
+alignment uncertainties, or thermal effects caused by heating of the coils.
+
+
+The Faraday effect was successfully observed for all investigated wavelength ranges. In each case, an approximately linear 
+dependence between the rotation angle and the effective magnetic field was found.
+
+The calculated Verdet constants satisfy the qualitative relation
+
+\[
+V_{360-460}
+>
+V_{400-560}
+>
+V_{560-630}
+\]
+
+which means that the Verdet constant decreases with increasing wavelength, as expected from theory.
+
