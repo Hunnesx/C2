@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1781054350.16785 "/Users/nelewurster/Documents/Uni/GitHub/C2/C40/Tex/main.tex" "main.pdf" "main" 1781054351.23368 0
+["pdflatex"] 1781054571.00688 "/Users/nelewurster/Documents/Uni/GitHub/C2/C40/Tex/main.tex" "main.pdf" "main" 1781054572.07853 0
   "../Images/Figure_1_1.png" 1781050217.41308 29808 8d68c2ec26f7824b4cf740c5962f257b ""
   "../Images/Figure_1_2.png" 1781051627.42184 24122 19f6efb5cfe2ecd4d3fec4d8fbcf8d16 ""
   "../Images/Figure_1_3.png" 1781052663.51066 23728 ae01a0e7ae5f659235b6970761aa7334 ""
@@ -174,14 +174,14 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1761778857 3345736 e9d28c2ffe8989ad069d1ad234da6ff9 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Appendix.tex" 1781021792.37603 1644 7dbe87cedb7ef6c68858b1cf9e41b695 ""
-  "Faraday.tex" 1781054348.90586 6297 35fa7f2380c8f0f2c94dbeb7b042171c ""
+  "Faraday.tex" 1781054569.74715 6298 c3eae237b5dd3be1acaf3f78f97d811b ""
   "Introduction.tex" 1780396971.00285 1086 adf24c0fd4966543c2bba3c236cec2e2 ""
   "Jones.tex" 1780396971.00293 1657 e189106f6eaa12a81f26550dc96a246b ""
   "Kalkspalt.tex" 1780396971.00318 1243 f3017b89e98d651cb184fc016cef8b24 ""
   "LambdaViertel.tex" 1780396971.00328 3173 5440bd44954f6f76c70f5a0aaeefe175 ""
   "Malus.tex" 1781021792.37632 2542 a5ae438b72192429c41abcc1a769061e ""
-  "main.aux" 1781054351.18421 15954 c52350c2478927c89ff32dbb730a3469 "pdflatex"
-  "main.out" 1781054350.71765 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1781054572.02842 15954 c52350c2478927c89ff32dbb730a3469 "pdflatex"
+  "main.out" 1781054571.55885 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1781021792.38099 4225 4d78644efc469bc4525143207af0eb52 ""
   "optischeAktivitaet.tex" 1781021792.38152 2433 d269138085998218ca972aa96da7a173 ""
   (generated)
