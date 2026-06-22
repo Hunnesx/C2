@@ -119,7 +119,7 @@ print(f"Halbwertswinkel:        ({halbwertswinkel:.2f} ± {sigma_halbwertswinkel
 # ------------------------------------------------------------------
 winkel_rad = np.deg2rad(winkel)
 fig, ax = plt.subplots(figsize=(8, 8), subplot_kw={'projection': 'polar'})
-ax.plot(winkel_rad, I_norm, 'o-', label='Angular distribution of radiation characteristics')
+ax.plot(winkel_rad, I_norm, 'x-', label='Angular distribution of radiation characteristics')
 ax.fill(winkel_rad, I_norm, alpha=0.2)
 ax.plot(np.linspace(0, 2*np.pi, 200), np.ones(200) * I_half, '--', label='Halfvalues (0.5)')
 
