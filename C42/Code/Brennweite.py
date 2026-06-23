@@ -96,14 +96,14 @@ fig, ax = plt.subplots(figsize=(8, 6), dpi=150)
 
 # Plot original data points as a clean scatter plot (no error bars)
 ax.scatter(
-    x_data, y_data, marker="x", color="red", s=50, label="Data", zorder=3
+    x_data, y_data, marker="x", color="black", s=50, label="Data", zorder=3
 )
 
 # Plot the smooth fit line
 ax.plot(
     x_smooth,
     y_smooth,
-    color="black",
+    color="red",
     linewidth=2,
     label="Smooth Fit (Spline)",
     zorder=2,
