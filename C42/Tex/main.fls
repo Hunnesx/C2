@@ -954,6 +954,10 @@ INPUT ../Images/Gitterkonstante110.png
 INPUT ../Images/Gitterkonstante110.png
 INPUT ../Images/Gitterkonstante110.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/ae/aeb10.tfm
+INPUT ./Wellenleiter.tex
+INPUT Wellenleiter.tex
+INPUT ./Wellenleiter.tex
+INPUT Wellenleiter.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
