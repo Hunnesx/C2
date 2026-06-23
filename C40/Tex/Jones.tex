@@ -44,4 +44,55 @@ The Jones matrix for the $\lambda/4$-plate with the fast axis along the x-direct
 This matrix introduces a phase shift of $\pi/2$ between the x and y components of the electric field, which is characteristic of a quarter-wave plate.
 When linearly polarized light at 45 degrees passes through this $\lambda/4$-plate, it becomes circularly polarized.
 Conversely, circularly polarized light can be converted back into linearly polarized light by passing it through the same $\lambda/4$-plate
-swith the appropriate orientation.
+swith the appropriate orientation.\\
+Applying $M_{\lambda/4}$ to light linearly polarized at $45^\circ$:
+\begin{equation}
+    \begin{split}
+    M_{\lambda/4}\,\vec{J}_{45}
+    &= \frac{1}{\sqrt{2}}
+    \begin{pmatrix} 1-i & 0 \\ 0 & 1+i \end{pmatrix}
+    \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}\\
+    &= \frac{1}{2}\begin{pmatrix} 1-i \\ 1+i \end{pmatrix}.
+    \end{split}
+\end{equation}
+Using $1-i = \sqrt{2}\,e^{-i\pi/4}$ and $1+i = \sqrt{2}\,e^{i\pi/4}$, this
+becomes
+\begin{equation}
+    \begin{split}
+    \frac{1}{2}\begin{pmatrix} \sqrt{2}\,e^{-i\pi/4} \\ \sqrt{2}\,e^{i\pi/4} \end{pmatrix}
+    &= e^{-i\pi/4}\,\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ e^{i\pi/2} \end{pmatrix}\\
+    &= e^{-i\pi/4}\,\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}\\
+    &= e^{-i\pi/4}\,\vec{J}_L.
+    \end{split}
+\end{equation}
+Since an overall phase factor $e^{-i\pi/4}$ has no physical effect on the
+polarization state, this shows that
+\begin{equation}
+    M_{\lambda/4}\,\vec{J}_{45} \;\propto\; \vec{J}_L,
+\end{equation}
+i.e.\ linearly polarized light at $45^\circ$ is converted into left
+circularly polarized light, as claimed.
+\\
+\\
+Conversely, applying $M_{\lambda/4}$ to left circularly polarized light:
+\begin{equation}
+    \begin{split}
+    M_{\lambda/4}\,\vec{J}_{L}
+    &= \frac{1}{\sqrt{2}}
+    \begin{pmatrix} 1-i & 0 \\ 0 & 1+i \end{pmatrix}
+    \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}
+    = \frac{1}{2}\begin{pmatrix} 1-i \\ i(1+i) \end{pmatrix}\\
+    &= \frac{1}{2}\begin{pmatrix} 1-i \\ -1+i \end{pmatrix}
+    = \frac{1-i}{2}\begin{pmatrix} 1 \\ -1 \end{pmatrix}.
+    \end{split}
+\end{equation}
+Writing $1-i = \sqrt{2}\,e^{-i\pi/4}$, this is
+\begin{equation}
+    M_{\lambda/4}\,\vec{J}_L
+    = e^{-i\pi/4}\,\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}
+    \;\propto\;
+    \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix},
+\end{equation}
+which (up to the irrelevant global phase) is linearly polarized light at
+$-45^\circ$. This confirms that circularly polarized light is converted
+back into linearly polarized light by the same $\lambda/4$-plate.

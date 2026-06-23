@@ -29,7 +29,7 @@ B_{\mathrm{eff}} = \frac{1}{l}\int_0^l B(x)\,dx
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{../Images/Figure_1_1.png}
-    \caption{Magnetic flux density $B(x)$ as a function of the position $x$ along the optical axis.}
+    \caption{Magnetic flux density $B(x)$ as a function of the position $x$ along the optical axis. Raw data shown in tab. \ref{tab:Bfield}}
     \label{fig:magnetic_field_profile}
 \end{figure}
 
@@ -177,9 +177,35 @@ Finally, the Verdet constant was plotted as a function of the mean wavelength of
 
 
 
-The measurements show that the Verdet constant decreases with increasing wavelength. This behaviour is expected for 
-dispersive optical media such as N-SF6 glass. Shorter wavelengths experience a stronger rotation of the plane of polarisation 
-than longer wavelengths.
+The measurements show that the Verdet constant decreases with increasing
+wavelength. This behaviour is expected for dispersive optical media such as
+N-SF6 glass. Shorter wavelengths experience a stronger rotation of the plane
+of polarisation than longer wavelengths.
+\\
+The Faraday effect can be understood as a magnetically induced circular
+birefringence: in the presence of an external magnetic field, the medium
+acquires slightly different refractive indices $n_+$ and $n_-$ for left- and
+right-circularly polarized light, and this difference is what produces the
+rotation of the plane of polarization. The Verdet constant is therefore
+closely tied to how strongly, and how quickly, the refractive index of the
+medium changes with wavelength -- i.e.\ to the material's dispersion
+$dn/d\lambda$. This relationship is expressed approximately by the
+Becquerel formula,
+\begin{equation}
+    V(\lambda) \;\approx\; -\frac{e}{2 m_e c}\,\lambda\,\frac{dn}{d\lambda},
+\end{equation}
+which shows that the Verdet constant is proportional to the slope of the
+refractive index curve, $dn/d\lambda$, rather than to the refractive index
+itself.
+
+In the region of normal dispersion,
+the refractive index $n(\lambda)$ decreases with increasing wavelength, and
+it does so more steeply at shorter wavelengths than at longer ones.\\
+Physically, this means that at
+shorter wavelengths, light interacts more strongly with the bound electrons
+of the glass (closer to their resonance/absorption frequencies in the UV),
+leading to a larger magnetically induced splitting between $n_+$ and $n_-$,
+and hence a larger rotation angle per unit field and path length.\\
 
 The data point corresponding to the wavelength range 360--460 nm should be interpreted carefully, since several measured values 
 deviate more strongly from the linear behaviour. Possible reasons include reduced light intensity in this wavelength range, 

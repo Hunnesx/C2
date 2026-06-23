@@ -1,11 +1,49 @@
 \section{$\lambda/4$-Plate}
 
     \subsection{Theory of a $\lambda/4$-plate}
-    A $\lambda/4$-plate, also known as a quarter-wave plate, is an optical device that introduces a phase shift of $\pi/2$ (90 degrees) between
-    the orthogonal components of polarized light. When linearly polarized light passes through a $\lambda/4$-plate, it can be converted into
-    circularly polarized light if the fast axis of the plate is aligned at 45 degrees to the polarization direction of the incident light.
-    Conversely, circularly polarized light can be converted back into linearly polarized light by passing it through a $\lambda/4$-plate with
-    the appropriate orientation.
+ A $\lambda/4$-plate, also known as a quarter-wave plate, is an optical device
+that introduces a phase shift of $\pi/2$ (90 degrees) between the orthogonal
+components of polarized light.
+
+This phase shift arises from birefringence: the plate is made of an
+anisotropic crystal, in which light polarized parallel to the optic
+axis (extraordinary ray) experiences a different refractive index
+$n_e$ than light polarized perpendicular to the optic axis (the
+ordinary ray), which experiences $n_o$. Since the two polarization
+components travel through the same physical thickness $d$ but at different
+phase velocities $v_o = c/n_o$ and $v_e = c/n_e$, they accumulate different
+optical path lengths, and hence a relative phase difference, when passing
+through the crystal.
+
+For a plane wave of vacuum wavelength $\lambda$ traveling a distance $d$
+through the crystal, each component picks up a phase
+\begin{equation}
+    \phi_o = \frac{2\pi}{\lambda} n_o d, \qquad
+    \phi_e = \frac{2\pi}{\lambda} n_e d.
+\end{equation}
+\noindent
+The phase difference between the two components after traversing the plate
+is therefore
+\begin{equation}
+    \delta = \phi_e - \phi_o
+    = \frac{2\pi}{\lambda}\left(n_e - n_o\right) d
+    = \frac{2\pi}{\lambda}\,\Delta n \, d,
+\end{equation}
+where $\Delta n = n_e - n_o$ is the birefringence of the material.\\
+\noindent
+For a quarter-wave plate, we require $\delta = \pi/2$. Setting this equal to the expression above and solving for
+$d$:
+\begin{equation}
+    \frac{2\pi}{\lambda}\,\Delta n\, d = \frac{\pi}{2}
+    \quad\Longrightarrow\quad
+    d = \frac{\lambda}{4\,|\Delta n|}.
+\end{equation}
+\noindent
+This is the minimum thickness. In practice, plates are often
+made thicker for mechanical robustness
+which still produces a phase difference of $\pi/2$ modulo $2\pi$, since
+adding any integer number of full wavelengths of relative delay does not
+change the resulting polarization state.
 
     \subsection{Experimental setup for a $\lambda/4$-plate}
     In this experiment a $\lambda/4$-plate made of quartz was used. The light of an incandescent lamp was first linearly polarized using a polarizer.
