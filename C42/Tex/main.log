@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  24 JUN 2026 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  24 JUN 2026 23:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -618,10 +618,47 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 17--18
 
 ) (./WellenlängeMichaelson.tex
 
-[2 <../Images/Winkelverteilung_Polar.pdf> <../Images/brennweite_fit_clean.png>]) (./Totalreflexion.tex) (./Polarisation.tex
+[2 <../Images/Winkelverteilung_Polar.pdf> <../Images/brennweite_fit_clean.png>]) (./Totalreflexion.tex
+<../Images/7.2.png, id=89, 629.35126pt x 310.15875pt>
+File: ../Images/7.2.png Graphic file (type png)
+<use ../Images/7.2.png>
+Package pdftex.def Info: ../Images/7.2.png  used on input line 8.
+(pdftex.def)             Requested size: 242.73761pt x 119.62682pt.
 
-) (./LatticeConstant.tex
-<../Images/Aufbau2_8.png, id=90, 421.575pt x 371.3875pt>
+Overfull \hbox (12.5pt too wide) in paragraph at lines 8--10
+ [][] 
+ []
+
+<../Images/6.png, id=91, 505.89pt x 289.08pt>
+File: ../Images/6.png Graphic file (type png)
+<use ../Images/6.png>
+Package pdftex.def Info: ../Images/6.png  used on input line 46.
+(pdftex.def)             Requested size: 242.73761pt x 138.7083pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 46--47
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2698) has occurred while \output is active []
+
+
+
+) (./Polarisation.tex
+<../Images/7.1.png, id=93, 1115.16624pt x 617.30624pt>
+File: ../Images/7.1.png Graphic file (type png)
+<use ../Images/7.1.png>
+Package pdftex.def Info: ../Images/7.1.png  used on input line 30.
+(pdftex.def)             Requested size: 242.73761pt x 134.36664pt.
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
+
+
+[3 <../Images/7.2.png> <../Images/6.png> <../Images/7.1.png>]) (./LatticeConstant.tex
+<../Images/Aufbau2_8.png, id=112, 421.575pt x 371.3875pt>
 File: ../Images/Aufbau2_8.png Graphic file (type png)
 <use ../Images/Aufbau2_8.png>
 Package pdftex.def Info: ../Images/Aufbau2_8.png  used on input line 16.
@@ -631,7 +668,9 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 16--17
  [][] 
  []
 
-<../Images/Gitterkonstante100.png, id=95, 570.933pt x 353.4003pt>
+
+
+<../Images/Gitterkonstante100.png, id=117, 570.933pt x 353.4003pt>
 File: ../Images/Gitterkonstante100.png Graphic file (type png)
 <use ../Images/Gitterkonstante100.png>
 Package pdftex.def Info: ../Images/Gitterkonstante100.png  used on input line 38.
@@ -641,10 +680,7 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
-
-
-[3]
-<../Images/Gitterkonstante110.png, id=115, 570.2103pt x 353.4003pt>
+<../Images/Gitterkonstante110.png, id=118, 570.2103pt x 353.4003pt>
 File: ../Images/Gitterkonstante110.png Graphic file (type png)
 <use ../Images/Gitterkonstante110.png>
 Package pdftex.def Info: ../Images/Gitterkonstante110.png  used on input line 47.
@@ -654,14 +690,12 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
+)
 
+[4 <../Images/Aufbau2_8.png> <../Images/Gitterkonstante100.png> <../Images/Gitterkonstante110.png>] (./Wellenleiter.tex) (./Conclusion.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-) (./Wellenleiter.tex)
-
-[4 <../Images/Aufbau2_8.png> <../Images/Gitterkonstante100.png> <../Images/Gitterkonstante110.png>] (./Conclusion.tex
 
 )
 LaTeX Font Info:    Trying to load font information for T1+aett on input line 114.
@@ -725,18 +759,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17324 strings out of 473190
- 326017 string characters out of 5715799
+ 17345 strings out of 473190
+ 326504 string characters out of 5715799
  899954 words of memory out of 5000000
- 40258 multiletter control sequences out of 15000+600000
+ 40279 multiletter control sequences out of 15000+600000
  589327 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,107p,10950b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (5 pages, 363975 bytes).
+Output written on main.pdf (5 pages, 1406695 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
+ 256 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
