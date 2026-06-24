@@ -287,6 +287,9 @@ INPUT ../Images/brennweite_fit_clean.png
 INPUT ./WellenlängeStehendeWellen.tex
 INPUT ./WellenlängeStehendeWellen.tex
 INPUT WellenlängeStehendeWellen.tex
+INPUT ./WellenlängeMichaelson.tex
+INPUT ./WellenlängeMichaelson.tex
+INPUT WellenlängeMichaelson.tex
 INPUT ./Totalreflexion.tex
 INPUT ./Totalreflexion.tex
 INPUT Totalreflexion.tex
