@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1782336849.61333 "/Users/nelewurster/Documents/Uni/GitHub/C2/C42/Tex/main.tex" "main.pdf" "main" 1782336852.52679 0
+["pdflatex"] 1782336982.24177 "/Users/nelewurster/Documents/Uni/GitHub/C2/C42/Tex/main.tex" "main.pdf" "main" 1782336985.16899 0
   "../Images/6.png" 1782335738.52327 19153 9054317697a432c47db43fe602c38c3f ""
   "../Images/7.1.png" 1782335738.52691 1793744 83109b63890912b6ba6ddd1d32e8d51d ""
   "../Images/7.2.png" 1782335738.52755 90379 484454387d84429d1d4b4c31717b1061 ""
@@ -162,13 +162,13 @@
   "FocalLenght.tex" 1782237153.57387 1318 59169d2fbc73407067599fb4227d2b8b ""
   "Introduction.tex" 1782213155.91623 1181 8da917d4acbf1299e320133ab9a6c3a9 ""
   "LatticeConstant.tex" 1782298926.48411 3850 e0497d813d918efb016675e0dd9a7452 ""
-  "Polarisation.tex" 1782336846.50622 1528 6ca3800c413496572b1a35c93199d162 ""
-  "Totalreflexion.tex" 1782336744.59839 1821 bfad60c7db8343d12db7f7f49a37f44d ""
+  "Polarisation.tex" 1782336982.06204 1534 e363f40c4570f0a6c41bb78bcfb81e77 ""
+  "Totalreflexion.tex" 1782336965.43173 1827 9dac7aeb22bde4ffe56b6aa0af989aa1 ""
   "Wellenleiter.tex" 1782298926.48419 2059 7c6e79e867ef0de0643aa13360a9cd68 ""
   "WellenlängeMichaelson.tex" 1782316880.23328 1012 81d71f7a12fea18d29435290602960b4 ""
   "WellenlängeStehendeWellen.tex" 1782316765.41043 893 26d17ca1d71fafa4649eb2c0daf95cfa ""
-  "main.aux" 1782336852.48451 10246 852bebbd90887c94b2248efca2b16932 "pdflatex"
-  "main.out" 1782336850.1698 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1782336985.12612 10246 852bebbd90887c94b2248efca2b16932 "pdflatex"
+  "main.out" 1782336982.80145 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1782318501.09747 5336 b7888c11bc2b0a03ece818a54fce95c4 ""
   (generated)
   "main.aux"
