@@ -162,9 +162,9 @@ plt.show()
 #--------------------------------------
 
 # Wellenlänge
-wavelength = 3.33  # cm
+wavelength = 3.262  # cm
 n = 1
-errWave = 0.5      # cm Unsicherheit der Wellenlänge
+errWave = 0.013      # cm Unsicherheit der Wellenlänge
 
 # 100-Seite
 if len(peaks100) >= 2:

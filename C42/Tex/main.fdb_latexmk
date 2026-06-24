@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1782246063 "/home/hannes/Desktop/Uni/C2-Praktikum/C42/Tex/main.tex" "main.pdf" "main" 1782246065
+["pdflatex"] 1782284884 "/home/hannes/Desktop/Uni/C2-Praktikum/C42/Tex/main.tex" "main.pdf" "main" 1782284886
   "../Images/Aufbau2_8.png" 1782231591 33748 3a0fc71e31f6cfc2c84c2b6c8db6b155 ""
-  "../Images/Gitterkonstante100.png" 1782234784 49615 287b44b30e71120a532d6645e3c7e484 ""
-  "../Images/Gitterkonstante110.png" 1782234785 43006 24d42c2b079fdb3a7bdb9c85c4ecac27 ""
+  "../Images/Gitterkonstante100.png" 1782284081 49615 287b44b30e71120a532d6645e3c7e484 ""
+  "../Images/Gitterkonstante110.png" 1782284083 43006 24d42c2b079fdb3a7bdb9c85c4ecac27 ""
   "../Images/Winkelverteilung_Polar.pdf" 1782137645 17451 c494649fb716622b4234ba0f4496d0f4 ""
   "../Images/brennweite_fit_clean.png" 1782229532 80994 f7173cfec81b6c02aa6494024e9f73c3 ""
   "/etc/texmf/web2c/texmf.cnf" 1702837203 475 c0e671620eb5563b2130f56340a5fde8 ""
@@ -157,10 +157,10 @@
   "AngularDistribution.tex" 1782136856 1379 bf400ece35ccf5cd9c068f3c15bf0820 ""
   "FocalLenght.tex" 1782229499 1318 59169d2fbc73407067599fb4227d2b8b ""
   "Introduction.tex" 1782131027 1181 8da917d4acbf1299e320133ab9a6c3a9 ""
-  "LatticeConstant.tex" 1782234958 3414 706043e316e8142dd6bc7197c487bf45 ""
+  "LatticeConstant.tex" 1782284884 3850 e0497d813d918efb016675e0dd9a7452 ""
   "Wellenleiter.tex" 1782246046 2059 7c6e79e867ef0de0643aa13360a9cd68 ""
-  "main.aux" 1782246064 6577 bb1f72f2e72cf44adc2a16c98d120c55 "pdflatex"
-  "main.out" 1782246064 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1782284885 6577 bb1f72f2e72cf44adc2a16c98d120c55 "pdflatex"
+  "main.out" 1782284885 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1782246062 3969 69904b8aeb778e9ac95ca369b853d1f3 ""
   (generated)
   "main.aux"
