@@ -8,20 +8,23 @@ from scipy.optimize import curve_fit
 
 # Abstand der beiden Paraffinprismen in cm
 d = np.array([
-    15.35, 15.00, 14.50, 14.00, 13.50,
-    13.00, 12.50, 12.00, 11.50
+    0, 0.35, 0.85, 1.35, 1.85,
+    2.35, 2.85, 3.35, 3.85, 4.35, 4.85,
+    5.35, 5.85
 ])
 
 # Transmission Stellung A in mA
 I_A = np.array([
     0.295, 0.261, 0.211, 0.136, 0.100,
-    0.086, 0.076, 0.072, 0.073
+    0.086, 0.076, 0.072, 0.073, 0.075, 0.070,
+    0.070, 0.070
 ])
 
 # Reflexion Stellung B in mA
 I_B = np.array([
     0.180, 0.195, 0.198, 0.200, 0.202,
-    0.203, 0.206, 0.208, 0.198
+    0.203, 0.206, 0.208, 0.198, 0.197, 0.190,
+    0.189, 0.190
 ])
 
 # Fehler
@@ -144,7 +147,7 @@ plt.errorbar(
     yerr=dI_A,
     fmt="o",
     capsize=3,
-    label="Transmission"
+    label="transmitted intensity"
 )
 
 plt.errorbar(
@@ -154,11 +157,11 @@ plt.errorbar(
     yerr=dI_B,
     fmt="s",
     capsize=3,
-    label="Reflexion"
+    label="reflected intensity"
 )
 
-plt.xlabel("Abstand d / cm")
-plt.ylabel("Intensität / mA")
+plt.xlabel("distance [cm]")
+plt.ylabel("intensity [mA]")
 
 plt.tick_params(
     direction="in",

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  24 JUN 2026 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.30)  24 JUN 2026 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,22 +551,22 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count316
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+aess on input line 70.
+LaTeX Font Info:    Trying to load font information for T1+aess on input line 90.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <20.74> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 70.
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 90.
  (./Introduction.tex
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 1.
@@ -579,6 +579,9 @@ Underfull \hbox (badness 1112) in paragraph at lines 3--8
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -600,8 +603,8 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 16--17
 
 
 
- <../Images/Winkelverteilung_Polar.pdf>]
-<../Images/brennweite_fit_clean.png, id=69, 578.16pt x 433.62pt>
+]
+<../Images/brennweite_fit_clean.png, id=26, 578.16pt x 433.62pt>
 File: ../Images/brennweite_fit_clean.png Graphic file (type png)
 <use ../Images/brennweite_fit_clean.png>
 Package pdftex.def Info: ../Images/brennweite_fit_clean.png  used on input line 17.
@@ -611,13 +614,14 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
-) (./WellenlängeStehendeWellen.tex)
+) (./WellenlängeStehendeWellen.tex
 
-(./WellenlängeMichaelson.tex) (./Totalreflexion.tex
+) (./WellenlängeMichaelson.tex
 
-[2 <../Images/brennweite_fit_clean.png>]) (./Polarisation.tex) (./LatticeConstant.tex
+[2 <../Images/Winkelverteilung_Polar.pdf> <../Images/brennweite_fit_clean.png>]) (./Totalreflexion.tex) (./Polarisation.tex
 
-<../Images/Aufbau2_8.png, id=93, 421.575pt x 371.3875pt>
+) (./LatticeConstant.tex
+<../Images/Aufbau2_8.png, id=90, 421.575pt x 371.3875pt>
 File: ../Images/Aufbau2_8.png Graphic file (type png)
 <use ../Images/Aufbau2_8.png>
 Package pdftex.def Info: ../Images/Aufbau2_8.png  used on input line 16.
@@ -627,13 +631,7 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 16--17
  [][] 
  []
 
-
-Underfull \vbox (badness 6332) has occurred while \output is active []
-
-
-
-[3 <../Images/Aufbau2_8.png>]
-<../Images/Gitterkonstante100.png, id=113, 570.933pt x 353.4003pt>
+<../Images/Gitterkonstante100.png, id=95, 570.933pt x 353.4003pt>
 File: ../Images/Gitterkonstante100.png Graphic file (type png)
 <use ../Images/Gitterkonstante100.png>
 Package pdftex.def Info: ../Images/Gitterkonstante100.png  used on input line 38.
@@ -643,7 +641,10 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
-<../Images/Gitterkonstante110.png, id=114, 570.2103pt x 353.4003pt>
+
+
+[3]
+<../Images/Gitterkonstante110.png, id=115, 570.2103pt x 353.4003pt>
 File: ../Images/Gitterkonstante110.png Graphic file (type png)
 <use ../Images/Gitterkonstante110.png>
 Package pdftex.def Info: ../Images/Gitterkonstante110.png  used on input line 47.
@@ -653,66 +654,67 @@ Overfull \hbox (12.5pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
-)
 
-(./Wellenleiter.tex)
-LaTeX Font Info:    Trying to load font information for T1+aett on input line 92.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (./Wellenleiter.tex)
+
+[4 <../Images/Aufbau2_8.png> <../Images/Gitterkonstante100.png> <../Images/Gitterkonstante110.png>] (./Conclusion.tex
+
+)
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 114.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 \T1/aett/m/n/10 fileadmin / 11016800 / Modulbeschreibungen /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 \T1/aett/m/n/10 C-[]Modul / Versuch _ 42 _ ueberarbeitet . pdf$[] \T1/aer/m/n/10 last
  []
 
 
-
-[4 <../Images/Gitterkonstante100.png> <../Images/Gitterkonstante110.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 [][]$\T1/aett/m/n/10 https : / / www . physik . uni-[]wuerzburg .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 \T1/aett/m/n/10 de / fileadmin / 11000000 / 03 _ Studium / 02 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 \T1/aett/m/n/10 Bachelor / Grundpraktikum / _imported /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 \T1/aett/m/n/10 fileadmin / 11016800 / Geraete /
  []
 
 
 
-
-
-[5
-
-] 
+[5] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -723,18 +725,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17316 strings out of 473190
- 325894 string characters out of 5715799
- 897954 words of memory out of 5000000
- 40254 multiletter control sequences out of 15000+600000
+ 17324 strings out of 473190
+ 326017 string characters out of 5715799
+ 899954 words of memory out of 5000000
+ 40258 multiletter control sequences out of 15000+600000
  589327 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,107p,10950b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,107p,10950b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (5 pages, 361216 bytes).
+Output written on main.pdf (5 pages, 363975 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
